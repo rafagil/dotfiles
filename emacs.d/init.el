@@ -156,6 +156,7 @@
 
 (add-hook 'scala-mode 'pretty-symbols-mode)
 
+;; see https://github.com/folone/emacs-scalaz-unicode-input-method
 (add-to-list 'load-path "~/Code/dev/emacs-scalaz-unicode-input-method")
 (require 'scalaz-unicode-input-method)
 (add-hook 'scala-mode-hook 
