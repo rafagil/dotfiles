@@ -122,6 +122,8 @@
 (setq tabbar-ruler-popup-scrollbar t) ; If you want to only show the
                                         ; scroll bar when your mouse is moving.
 (require 'tabbar)
+;; Enable tabbars globally:
+(tabbar-mode 1)
 
 ;; org-mode and org-journal
 (require 'org)
@@ -168,7 +170,6 @@
 
 (electric-pair-mode 1)
 (column-number-mode 1)
-(desktop-save-mode 1) ; save/restore opened files
 
 ;; keybindings
 (require 'expand-region)
