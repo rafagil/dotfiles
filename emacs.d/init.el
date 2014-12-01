@@ -161,7 +161,7 @@
 (add-hook 'scala-mode-hook 
   (lambda () (set-input-method "scalaz-unicode")))
 
-(setq exec-path (append exec-path '("/Users/channing/Code/dev/sbt-extras/")))
+(setq exec-path (append exec-path '("~/Code/dev/sbt-extras/")))
 
 (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
 
