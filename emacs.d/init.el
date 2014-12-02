@@ -55,6 +55,13 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+;; Paths
+(setq exec-path (append exec-path '("/usr/local/bin/")))
+
+;; Spelling
+(setq ispell-program-name "aspell"
+      ispell-extra-args '("--sug-mode=ultra"))
+
 ;; Marking text
 (delete-selection-mode t)
 (transient-mark-mode t)
@@ -144,6 +151,8 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(add-hook 'org-mode-hook 'turn-on-flyspell)
 
 ;; UI
 (if window-system
