@@ -168,6 +168,8 @@
 
 (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
 
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+
 (electric-pair-mode 1)
 (column-number-mode 1)
 
