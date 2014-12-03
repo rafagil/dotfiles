@@ -61,6 +61,7 @@
 ;; Spelling
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
+(setq ispell-personal-dictionary "~/dotfiles/dictionary.txt")
 
 ;; Marking text
 (delete-selection-mode t)
@@ -145,6 +146,12 @@
 (setq org-startup-indented t)
 (setq org-ellipsis " \u25bc" )
 (setq org-completion-use-ido t)
+
+;; This suggestion from tychoish.com
+(setq org-todo-keywords
+      '((sequence "TODO"
+		  "DELEGATED"
+		  "DONE")))
 
 ;; This from http://orgmode.org/worg/org-faq.html
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
