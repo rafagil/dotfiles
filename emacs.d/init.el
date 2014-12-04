@@ -139,6 +139,7 @@
 ;; $ brew cask install mactex
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 (require 'org)
+(setq user-full-name "Channing Walton")
 (setq org-directory "~/Dropbox/org/")
 (setq org-journal-dir "~/Dropbox/org/journal/")
 (setq org-agenda-files (list "~/Dropbox/org"
@@ -164,6 +165,22 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (add-hook 'org-mode-hook 'turn-on-flyspell)
+
+;; Babel for diagrams etc
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (plantuml   . t)
+   (ditaa      . t)
+   (java       . t)
+   (js         . t)
+   (scala      . t)
+   (sh         . t)
+   (sql        . t)
+   (dot        . t)))
+
+;; Setup path to ditaa.jar after brew install ditaa
+(setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.9/libexec/ditaa0_9.jar")
 
 ;; UI
 (if window-system
