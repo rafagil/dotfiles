@@ -134,6 +134,9 @@
 (tabbar-mode 1)
 
 ;; org-mode and org-journal
+;; For exporting to latex and pdf do
+;; $ brew install caskroom/cask/brew-cask
+;; $ brew cask install mactex
 (require 'org)
 (setq org-directory "~/Dropbox/org/")
 (setq org-journal-dir "~/Dropbox/org/journal/")
