@@ -2,3 +2,5 @@
 *.lock
 
 emacs.d/ido.last
+
+emacs.d/SessionDesktop.el

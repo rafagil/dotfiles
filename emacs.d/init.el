@@ -35,6 +35,7 @@
 			    s
 			    sbt-mode
 			    scala-mode2
+			    sr-speedbar
 			    smex
 			    tabbar
 			    tabbar-ruler
