@@ -223,3 +223,13 @@
 (setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
 (setq ergoemacs-keyboard-layout "gb") ;; Assumes QWERTY keyboard layout
 (ergoemacs-mode 1)
+
+;; scrolling
+(setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
+
+;; make emacs split buffers horizontally not vertically
+;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
