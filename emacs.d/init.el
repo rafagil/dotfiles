@@ -17,6 +17,7 @@
 			    dash
 			    ensime
 			    epl
+			    ergoemacs-mode
 			    expand-region
 			    f
 			    furl
@@ -217,3 +218,8 @@
 
 ;; Allow hash to be entered  
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
+
+;; ergo emacs
+(setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
+(setq ergoemacs-keyboard-layout "gb") ;; Assumes QWERTY keyboard layout
+(ergoemacs-mode 1)
