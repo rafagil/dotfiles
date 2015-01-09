@@ -212,10 +212,6 @@
 (electric-pair-mode 1)
 (column-number-mode 1)
 
-;; keybindings
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
-
 ;; Allow hash to be entered  
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
@@ -223,6 +219,10 @@
 (setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
 (setq ergoemacs-keyboard-layout "gb") ;; Assumes QWERTY keyboard layout
 (ergoemacs-mode 1)
+
+;; keybindings
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; scrolling
 (setq scroll-step 1)
@@ -233,3 +233,4 @@
 ;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
+
