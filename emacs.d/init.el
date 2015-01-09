@@ -210,6 +210,7 @@
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 (electric-pair-mode 1)
+
 (column-number-mode 1)
 
 ;; Allow hash to be entered  
@@ -240,28 +241,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ergoemacs-ctl-c-or-ctl-x-delay 0.2)
- '(ergoemacs-handle-ctl-c-or-ctl-x (quote both))
- '(ergoemacs-ini-mode t)
- '(ergoemacs-keyboard-layout "gb")
- '(ergoemacs-mode nil)
- '(ergoemacs-smart-paste nil)
- '(ergoemacs-theme "standard")
- '(ergoemacs-theme-options nil)
- '(ergoemacs-use-menus t)
- '(initial-scratch-message
-   ";; This buffer is for notes you don't want to save, and for Lisp evaluation.
-;; If you want to create a file, visit that file with C-x C-f,
-;; then enter the text in that file's own buffer.
-
-")
+ '(delete-selection-mode t)
  '(org-CUA-compatible nil)
- '(org-special-ctrl-a/e nil)
- '(org-support-shift-select nil)
- '(scroll-error-top-bottom nil)
- '(set-mark-command-repeat-pop nil)
- '(shift-select-mode t)
- '(smex-prompt-string "M-x "))
+ '(recentf-mode t)
+ '(shift-select-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
