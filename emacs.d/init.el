@@ -1,4 +1,3 @@
-;; This was shamelessly stolen from https://github.com/abedra/emacs.d/blob/master/abedra.org
 ;; packages
 (require 'cl)
 (load "package")
