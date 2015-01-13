@@ -1,3 +1,4 @@
+;;  This was shamelessly stolen from https://github.com/abedra/emacs.d/blob/master/abedra.org
 ;; packages
 (require 'cl)
 (load "package")
@@ -62,6 +63,7 @@
 ;; Spelling
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
+(setq ispell-dictionary "british")
 (setq ispell-personal-dictionary "~/dotfiles/dictionary.txt")
 
 ;; Marking text
@@ -242,6 +244,7 @@
  ;; If there is more than one, they won't work right.
  '(delete-selection-mode t)
  '(org-CUA-compatible nil)
+ '(org-replace-disputed-keys nil)
  '(recentf-mode t)
  '(shift-select-mode nil))
 (custom-set-faces
