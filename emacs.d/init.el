@@ -1,4 +1,4 @@
-;; This was shamelessly stolen from https://github.com/abedra/emacs.d/blob/master/abedra.org
+;;  This was shamelessly stolen from https://github.com/abedra/emacs.d/blob/master/abedra.org
 ;; packages
 (require 'cl)
 (load "package")
@@ -62,6 +62,7 @@
 ;; Spelling
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
+(setq ispell-dictionary "british")
 (setq ispell-personal-dictionary "~/dotfiles/dictionary.txt")
 
 ;; Marking text
@@ -211,6 +212,7 @@
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 (electric-pair-mode 1)
+
 (column-number-mode 1)
 
 ;; Allow hash to be entered  
@@ -229,4 +231,3 @@
 ;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
-
