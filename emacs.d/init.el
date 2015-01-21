@@ -17,7 +17,6 @@
 			    dash
 			    ensime
 			    epl
-			    ergoemacs-mode
 			    expand-region
 			    f
 			    furl
@@ -189,6 +188,8 @@
     (require 'darcula-theme)
   (load-theme 'wombat t))
 
+(set-background-color "black")
+
 (set-face-attribute 'default nil :family "Input Mono Narrow")
 
 (set-face-attribute 'default nil :height 120)
@@ -215,12 +216,6 @@
 ;; Allow hash to be entered  
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
-;; ergo emacs
-(require 'ergoemacs-mode)
-(setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
-(setq ergoemacs-keyboard-layout "gb") ;; Assumes QWERTY keyboard layout
-(ergoemacs-mode 1)
-
 ;; keybindings
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
@@ -235,36 +230,3 @@
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ergoemacs-ctl-c-or-ctl-x-delay 0.2)
- '(ergoemacs-handle-ctl-c-or-ctl-x (quote both))
- '(ergoemacs-ini-mode t)
- '(ergoemacs-keyboard-layout "gb")
- '(ergoemacs-mode nil)
- '(ergoemacs-smart-paste nil)
- '(ergoemacs-theme "standard")
- '(ergoemacs-theme-options nil)
- '(ergoemacs-use-menus t)
- '(initial-scratch-message
-   ";; This buffer is for notes you don't want to save, and for Lisp evaluation.
-;; If you want to create a file, visit that file with C-x C-f,
-;; then enter the text in that file's own buffer.
-
-")
- '(org-CUA-compatible nil)
- '(org-special-ctrl-a/e nil)
- '(org-support-shift-select nil)
- '(scroll-error-top-bottom nil)
- '(set-mark-command-repeat-pop nil)
- '(shift-select-mode t)
- '(smex-prompt-string "M-x "))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
