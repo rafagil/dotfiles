@@ -4,3 +4,15 @@
 emacs.d/ido.last
 
 emacs.d/SessionDesktop.el
+
+config/configstore/insight-bower.yml
+
+config/configstore/update-notifier-bower.yml
+
+config/gtk-2.0/gtkfilechooser.ini
+
+config/ranger/bookmarks
+
+config/ranger/history
+
+config/ranger/tagged
