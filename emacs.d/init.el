@@ -28,7 +28,7 @@
 			    markdown-mode
 			    marmalade
 			    org
-			    org-journal
+			    org-journal		 
 			    paredit
 			    popup
 			    projectile
@@ -183,6 +183,31 @@
 
 ;; Setup path to ditaa.jar after brew install ditaa
 (setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.9/libexec/ditaa0_9.jar")
+
+;; publishing
+(require 'ox-publish)
+(setq org-publish-project-alist
+      '(
+	("org-notes"
+	 :base-directory "~/Dropbox/org/"
+	 :base-extension "org"
+	 :publishing-directory "~/public_html/"
+	 :recursive t
+	 :publishing-function org-html-publish-to-html
+	 :headline-levels 4             ; Just the default for this project.
+	 :auto-preamble t
+	 )
+	
+	("org-static"
+	 :base-directory "~/Dropbox/org/"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+	 :publishing-directory "~/public_html/"
+	 :recursive t
+	 :publishing-function org-publish-attachment
+	 )
+	
+	("org" :components ("org-notes" "org-static"))
+	))
 
 ;; UI
 (if window-system
