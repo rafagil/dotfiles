@@ -34,7 +34,8 @@
 			    markdown-mode
 			    marmalade
 			    org
-			    org-journal		 
+			    org-journal
+			    org-plus-contrib
 			    paredit
 			    popup
 			    projectile
