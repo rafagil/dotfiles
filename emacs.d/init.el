@@ -161,10 +161,8 @@
 (setq org-ellipsis " \u25bc" )
 (setq org-completion-use-ido t)
 
-;; This suggestion from tychoish.com
 (setq org-todo-keywords
       '((sequence "TODO"
-		  "DELEGATED"
 		  "DONE")))
 
 ;; This from http://orgmode.org/worg/org-faq.html
@@ -231,13 +229,17 @@
 
 (add-hook 'scala-mode 'pretty-symbols-mode)
 
+;; Scala and Ensime
+;;(require 'ensime)
+;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
 ;; see https://github.com/folone/emacs-scalaz-unicode-input-method
 (add-to-list 'load-path "~/Code/dev/emacs-scalaz-unicode-input-method")
 (require 'scalaz-unicode-input-method)
 (add-hook 'scala-mode-hook 
   (lambda () (set-input-method "scalaz-unicode")))
 
-(setq exec-path (append exec-path '("~/Code/dev/sbt-extras/")))
+(setq exec-path (append exec-path '("~/bin/")))
 
 (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
 
