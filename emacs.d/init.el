@@ -163,9 +163,10 @@
 
 ;; This suggestion from tychoish.com
 (setq org-todo-keywords
-      '((sequence "TODO"
-		  "DELEGATED"
-		  "DONE")))
+      '((sequence "TODO(t)" "|" "DONE(d)")
+	(sequence "BUG(b)" "|" "FIXED(f)" "DELEGATED(d)")
+	(sequence "QUESTION(q)" "|" "ANSWERED(a)")
+	(sequence "|" "CANCELED(c)")))
 
 ;; This from http://orgmode.org/worg/org-faq.html
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
