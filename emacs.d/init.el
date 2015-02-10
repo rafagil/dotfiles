@@ -226,22 +226,8 @@
 (setq cursor-type (quote bar))
 
 ;; Set up fonts
- (defun my-variable-face-mode ()
-   "Set font to a variable width (proportional) fonts in current buffer"
-   (interactive)
-   (setq buffer-face-mode-face '(:family "Ariel"))
-   (buffer-face-mode))
-
- ;; Use monospaced font faces in current buffer
- (defun my-fixed-face-mode ()
-   "Sets a fixed width (monospace) font in current buffer"
-   (interactive)
-   (setq buffer-face-mode-face '(:family "Input Mono Narrow"))
-   (buffer-face-mode))
-
- ;; Set default font faces for Info and ERC modes
- (add-hook 'org-mode-hook 'my-variable-face-mode)
- (add-hook 'scala-mode-hook 'my-fixed-face-mode)
+(add-hook 'org-mode-hook nil :inherit 'variable-pitch)
+(set-face-attribute 'org-table nil :inherit 'fixed-pitch)
 
 (setq pretty-symbol-categories '(lambda relational logical))
 
@@ -282,3 +268,16 @@
 ;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(fixed-pitch ((t (:family "Input Mono Narrow"))))
+ '(variable-pitch ((t (:family "Arial")))))
