@@ -216,24 +216,37 @@
 	("org" :components ("org-notes" "org-static"))
 	))
 
-;; UI
+;; Theme
 (if window-system
     (require 'darcula-theme)
   (load-theme 'wombat t))
 
 (set-background-color "black")
 
-(set-face-attribute 'default nil :family "Input Mono Narrow")
+;; Set up fonts
+ (defun my-variable-face-mode ()
+   "Set font to a variable width (proportional) fonts in current buffer"
+   (interactive)
+   (setq buffer-face-mode-face '(:family "Ariel"))
+   (buffer-face-mode))
 
-(set-face-attribute 'default nil :height 120)
+ ;; Use monospaced font faces in current buffer
+ (defun my-fixed-face-mode ()
+   "Sets a fixed width (monospace) font in current buffer"
+   (interactive)
+   (setq buffer-face-mode-face '(:family "Input Mono Narrow"))
+   (buffer-face-mode))
+
+ ;; Set default font faces for Info and ERC modes
+ (add-hook 'org-mode-hook 'my-variable-face-mode)
+ (add-hook 'scala-mode-hook 'my-fixed-face-mode)
 
 (setq pretty-symbol-categories '(lambda relational logical))
-
-(add-hook 'scala-mode 'pretty-symbols-mode)
 
 ;; Scala and Ensime
 ;;(require 'ensime)
 ;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(add-hook 'scala-mode 'pretty-symbols-mode)
 
 ;; see https://github.com/folone/emacs-scalaz-unicode-input-method
 (add-to-list 'load-path "~/Code/dev/emacs-scalaz-unicode-input-method")
