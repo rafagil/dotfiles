@@ -223,6 +223,8 @@
 
 (set-background-color "black")
 
+(setq cursor-type (quote bar))
+
 ;; Set up fonts
  (defun my-variable-face-mode ()
    "Set font to a variable width (proportional) fonts in current buffer"
