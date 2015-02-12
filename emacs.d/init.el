@@ -89,6 +89,9 @@
 (setq tab-width 2
       indent-tabs-mode nil)
 
+;; hide backup files etc
+(setq dired-omit-mode t)
+
 ;; yes and no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -226,9 +229,8 @@
 (setq cursor-type (quote bar))
 
 ;; Set up fonts
-(add-hook 'org-mode-hook nil :inherit 'variable-pitch)
+(add-hook 'text-mode-hook 'variable-pitch-mode)
 (set-face-attribute 'org-table nil :inherit 'fixed-pitch)
-
 (setq pretty-symbol-categories '(lambda relational logical))
 
 ;; Scala and Ensime
@@ -268,16 +270,3 @@
 ;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(fixed-pitch ((t (:family "Input Mono Narrow"))))
- '(variable-pitch ((t (:family "Arial")))))
