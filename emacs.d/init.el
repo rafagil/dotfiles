@@ -194,6 +194,11 @@
 ;; Setup path to ditaa.jar after brew install ditaa
 (setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.9/libexec/ditaa0_9.jar")
 
+(setq org-plantuml-jar-path
+      (expand-file-name "~/.emacs.d/plantuml/plantuml.jar"))
+
+(setq org-image-actual-width nil)
+
 ;; publishing
 (require 'ox-publish)
 (setq org-publish-project-alist
