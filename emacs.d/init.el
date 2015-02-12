@@ -191,6 +191,11 @@
    (sql        . t)
    (dot        . t)))
 
+;; don't prompt when evaluating various babel files
+(defun my-org-confirm-babel-evaluate (lang body)
+            (not (string= lang "plantuml")))  ; don't ask for ditaa
+          (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+
 ;; Setup path to ditaa.jar after brew install ditaa
 (setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.9/libexec/ditaa0_9.jar")
 
