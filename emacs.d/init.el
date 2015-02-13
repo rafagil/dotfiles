@@ -239,9 +239,6 @@
 (setq cursor-type (quote bar))
 
 ;; Set up fonts
-(add-hook 'text-mode-hook 'variable-pitch-mode)
-(set-face-attribute 'org-table nil :inherit 'fixed-pitch)
-(set-face-attribute 'org-block nil :inherit 'fixed-pitch)
 (setq pretty-symbol-categories '(lambda relational logical))
 
 ;; Scala and Ensime
@@ -286,7 +283,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(column-number-mode t)
+ '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
