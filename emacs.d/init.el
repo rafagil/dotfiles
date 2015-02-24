@@ -48,7 +48,8 @@
 			    tabbar-ruler
 			    web-mode
 			    writegood-mode
-			    yaml-mode)
+			    yaml-mode
+			    yasnippet)
   "Default packages")
 
 (defun channing/packages-installed-p ()
@@ -65,6 +66,13 @@
 
 ;; Paths
 (setq exec-path (append exec-path '("/usr/local/bin/")))
+
+;; yas-snippet
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook
+          '(lambda ()
+             (yas-minor-mode)))
 
 ;; Spelling
 (setq ispell-program-name "aspell"
@@ -210,26 +218,6 @@
 
 ;; latex
 (require 'ox-latex)
-(add-to-list 'org-latex-classes
-             '("memoir-article"
-               "\\documentclass[11pt,oneside,article]{memoir}
-                [PACKAGES]
-                \\usepackage{memoir-article-style}
-                [NO-DEFAULT-PACKAGES]"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
-(add-to-list 'org-latex-classes
-          '("koma-article"
-             "\\documentclass{scrartcl}"
-             ("\\section{%s}" . "\\section*{%s}")
-             ("\\subsection{%s}" . "\\subsection*{%s}")
-             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 ;; publishing
 (require 'ox-publish)
