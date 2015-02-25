@@ -177,7 +177,7 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d)")
+      '((sequence "TODO(t)" "|" "DONE(d)" "|" "NO NEED(n)")
 	(sequence "BUG(b)" "|" "FIXED(f)" "DELEGATED(d)")
 	(sequence "QUESTION(q)" "|" "ANSWERED(a)")
 	(sequence "|" "CANCELED(c)")))
