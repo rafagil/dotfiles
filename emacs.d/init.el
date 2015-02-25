@@ -67,6 +67,15 @@
 ;; Paths
 (setq exec-path (append exec-path '("/usr/local/bin/")))
 
+;; Backups
+(setq backup-directory-alist '(("." . "~/Dropbox/emacs-backup"))
+      backup-by-copying t    ; Don't delink hardlinks
+      version-control t      ; Use version numbers on backups
+      delete-old-versions t  ; Automatically delete excess backups
+      kept-new-versions 20   ; how many of the newest versions to keep
+      kept-old-versions 5    ; and how many of the old
+      )
+
 ;; yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
@@ -241,6 +250,9 @@
 	
 	("org" :components ("org-notes" "org-static"))
 	))
+
+;; configure sr-speedbar
+(setq speedbar-use-images nil)
 
 ;; Theme
 (if window-system
