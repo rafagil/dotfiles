@@ -251,8 +251,16 @@
 	("org" :components ("org-notes" "org-static"))
 	))
 
+;; Keybinding for exporting to pdf
+(add-hook 
+ 'org-mode-hook
+ (lambda()
+   (define-key org-mode-map 
+       (kbd "C-c e") 'org-latex-export-to-pdf)))
+
 ;; configure sr-speedbar
 (setq speedbar-use-images nil)
+(setq sr-speedbar-right-side nil)
 
 ;; Theme
 (if window-system
