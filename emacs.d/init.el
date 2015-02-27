@@ -168,7 +168,7 @@
 (require 'org)
 (setq user-full-name "Channing Walton")
 (setq org-directory "~/Dropbox/org")
-(setq org-journal-dir (concat org-directory "/journal"))
+(setq org-journal-dir (concat org-directory "/journal/"))
 (setq org-agenda-files (list org-directory
 			     (concat org-directory "/projects/boost")
                              (concat org-directory "/journal")))
