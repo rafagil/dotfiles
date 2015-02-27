@@ -271,8 +271,6 @@
 
 (set-background-color "black")
 
-(setq cursor-type (quote bar))
-
 ;; Set up fonts
 (setq pretty-symbol-categories '(lambda relational logical))
 
@@ -302,6 +300,8 @@
 
 ;; Show line numbers
 (global-linum-mode 1)
+(setq cursor-type (quote bar))
+(modify-all-frames-parameters (list (cons 'cursor-type 'bar)))
 
 ;; keybindings
 (require 'expand-region)
