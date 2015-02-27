@@ -242,7 +242,7 @@
 	
 	("org-static"
 	 :base-directory "~/Dropbox/org/"
-	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf|pptx\\|ppt\\|"
 	 :publishing-directory "~/public_html/"
 	 :recursive t
 	 :publishing-function org-publish-attachment
@@ -250,6 +250,8 @@
 	
 	("org" :components ("org-notes" "org-static"))
 	))
+
+(setq org-publish-use-timestamps-flag nil)
 
 ;; Keybinding for exporting to pdf
 (add-hook 
