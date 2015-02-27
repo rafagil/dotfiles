@@ -154,8 +154,8 @@
 (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
 (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
 (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
-(setq tabbar-ruler-popup-scrollbar t) ; If you want to only show the
-                                        ; scroll bar when your mouse is moving.
+(setq tabbar-ruler-popup-scrollbar t) ; If you want to only show the scroll bar when your mouse is moving.
+
 (require 'tabbar)
 ;; Enable tabbars globally:
 (tabbar-mode 1)
@@ -167,11 +167,11 @@
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 (require 'org)
 (setq user-full-name "Channing Walton")
-(setq org-directory "~/Dropbox/org/")
-(setq org-journal-dir "~/Dropbox/org/journal/")
-(setq org-agenda-files (list "~/Dropbox/org"
-                             "~/Dropbox/org/projects/boost" 
-                             "~/Dropbox/org/journal"))
+(setq org-directory "~/Dropbox/org")
+(setq org-journal-dir (concat org-directory "/journal"))
+(setq org-agenda-files (list org-directory
+			     (concat org-directory "/projects/boost")
+                             (concat org-directory "/journal")))
 
 (setq org-journal-file-format "%Y%m%d.org")
 (setq org-log-done 'time)
@@ -179,7 +179,7 @@
 (setq org-ellipsis " \u25bc" )
 (setq org-completion-use-ido t)
 
-;; remember
+;; remember/capture
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
 
