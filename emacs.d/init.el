@@ -300,6 +300,9 @@
 ;; Allow hash to be entered  
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
+;; Show line numbers
+(global-linum-mode 1)
+
 ;; keybindings
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
