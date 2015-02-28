@@ -288,7 +288,7 @@
 (setq exec-path (append exec-path '("~/bin/")))
 
 (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
-
+(add-hook 'scala-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'text-mode-hook 'turn-on-visual-line-mode)
 
 (electric-pair-mode 1)
