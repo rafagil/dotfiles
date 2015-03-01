@@ -173,9 +173,9 @@
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
-             "* TODO %?\n  %i\n  %a")
+             "* TODO %U %?\n  %i\n  %a")
         ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
-             "* %?\nEntered on %U\n  %i\n  %a")))
+	 "* %U\n\n%?\n")))
 
 (setq org-agenda-files (list org-directory
 			     (concat org-directory "/projects/boost")))
