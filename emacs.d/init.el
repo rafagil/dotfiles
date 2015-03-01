@@ -34,7 +34,6 @@
 			    markdown-mode
 			    marmalade
 			    org
-			    org-journal
 			    org-plus-contrib
 			    paredit
 			    popup
@@ -160,7 +159,7 @@
 ;; Enable tabbars globally:
 (tabbar-mode 1)
 
-;; org-mode and org-journal
+;; org-mode
 ;; For exporting to latex and pdf do
 ;; $ brew install caskroom/cask/brew-cask
 ;; $ brew cask install mactex
@@ -168,20 +167,22 @@
 (require 'org)
 (setq user-full-name "Channing Walton")
 (setq org-directory "~/Dropbox/org")
-(setq org-journal-dir (concat org-directory "/journal/"))
-(setq org-agenda-files (list org-directory
-			     (concat org-directory "/projects/boost")
-                             (concat org-directory "/journal")))
 
-(setq org-journal-file-format "%Y%m%d.org")
-(setq org-log-done 'time)
+;; capture
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+             "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
+             "* %?\nEntered on %U\n  %i\n  %a")))
+
+(setq org-agenda-files (list org-directory
+			     (concat org-directory "/projects/boost")))
+
 (setq org-startup-indented t)
 (setq org-ellipsis " \u25bc" )
 (setq org-completion-use-ido t)
-
-;; remember/capture
-(setq org-default-notes-file (concat org-directory "/notes.org"))
-(define-key global-map "\C-cc" 'org-capture)
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d)" "|" "NO NEED(n)")
