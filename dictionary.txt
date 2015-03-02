@@ -1,6 +1,9 @@
-personal_ws-1.1 en 5 
+personal_ws-1.1 en 8 
 VeriSign
 Fulfilment
 rxlift's
+eChannels
 versioned
+plantuml
 Channing
+Alacra
