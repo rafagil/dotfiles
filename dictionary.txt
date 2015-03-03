@@ -1,9 +1,35 @@
-personal_ws-1.1 en 8 
+personal_ws-1.1 en 34 
+Observables
+UI
+RxCometActor
 VeriSign
+JsCmd
+VM
 Fulfilment
+RxElement
+NodeSeqs
+scalaz
+Scalaz
+RxScala
+scala
+Scala
+RxLift's
 rxlift's
+NodeSeq
+SHtml
 eChannels
+RxJava
+RxComponent
+ListBuffer
 versioned
 plantuml
+backend
+LiftWeb
+Endo
+JsCmds
+SBT
 Channing
+RxLift
+CometActor
 Alacra
+datatype
