@@ -66,6 +66,9 @@
 ;; Paths
 (setq exec-path (append exec-path '("/usr/local/bin/")))
 
+;; recent file size
+(setq recentf-max-saved-items 100)
+
 ;; Backups
 (setq backup-directory-alist '(("." . "~/Dropbox/emacs-backup"))
       backup-by-copying t    ; Don't delink hardlinks
