@@ -175,9 +175,12 @@
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks") "* TODO %U %?\n  %i\n  %a")
-        ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org")) "* %U\n\n%?\n")
-	("g" "Glossary" table-line (file (concat org-directory "/projects/boost/glossary.org") "Glossary") "|%^{Term}|:%^{Tag}:|%?|")
+      '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+             "* TODO %U %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
+	 "* %U\n\n%?\n")
+	("g" "Glossary" entry (file+headline (concat org-directory "/projects/boost/glossary.org") "Glossary")
+	 "* %^{Term} :%^{Tag}:\n %?\n")
 	))
 
 (setq org-agenda-files (list org-directory
