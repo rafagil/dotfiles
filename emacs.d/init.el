@@ -262,13 +262,6 @@
 
 (setq org-publish-use-timestamps-flag nil)
 
-;; Keybinding for exporting to pdf
-(add-hook 
- 'org-mode-hook
- (lambda()
-   (define-key org-mode-map 
-       (kbd "C-c e") 'org-latex-export-to-pdf)))
-
 ;; configure sr-speedbar
 (setq speedbar-use-images nil)
 (setq sr-speedbar-right-side nil)
