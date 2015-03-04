@@ -177,7 +177,9 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
              "* TODO %U %?\n  %i\n  %a")
-        ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
+        ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
+	 "* %U\n\n%?\n")
+	("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal-boost.org"))
 	 "* %U\n\n%?\n")
 	("g" "Glossary" entry (file+headline (concat org-directory "/projects/boost/glossary.org") "Glossary")
 	 "* %^{Term} :%^{Tag}:\n %?\n")
@@ -191,10 +193,10 @@
 (setq org-completion-use-ido t)
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d)" "NO NEED(n)")
-	(sequence "BUG(b)" "|" "FIXED(f)" "DELEGATED(d)")
-	(sequence "QUESTION(q)" "|" "ANSWERED(a)")
-	(sequence "|" "CANCELED(c)")))
+      '((sequence "TODO(t)" "|" "DONE(d!)" "NO NEED(n@/!)")
+	(sequence "BUG(b)" "|" "FIXED(f!)" "DELEGATED(@/d!)")
+	(sequence "QUESTION(q)" "|" "ANSWERED(a!)")
+	(sequence "|" "CANCELED(c!)")))
 
 ;; This from http://orgmode.org/worg/org-faq.html
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -249,7 +251,7 @@
 	
 	("org-static"
 	 :base-directory "~/Dropbox/org/"
-	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf|pptx\\|ppt\\|"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf|pptx\\|ppt\\|doc\\|docx\\|"
 	 :publishing-directory "~/public_html/"
 	 :recursive t
 	 :publishing-function org-publish-attachment
