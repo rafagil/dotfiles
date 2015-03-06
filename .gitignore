@@ -19,4 +19,4 @@ config/ranger/tagged
 
 emacs.d/bookmarks
 
-emacs.d/ensime/classpath_2.10.4_0.9.10-SNAPSHOT
+emacs.d/ensime/classpath_*
