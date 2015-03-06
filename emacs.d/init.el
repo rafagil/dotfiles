@@ -191,10 +191,9 @@
 (setq org-startup-indented t)
 (setq org-ellipsis " \u25bc" )
 (setq org-completion-use-ido t)
-
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d!)" "NO NEED(n@/!)")
-	(sequence "BUG(b)" "|" "FIXED(f!)" "DELEGATED(@/d!)")
+	(sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(w@/!)" "DELEGATED(@/d!)")
 	(sequence "QUESTION(q)" "|" "ANSWERED(a!)")
 	(sequence "|" "CANCELED(c!)")))
 
