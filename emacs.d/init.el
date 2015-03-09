@@ -306,6 +306,7 @@
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
 ;; Show line numbers
+(setq linum-format "%4d ")
 (global-linum-mode 1)
 (setq cursor-type (quote bar))
 (modify-all-frames-parameters (list (cons 'cursor-type 'bar)))
