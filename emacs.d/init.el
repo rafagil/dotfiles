@@ -121,6 +121,9 @@
 (global-set-key (kbd "C-c C-k") 'compile)
 (global-set-key (kbd "C-x g") 'magit-status)
 
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
+
 ;; Misc
 (setq echo-keystrokes 0.1
       use-dialog-box nil
