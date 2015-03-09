@@ -184,12 +184,15 @@
 	 "* %U\n\n%?\n")
 	("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal-boost.org"))
 	 "* %U\n\n%?\n")
+	("f" "Foggyball Journal" entry (file+datetree (concat org-directory "/projects/foggyball/journal-boost.org"))
+	 "* %U\n\n%?\n")
 	("g" "Glossary" entry (file+headline (concat org-directory "/projects/boost/glossary.org") "Glossary")
 	 "* %^{Term} :%^{Tag}:\n %?\n")
 	))
 
 (setq org-agenda-files (list org-directory
-			     (concat org-directory "/projects/boost")))
+			     (concat org-directory "/projects/boost")
+			     (concat org-directory "/projects/foggyball")))
 
 (setq org-startup-indented t)
 (setq org-ellipsis " \u25bc" )
@@ -315,6 +318,9 @@
 (setq scroll-step 1)
 (setq scroll-conservatively 10000)
 (setq auto-window-vscroll nil)
+
+;; show the time
+(display-time-mode 1)
 
 ;; make emacs split buffers horizontally not vertically
 ;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
