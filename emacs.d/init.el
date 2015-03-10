@@ -271,16 +271,12 @@
 (setq speedbar-use-images nil)
 (setq sr-speedbar-right-side nil)
 
-;; UI Theme
-(require 'darcula-theme)
-(set-background-color "black")
-
 ;; Set up fonts
 (setq pretty-symbol-categories '(lambda relational logical))
 
 ;; Scala and Ensime
 ;;(require 'ensime)
-;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 (add-hook 'scala-mode 'pretty-symbols-mode)
 
 ;; see https://github.com/folone/emacs-scalaz-unicode-input-method
@@ -324,12 +320,19 @@
 ;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
+
+;; UI Theme
+(require 'darcula-theme)
+(set-background-color "black")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(display-time-mode t)
+ '(frame-background-mode (quote dark))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -337,5 +340,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#a9b7c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "nil" :family "Menlo"))))
- '(org-block ((t (:inherit shadow :foreground "SlateGray1")))))
+ )
