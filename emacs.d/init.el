@@ -271,11 +271,8 @@
 (setq speedbar-use-images nil)
 (setq sr-speedbar-right-side nil)
 
-;; Theme
-(if window-system
-    (require 'darcula-theme)
-  (load-theme 'wombat t))
-
+;; UI Theme
+(require 'darcula-theme)
 (set-background-color "black")
 
 ;; Set up fonts
