@@ -1,4 +1,4 @@
-personal_ws-1.1 en 36 
+personal_ws-1.1 en 37 
 Observables
 UI
 RxCometActor
@@ -12,8 +12,8 @@ NodeSeqs
 scalaz
 RxScala
 scala
-rxlift's
 RxLift's
+rxlift's
 NodeSeq
 SHtml
 eChannels
@@ -30,6 +30,7 @@ SBT
 Channing
 JSON
 RxLift
+UUID
 CometActor
 Alacra
 datatype
