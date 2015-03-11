@@ -8,5 +8,6 @@
     "id" : "${1}",
     "title" : "$0"
   },
-  "status" : "Not Started"
+  "status" : "Not Started",
+   "dependencies": []
 }
