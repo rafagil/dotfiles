@@ -29,6 +29,7 @@
 			    git-commit-mode
 			    git-rebase-mode
 			    haskell-mode
+                            helm
 			    htmlize
 			    magit
 			    markdown-mode
@@ -62,6 +63,11 @@
   (dolist (pkg channing/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
+
+;; Helm
+(require 'helm-config)
+(helm-mode 1)
+(helm-autoresize-mode 1)
 
 ;; Paths
 (setq exec-path (append exec-path '("/usr/local/bin/")))
