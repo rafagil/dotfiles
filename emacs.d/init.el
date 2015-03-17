@@ -30,6 +30,7 @@
 			    git-rebase-mode
 			    haskell-mode
                             helm
+                            helm-projectile
 			    htmlize
 			    magit
 			    markdown-mode
@@ -186,7 +187,7 @@
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
-         "* TODO [#A] %U %?\n  %i\n  %a" :clock-in t :clock-resume t)
+         "* TODO [#A] %U %?\n  %i\n  %a")
         ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
 	 "* %U\n\n%?\n")
 	("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal-boost.org"))
