@@ -187,14 +187,24 @@
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+         "* TODO [#B] %U %?\n  %i\n  %a")
+        
+        ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "Tasks")
          "* TODO [#A] %U %?\n  %i\n  %a")
+
+        ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+         "* FIXME [#B] %U %?\n  %i\n  %a")
+        
         ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
 	 "* %U\n\n%?\n")
-	("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal-boost.org"))
+
+        ("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal-boost.org"))
 	 "* %U\n\n%?\n")
-	("f" "Foggyball Journal" entry (file+datetree (concat org-directory "/projects/foggyball/journal-foggyball.org"))
+
+        ("f" "Foggyball Journal" entry (file+datetree (concat org-directory "/projects/foggyball/journal-foggyball.org"))
 	 "* %U\n\n%?\n")
-	("g" "Glossary" entry (file+headline (concat org-directory "/projects/boost/glossary.org") "Glossary")
+
+        ("g" "Glossary" entry (file+headline (concat org-directory "/projects/boost/glossary.org") "Glossary")
 	 "* %^{Term} :%^{Tag}:\n %?\n")
 	))
 
