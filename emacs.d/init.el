@@ -30,6 +30,8 @@
 			    git-rebase-mode
 			    haskell-mode
                             helm
+                            helm-ack
+                            helm-ag
                             helm-projectile
 			    htmlize
 			    magit
@@ -64,11 +66,6 @@
   (dolist (pkg channing/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
-
-;; Helm
-(require 'helm-config)
-(helm-mode 1)
-(helm-autoresize-mode 1)
 
 ;; Paths
 (setq exec-path (append exec-path '("/usr/local/bin/")))
@@ -145,9 +142,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 ;; Ido
-(ido-mode t)
-(setq ido-enable-flex-matching t
-      ido-use-virtual-buffers t)
+;;(ido-mode t)
+;;(setq ido-enable-flex-matching t
+;;      ido-use-virtual-buffers t)
 
 ;; autopair
 (require 'autopair)
@@ -338,6 +335,30 @@
 ;; see http://stackoverflow.com/questions/2081577/setting-emacs-split-to-horizontal
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
+
+;; Helm
+(require 'helm-config)
+(helm-mode 1)
+(helm-autoresize-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+(require 'helm-projectile)
+(helm-projectile-on)
+
+;; helm ag
+;; brew install ag
+(global-set-key (kbd "M-s s")   #'helm-ag)
+
+;; helm keybindings
+(global-set-key (kbd "C-x b")   #'helm-mini)
+(global-set-key (kbd "C-x C-b") #'helm-buffers-list)
+(global-set-key (kbd "C-x C-m") #'helm-M-x)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(global-set-key (kbd "C-x C-r") #'helm-recentf)
+(global-set-key (kbd "C-x r l") #'helm-filtered-bookmarks)
+(global-set-key (kbd "M-y")     #'helm-show-kill-ring)
+(global-set-key (kbd "M-s o")   #'helm-swoop)
+(global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
 ;; UI Theme
 (require 'darcula-theme)
