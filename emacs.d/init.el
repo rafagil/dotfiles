@@ -1,5 +1,3 @@
-;;  This was shamelessly stolen from https://github.com/abedra/emacs.d/blob/master/abedra.org
-;; packages
 (require 'cl)
 (load "package")
 (require 'package)
@@ -31,7 +29,6 @@
                             guide-key
 			    haskell-mode
                             helm
-                            helm-ack
                             helm-ag
                             helm-projectile
                             helm-swoop
