@@ -28,11 +28,13 @@
 			    furl
 			    git-commit-mode
 			    git-rebase-mode
+                            guide-key
 			    haskell-mode
                             helm
                             helm-ack
                             helm-ag
                             helm-projectile
+                            helm-swoop
 			    htmlize
 			    magit
 			    markdown-mode
@@ -190,12 +192,12 @@
          "* TODO [#A] %U %?\n  %i\n  %a")
 
         ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "Tasks")
-         "* FIXME [#B] %U %?\n  %i\n  %a")
+         "* FIXME [#C] %U %?\n  %i\n  %a")
         
         ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
 	 "* %U\n\n%?\n")
 
-        ("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal-boost.org"))
+        ("b" "Boost Journal" entry (file+datetree (concat org-directory "/projectss/boost/journal-boost.org"))
 	 "* %U\n\n%?\n")
 
         ("f" "Foggyball Journal" entry (file+datetree (concat org-directory "/projects/foggyball/journal-foggyball.org"))
@@ -343,6 +345,7 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 
 (require 'helm-projectile)
+(setq projectile-completion-system 'helm)
 (helm-projectile-on)
 
 ;; helm ag
@@ -359,6 +362,11 @@
 (global-set-key (kbd "M-y")     #'helm-show-kill-ring)
 (global-set-key (kbd "M-s o")   #'helm-swoop)
 (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
+
+;; guide-key
+(require 'guide-key)
+(setq guide-key/guide-key-sequence t)
+(guide-key-mode 1)
 
 ;; UI Theme
 (require 'darcula-theme)
