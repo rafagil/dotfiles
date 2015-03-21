@@ -194,7 +194,7 @@
         ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
 	 "* %U\n\n%?\n")
 
-        ("b" "Boost Journal" entry (file+datetree (concat org-directory "/projectss/boost/journal-boost.org"))
+        ("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal-boost.org"))
 	 "* %U\n\n%?\n")
 
         ("f" "Foggyball Journal" entry (file+datetree (concat org-directory "/projects/foggyball/journal-foggyball.org"))
