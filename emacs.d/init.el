@@ -26,12 +26,12 @@
 			    furl
 			    git-commit-mode
 			    git-rebase-mode
-                            guide-key
+          guide-key
 			    haskell-mode
-                            helm
-                            helm-ag
-                            helm-projectile
-                            helm-swoop
+          helm
+          helm-ag
+          helm-projectile
+          helm-swoop
 			    htmlize
 			    magit
 			    markdown-mode
@@ -178,6 +178,10 @@
 (setq user-full-name "Channing Walton")
 (setq org-directory "~/Dropbox/org")
 
+;; Clocking
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
 ;; capture
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
@@ -213,7 +217,7 @@
 (setq org-completion-use-ido t)
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d!)" "NO NEED(n@/!)")
-	(sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(w@/!)" "DELEGATED(@/d!)")
+	(sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(w@/!)" "DELEGATED(l@/!)")
 	(sequence "QUESTION(q)" "|" "ANSWERED(a!)")
 	(sequence "|" "CANCELED(c!)")))
 
@@ -366,6 +370,7 @@
 (guide-key-mode 1)
 
 ;; UI Theme
+(color-theme-initialize)
 (require 'darcula-theme)
 (set-background-color "black")
 
@@ -378,8 +383,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(custom-safe-themes
+   (quote
+    ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "e80932ca56b0f109f8545576531d3fc79487ca35a9a9693b62bf30d6d08c9aaf" default)))
  '(dired-listing-switches "-al")
  '(display-time-mode t)
  '(frame-background-mode (quote dark))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

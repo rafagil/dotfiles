@@ -1,4 +1,4 @@
-personal_ws-1.1 en 37 
+personal_ws-1.1 en 38 
 Observables
 UI
 RxCometActor
@@ -12,8 +12,8 @@ NodeSeqs
 scalaz
 RxScala
 scala
-RxLift's
 rxlift's
+RxLift's
 NodeSeq
 SHtml
 eChannels
@@ -29,6 +29,7 @@ JsCmds
 SBT
 Channing
 JSON
+Foggyball
 RxLift
 UUID
 CometActor
