@@ -379,8 +379,8 @@
 
 ;; Start with agenda
 (setq inhibit-splash-screen t)
-(org-agenda-list)
-(delete-other-windows)
+(add-hook 'after-init-hook (lambda () (org-agenda nil "n")))
+(setq org-agenda-window-setup 'current-window)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
