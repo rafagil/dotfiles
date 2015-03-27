@@ -377,6 +377,11 @@
 (set-face-attribute 'default nil :font  "Source Code Pro" )
 (set-face-attribute 'default nil :height 110)
 
+;; Start with agenda
+(setq inhibit-splash-screen t)
+(org-agenda-list)
+(delete-other-windows)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

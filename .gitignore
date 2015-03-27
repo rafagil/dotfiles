@@ -20,3 +20,5 @@ config/ranger/tagged
 emacs.d/bookmarks
 
 emacs.d/ensime/classpath_*
+
+emacs.d/org-clock-save.el
