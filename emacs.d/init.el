@@ -192,6 +192,9 @@
         ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "Tasks")
          "* TODO [#A] %U %?\n  %i\n  %a")
 
+        ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
+	 "* %^{What?} :%^{Tag}:\n %?\n")
+
         ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "Tasks")
          "* FIXME [#C] %U %?\n  %i\n  %a")
         
