@@ -67,6 +67,10 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
+;; keybindings
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; Paths
 (setq exec-path (append exec-path '("/usr/local/bin/")))
 
@@ -330,10 +334,6 @@
 (global-linum-mode 1)
 (setq cursor-type (quote bar))
 (modify-all-frames-parameters (list (cons 'cursor-type 'bar)))
-
-;; keybindings
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
 
 ;; scrolling
 (setq scroll-step 1)
