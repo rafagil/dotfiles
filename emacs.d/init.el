@@ -157,7 +157,12 @@
 
 ;; projectile - https://github.com/bbatsov/projectile for keybindins
 (projectile-global-mode)
+(setq projectile-completion-system 'helm)
 (setq projectile-enable-caching t)
+
+(defun projectile-helm-ag ()
+  (interactive)
+  (helm-ag (projectile-project-root)))
 
 ;; tabbar
 (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
