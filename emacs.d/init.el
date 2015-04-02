@@ -419,7 +419,7 @@
             (writegood-mode t)
             (flyspell-mode t)))
 (setq markdown-command "pandoc --smart -f markdown -t html")
-(setq markdown-css-path  (expand-file-name "~/dotfiles/emacs.d/markdown.css"))
+(setq markdown-css-path "http://thomasf.github.io/solarized-css/solarized-light.min.css" )
 
 ;; UI Theme
 (load-theme 'sanityinc-tomorrow-night t)
