@@ -15,44 +15,41 @@
 (setq package-archive-enable-alist '(("melpa" deft magit)))
 
 (defvar channing/packages '(auto-complete
-			    autopair
-			    company
-			    darcula-theme
-			    dash
-			    ensime
-			    epl
-			    expand-region
-			    f
-			    furl
-			    git-commit-mode
-			    git-rebase-mode
-          guide-key
-			    haskell-mode
-          helm
-          helm-ag
-          helm-projectile
-          helm-swoop
-			    htmlize
-			    magit
-			    markdown-mode
-			    marmalade
-			    org
-			    org-plus-contrib
-			    paredit
-			    popup
-			    projectile
-			    s
+                            autopair
+                            company
+                            dash
+                            ensime
+                            epl
+                            expand-region
+                            f
+                            furl
+                            git-commit-mode
+                            git-rebase-mode
+                            guide-key
+                            haskell-mode
+                            helm
+                            helm-ag
+                            helm-projectile
+                            helm-swoop
+                            htmlize
+                            magit
+                            markdown-mode
+                            marmalade
+                            org
+                            org-plus-contrib
+                            paredit
+                            popup
+                            projectile
+                            s
                             color-theme-sanityinc-tomorrow
-			    sbt-mode
-			    scala-mode2
-			    sr-speedbar
-			    smex
-			    tabbar
-			    tabbar-ruler
-			    web-mode
-			    writegood-mode
-			    yaml-mode
-			    yasnippet)
+                            sbt-mode
+                            scala-mode2
+                            sr-speedbar
+                            smex
+                            web-mode
+                            writegood-mode
+                            yaml-mode
+                            yasnippet)
   "Default packages")
 
 (defun channing/packages-installed-p ()
@@ -66,6 +63,9 @@
   (dolist (pkg channing/packages)
     (when (not (package-installed-p pkg))
       (package-install pkg))))
+
+;; me
+(setq user-full-name "Channing Walton")
 
 ;; keybindings
 (require 'expand-region)
@@ -168,25 +168,23 @@
   (interactive)
   (helm-ag (projectile-project-root)))
 
-;; tabbar
-(setq tabbar-ruler-global-tabbar t) ; If you want tabbar
-(setq tabbar-ruler-global-ruler t) ; if you want a global ruler
-(setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
-(setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
-(setq tabbar-ruler-popup-scrollbar t) ; If you want to only show the scroll bar when your mouse is moving.
-
-(require 'tabbar)
-;; Enable tabbars globally:
-(tabbar-mode 1)
-
 ;; org-mode
 ;; For exporting to latex and pdf do
 ;; $ brew install caskroom/cask/brew-cask
 ;; $ brew cask install mactex
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 (require 'org)
-(setq user-full-name "Channing Walton")
+(require 'org-install)
+(require 'org-habit)
+(add-to-list 'org-modules "org-habit")
+(setq org-habit-preceding-days 7
+      org-habit-following-days 1
+      org-habit-graph-column 80
+      org-habit-show-habits-only-for-today t
+      org-habit-show-all-today t)
+
 (setq org-directory "~/Dropbox/org")
+(add-hook 'org-mode-hook (lambda () (writegood-mode)))
 
 ;; Clocking
 (setq org-clock-persist 'history)
@@ -198,41 +196,41 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
          "* TODO [#B] %U %?\n  %i\n  %a")
-        
+
         ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "Tasks")
          "* TODO [#A] %U %?\n  %i\n  %a")
 
         ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
-	 "* %^{What?} :%^{Tag}:\n %?\n")
+         "* %^{What?} :%^{Tag}:\n %?\n")
 
         ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "Tasks")
          "* FIXME [#C] %U %?\n  %i\n  %a")
-        
+
         ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
-	 "* %U\n\n%?\n")
+         "* %U\n\n%?\n")
 
         ("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal.org"))
-	 "* %U\n\n%?\n")
+         "* %U\n\n%?\n")
 
         ("f" "Foggyball Journal" entry (file+datetree (concat org-directory "/projects/foggyball/journal.org"))
-	 "* %U\n\n%?\n")
+         "* %U\n\n%?\n")
 
         ("g" "Glossary" entry (file+headline (concat org-directory "/projects/boost/glossary.org") "Glossary")
-	 "* %^{Term} :%^{Tag}:\n %?\n")
-	))
+         "* %^{Term} :%^{Tag}:\n %?\n")
+        ))
 
 (setq org-agenda-files (list org-directory
-			     (concat org-directory "/projects/boost")
-			     (concat org-directory "/projects/foggyball")))
+                             (concat org-directory "/projects/boost")
+                             (concat org-directory "/projects/foggyball")))
 
 (setq org-startup-indented t)
 (setq org-ellipsis " \u25bc" )
 (setq org-completion-use-ido t)
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d!)" "NO NEED(n@/!)")
-	(sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(w@/!)" "DELEGATED(l@/!)")
-	(sequence "QUESTION(q)" "|" "ANSWERED(a!)")
-	(sequence "|" "CANCELED(c!)")))
+        (sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(w@/!)" "DELEGATED(l@/!)")
+        (sequence "QUESTION(q)" "|" "ANSWERED(a!)")
+        (sequence "|" "CANCELED(c!)")))
 
 ;; This from http://orgmode.org/worg/org-faq.html
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -257,8 +255,8 @@
 
 ;; don't prompt when evaluating various babel files
 (defun my-org-confirm-babel-evaluate (lang body)
-            (not (string= lang "plantuml")))  ; don't ask for ditaa
-          (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+  (not (string= lang "plantuml")))  ; don't ask for ditaa
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
 ;; Setup path to ditaa.jar after brew install ditaa
 (setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.9/libexec/ditaa0_9.jar")
@@ -275,26 +273,26 @@
 (require 'ox-publish)
 (setq org-publish-project-alist
       '(
-	("org-notes"
-	 :base-directory "~/Dropbox/org/"
-	 :base-extension "org"
-	 :publishing-directory "~/public_html/"
-	 :recursive t
-	 :publishing-function org-html-publish-to-html
-	 :headline-levels 4             ; Just the default for this project.
-	 :auto-preamble t
-	 )
-	
-	("org-static"
-	 :base-directory "~/Dropbox/org/"
-	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf|pptx\\|ppt\\|doc\\|docx\\|"
-	 :publishing-directory "~/public_html/"
-	 :recursive t
-	 :publishing-function org-publish-attachment
-	 )
-	
-	("org" :components ("org-notes" "org-static"))
-	))
+        ("org-notes"
+         :base-directory "~/Dropbox/org/"
+         :base-extension "org"
+         :publishing-directory "~/public_html/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4             ; Just the default for this project.
+         :auto-preamble t
+         )
+
+        ("org-static"
+         :base-directory "~/Dropbox/org/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf|pptx\\|ppt\\|doc\\|docx\\|"
+         :publishing-directory "~/public_html/"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+
+        ("org" :components ("org-notes" "org-static"))
+        ))
 
 (setq org-publish-use-timestamps-flag nil)
 
@@ -313,8 +311,8 @@
 ;; see https://github.com/folone/emacs-scalaz-unicode-input-method
 (add-to-list 'load-path "~/Code/dev/emacs-scalaz-unicode-input-method")
 (require 'scalaz-unicode-input-method)
-(add-hook 'scala-mode-hook 
-  (lambda () (set-input-method "scalaz-unicode")))
+(add-hook 'scala-mode-hook
+          (lambda () (set-input-method "scalaz-unicode")))
 
 (setq exec-path (append exec-path '("~/bin/")))
 
@@ -326,7 +324,7 @@
 
 (column-number-mode 1)
 
-;; Allow hash to be entered  
+;; Allow hash to be entered
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
 ;; Show line numbers
@@ -373,10 +371,55 @@
 (global-set-key (kbd "M-s o")   #'helm-swoop)
 (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
+;; Cleaning things up - http://www.aaronbedra.com/emacs.d/
+(defun untabify-buffer ()
+  (interactive)
+  (untabify (point-min) (point-max)))
+
+(defun indent-buffer ()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
+(defun cleanup-buffer ()
+  "Perform a bunch of operations on the whitespace content of a buffer."
+  (interactive)
+  (indent-buffer)
+  (untabify-buffer)
+  (delete-trailing-whitespace))
+
+(defun cleanup-region (beg end)
+  "Remove tmux artifacts from region."
+  (interactive "r")
+  (dolist (re '("\\\\│\·*\n" "\W*│\·*"))
+    (replace-regexp re "" nil beg end)))
+
+(global-set-key (kbd "C-x M-t") 'cleanup-region)
+(global-set-key (kbd "C-c f") 'cleanup-buffer)
+
+(setq-default show-trailing-whitespace t)
+
 ;; guide-key
 (require 'guide-key)
 (setq guide-key/guide-key-sequence t)
 (guide-key-mode 1)
+
+;; Javascript
+(defun js-custom ()
+  "js-mode-hook"
+  (setq js-indent-level 2))
+
+(add-hook 'js-mode-hook 'js-custom)
+
+;; Markdown
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.mdown$" . markdown-mode))
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (visual-line-mode t)
+            (writegood-mode t)
+            (flyspell-mode t)))
+(setq markdown-command "pandoc --smart -f markdown -t html")
+(setq markdown-css-path  (expand-file-name "~/dotfiles/emacs.d/markdown.css"))
 
 ;; UI Theme
 (load-theme 'sanityinc-tomorrow-night t)
