@@ -163,6 +163,7 @@
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 (setq projectile-enable-caching t)
+(global-set-key (kbd "M-p") 'helm-projectile)
 
 (defun projectile-helm-ag ()
   (interactive)
