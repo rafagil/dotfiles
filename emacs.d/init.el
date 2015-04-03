@@ -67,7 +67,9 @@
 ;; me
 (setq user-full-name "Channing Walton")
 
-;; keybindings
+(global-auto-revert-mode t)
+
+;; expand region
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
@@ -121,18 +123,6 @@
 ;; yes and no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Keybindings
-(global-set-key (kbd "RET") 'newline-and-indent)
-(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
-(global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
-(global-set-key (kbd "C-c C-k") 'compile)
-(global-set-key (kbd "C-x g") 'magit-status)
-
-(global-set-key (kbd "M-[") 'previous-buffer)
-(global-set-key (kbd "M-]") 'next-buffer)
-
 ;; Misc
 (setq echo-keystrokes 0.1
       use-dialog-box nil
@@ -142,13 +132,6 @@
 ;; Smex
 (setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
 (smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
-;; Ido
-;;(ido-mode t)
-;;(setq ido-enable-flex-matching t
-;;      ido-use-virtual-buffers t)
 
 ;; autopair
 (require 'autopair)
@@ -163,7 +146,6 @@
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 (setq projectile-enable-caching t)
-(global-set-key (kbd "M-p") 'helm-projectile)
 
 (defun projectile-helm-ag ()
   (interactive)
@@ -235,9 +217,6 @@
 
 ;; This from http://orgmode.org/worg/org-faq.html
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
 
 (add-hook 'org-mode-hook 'turn-on-flyspell)
 
@@ -325,19 +304,11 @@
 
 (column-number-mode 1)
 
-;; Allow hash to be entered
-(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
-
 ;; Show line numbers
 (setq linum-format "%4d ")
 (global-linum-mode 1)
 (setq cursor-type (quote bar))
 (modify-all-frames-parameters (list (cons 'cursor-type 'bar)))
-
-;; scrolling
-(setq scroll-step 1)
-(setq scroll-conservatively 10000)
-(setq auto-window-vscroll nil)
 
 ;; show the time
 (display-time-mode 1)
@@ -351,26 +322,10 @@
 (require 'helm-config)
 (helm-mode 1)
 (helm-autoresize-mode 1)
-(global-set-key (kbd "M-x") 'helm-M-x)
 
 (require 'helm-projectile)
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
-
-;; helm ag
-;; brew install ag
-(global-set-key (kbd "M-s s")   #'helm-ag)
-
-;; helm keybindings
-(global-set-key (kbd "C-x b")   #'helm-mini)
-(global-set-key (kbd "C-x C-b") #'helm-buffers-list)
-(global-set-key (kbd "C-x C-m") #'helm-M-x)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
-(global-set-key (kbd "C-x C-r") #'helm-recentf)
-(global-set-key (kbd "C-x r l") #'helm-filtered-bookmarks)
-(global-set-key (kbd "M-y")     #'helm-show-kill-ring)
-(global-set-key (kbd "M-s o")   #'helm-swoop)
-(global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
 ;; Cleaning things up - http://www.aaronbedra.com/emacs.d/
 (defun untabify-buffer ()
@@ -393,9 +348,6 @@
   (interactive "r")
   (dolist (re '("\\\\│\·*\n" "\W*│\·*"))
     (replace-regexp re "" nil beg end)))
-
-(global-set-key (kbd "C-x M-t") 'cleanup-region)
-(global-set-key (kbd "C-c f") 'cleanup-buffer)
 
 (setq-default show-trailing-whitespace t)
 
@@ -427,6 +379,44 @@
 
 (set-face-attribute 'default nil :font  "Source Code Pro" )
 (set-face-attribute 'default nil :height 110)
+
+;; Keybindings
+(global-set-key (kbd "RET") 'newline-and-indent)
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key (kbd "C-c C-k") 'compile)
+(global-set-key (kbd "C-x g") 'magit-status)
+
+(global-set-key (kbd "M-[") 'previous-buffer)
+(global-set-key (kbd "M-]") 'next-buffer)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
+(global-set-key (kbd "M-p") 'helm-projectile)
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
+
+(global-set-key (kbd "M-x")      'helm-M-x)
+(global-set-key (kbd "M-s s")   #'helm-ag)
+(global-set-key (kbd "C-x b")   #'helm-mini)
+(global-set-key (kbd "C-x C-b") #'helm-buffers-list)
+(global-set-key (kbd "C-x C-m") #'helm-M-x)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(global-set-key (kbd "C-x C-r") #'helm-recentf)
+(global-set-key (kbd "C-x r l") #'helm-filtered-bookmarks)
+(global-set-key (kbd "M-y")     #'helm-show-kill-ring)
+(global-set-key (kbd "M-s o")   #'helm-swoop)
+(global-set-key (kbd "M-s /")   #'helm-multi-swoop)
+
+(global-set-key (kbd "C-x M-t") 'cleanup-region)
+(global-set-key (kbd "C-c f") 'cleanup-buffer)
 
 ;; Start with agenda
 (setq inhibit-splash-screen t)
