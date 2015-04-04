@@ -75,6 +75,7 @@
 
 ;; Paths
 (setq exec-path (append exec-path '("/usr/local/bin/")))
+(setq exec-path (append exec-path '("/usr/texbin/")))
 
 ;; recent file size
 (setq recentf-max-saved-items 100)
