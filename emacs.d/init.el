@@ -216,6 +216,8 @@
         (sequence "QUESTION(q)" "|" "ANSWERED(a!)")
         (sequence "|" "CANCELED(c!)")))
 
+(setq org-refile-targets '((org-agenda-files :maxlevel . 5)))
+
 ;; This from http://orgmode.org/worg/org-faq.html
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
