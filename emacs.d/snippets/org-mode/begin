@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
 # Author: Channing Walton <channingwalton@mac.com>
-# name: begin quote/verse/center
+# name: begin quote/verse/center/src
 # key: begin
 # --
-#+BEGIN_${1:$$(yas-choose-value '("QUOTE" "VERSE" "CENTER"))}
+#+BEGIN_${1:$$(yas-choose-value '("QUOTE" "VERSE" "CENTER" "SRC"))}
 $0
 #+END_$1

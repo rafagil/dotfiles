@@ -178,16 +178,16 @@
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+      '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "To do")
          "* TODO [#B] %U %?\n  %i\n  %a")
 
-        ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+        ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "To do")
          "* TODO [#A] %U %?\n  %i\n  %a")
 
         ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
          "* %^{What?} :%^{Tag}:\n %?\n")
 
-        ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "Tasks")
+        ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "To do")
          "* FIXME [#C] %U %?\n  %i\n  %a")
 
         ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
@@ -216,7 +216,9 @@
         (sequence "QUESTION(q)" "|" "ANSWERED(a!)")
         (sequence "|" "CANCELED(c!)")))
 
-(setq org-refile-targets '((org-agenda-files :maxlevel . 5)))
+(setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
+(setq org-refile-allow-creating-parent-nodes 'confirm)
+(setq org-refile-use-outline-path 'file)
 
 ;; This from http://orgmode.org/worg/org-faq.html
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
