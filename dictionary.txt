@@ -1,10 +1,11 @@
-personal_ws-1.1 en 38 
+personal_ws-1.1 en 39 
 Observables
 UI
 RxCometActor
 VeriSign
 eScreening
 JsCmd
+deserialise
 VM
 Fulfilment
 RxElement
@@ -12,8 +13,8 @@ NodeSeqs
 scalaz
 RxScala
 scala
-rxlift's
 RxLift's
+rxlift's
 NodeSeq
 SHtml
 eChannels
