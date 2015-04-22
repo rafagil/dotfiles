@@ -406,6 +406,9 @@ is nil, refile in the current file."
 (setq markdown-command "pandoc --smart -f markdown -t html")
 (setq markdown-css-path "http://thomasf.github.io/solarized-css/solarized-light.min.css" )
 
+;; Magit
+(setq magit-auto-revert-mode nil)
+
 ;; UI Theme
 (load-theme 'sanityinc-tomorrow-night t)
 
