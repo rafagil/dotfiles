@@ -146,7 +146,7 @@
 ;; projectile - https://github.com/bbatsov/projectile for keybindins
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
-(setq projectile-enable-caching t)
+(setq projectile-enable-caching nil)
 
 (defun projectile-helm-ag ()
   (interactive)
@@ -419,6 +419,7 @@ is nil, refile in the current file."
 (global-set-key (kbd "TAB" ) 'smart-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
+(global-set-key (kbd "s-/") 'comment-or-uncomment-region)
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
