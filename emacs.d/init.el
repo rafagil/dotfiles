@@ -412,8 +412,8 @@ is nil, refile in the current file."
 ;; UI Theme
 (load-theme 'sanityinc-tomorrow-night t)
 
-(set-face-attribute 'default nil :font  "Source Code Pro" )
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :font  "CMU Typewriter Text Light" )
+(set-face-attribute 'default nil :height 120)
 
 ;; Keybindings
 (global-set-key (kbd "TAB" ) 'smart-tab)
