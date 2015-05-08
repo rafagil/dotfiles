@@ -22,9 +22,10 @@ which require an initialization must be listed explicitly in the list.")
   "List of packages to exclude.")
 
 ;; For each package, define a function channing/init-<package-channing>
-;;
+
 (defun channing/init-expand-region ()
-  (use-package expand-region)
+  (use-package expand-region
+    :init (global-set-key (kbd "C-=") 'er/expand-region))
   )
 
 (defun channing/init-color-theme-sanityinc-tomorrow ()
