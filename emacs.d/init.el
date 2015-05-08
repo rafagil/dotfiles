@@ -145,6 +145,8 @@
 
 ;; projectile - https://github.com/bbatsov/projectile for keybindins
 (projectile-global-mode)
+(require 'projectile)
+(helm-projectile-on)
 (setq projectile-completion-system 'helm)
 (setq projectile-enable-caching nil)
 
@@ -274,7 +276,7 @@ is nil, refile in the current file."
 (setq org-ditaa-jar-path "/usr/local/Cellar/ditaa/0.9/libexec/ditaa0_9.jar")
 
 (setq org-plantuml-jar-path
-      (expand-file-name "~/.emacs.d/plantuml/plantuml.jar"))
+      (expand-file-name "~/dotfiles/plantuml/plantuml.jar"))
 
 (setq org-image-actual-width nil)
 
