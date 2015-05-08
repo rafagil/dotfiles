@@ -37,8 +37,8 @@
 
 (defun dotspacemacs/init ()
   "Initialization function.
-This function is called at the very startup of Spacemacs initialization
-before layers configuration."
+   This function is called at the very startup of Spacemacs initialization
+   before layers configuration."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
@@ -138,6 +138,7 @@ before layers configuration."
    )
   ;; User initialization goes here
   ;; me
+
   (setq user-full-name "Channing Walton")
 
   (global-auto-revert-mode t)
@@ -149,6 +150,10 @@ before layers configuration."
   ;; yas
   ;;(add-to-list 'yas-snippet-dirs "~/dotfiles/snippets/")
   ;;(yas/initialize)
+
+  ;;(setq yas-snippet-dirs (append yas-snippet-dirs
+  ;;                             '("~/dotfiles/snippets")))
+  ;;(yas-initialize)
 
   ;; recent file size
   (setq recentf-max-saved-items 100)

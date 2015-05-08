@@ -13,7 +13,7 @@
 (defvar channing-packages
   '(
     expand-region
-    color-theme-sanityinc-tomorrow
+  ;;  color-theme-sanityinc-tomorrow
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -28,10 +28,10 @@ which require an initialization must be listed explicitly in the list.")
     :init (global-set-key (kbd "C-=") 'er/expand-region))
   )
 
-(defun channing/init-color-theme-sanityinc-tomorrow ()
-  (use-package color-theme-sanityinc-tomorrow
-    :init (load-theme 'sanityinc-tomorrow-night t))
-  )
+;;(defun channing/init-color-theme-sanityinc-tomorrow ()
+;;  (use-package color-theme-sanityinc-tomorrow
+;;    :init (load-theme 'sanityinc-tomorrow-night t))
+;;  )
 ;;
 ;; Often the body of an initialize function uses `use-package'
 ;; For more info on `use-package', see readme:
