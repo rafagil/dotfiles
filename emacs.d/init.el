@@ -415,6 +415,7 @@ is nil, refile in the current file."
 
 ;; Magit
 (setq magit-auto-revert-mode nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; UI Theme
 (load-theme 'sanityinc-tomorrow-night t)
@@ -423,6 +424,10 @@ is nil, refile in the current file."
 (set-face-attribute 'default nil :height 120)
 
 ;; Keybindings
+(global-set-key (kbd "<s-right>") 'move-end-of-line)
+(global-set-key (kbd "<s-left>") 'move-beginning-of-line)
+(global-set-key (kbd "s-b") 'helm-buffers-list)
+
 (global-set-key (kbd "TAB" ) 'smart-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
