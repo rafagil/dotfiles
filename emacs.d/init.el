@@ -423,11 +423,14 @@ is nil, refile in the current file."
 (set-face-attribute 'default nil :font  "CMU Typewriter Text Light" )
 (set-face-attribute 'default nil :height 120)
 
-;; Keybindings
+;; OSX Keybindings
 (global-set-key (kbd "<s-right>") 'move-end-of-line)
 (global-set-key (kbd "<s-left>") 'move-beginning-of-line)
 (global-set-key (kbd "s-b") 'helm-buffers-list)
+(global-set-key (kbd "<s-up>") 'beginning-of-buffer)
+(global-set-key (kbd "<s-down>") 'end-of-buffer)
 
+;; Other Keybindings
 (global-set-key (kbd "TAB" ) 'smart-tab)
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
