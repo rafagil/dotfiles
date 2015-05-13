@@ -218,7 +218,7 @@
 (setq org-ellipsis " \u25bc" )
 (setq org-completion-use-ido t)
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d!)" "NO NEED(n@/!)")
+      '((sequence "TODO(t)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
         (sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(w@/!)" "DELEGATED(l@/!)")
         (sequence "QUESTION(q)" "|" "ANSWERED(a!)")
         (sequence "|" "CANCELED(c!)")))
@@ -447,7 +447,7 @@ is nil, refile in the current file."
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
-(global-set-key (kbd "M-p") 'helm-projectile)
+(global-set-key (kbd "M-p") 'helm-projectile-switch-project)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
