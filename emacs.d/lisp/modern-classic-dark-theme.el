@@ -53,9 +53,9 @@
  'modern-classic-dark
  '(ensime-sem-high-faces
    ;; FURTHER NOTE: these are overlays, not faces
-   '((var . (:foreground "#eaeaea" :underline (:style wave :color "yellow")))
+   '((var . (:foreground "pink"))
      (val . (:foreground "#eaeaea"))
-     (varField . (:slant italic))
+     (varField . (:foreground "pink" :slant italic))
      (valField . (:foreground "#eaeaea" :slant italic))
      (functionCall . (:foreground "#eaeaea"))
      (operator . (:foreground "#a5a5a5"))
@@ -70,16 +70,16 @@
  '(default ((t (:inherit nil :stipple nil :background "#000000" :foreground "#eaeaea"
                          :inverse-video nil :box nil :strike-through nil :overline nil
                          :underline nil :slant normal :weight normal :height 120
-                         :width normal :foundry nil :family "CMU Typewriter Text Light"))))
+                         :width normal :foundry nil :family "CMU Typewriter Text"))))
  '(cursor ((t (:foreground "#042028" :background "#eaeaea"))))
  '(error ((t (:inherit 'default :underline (:style wave :color "red")))))
  '(compilation-error ((t (:inherit 'default :foreground "red" :underline "red"))))
- '(scala-font-lock:var-face ((t (:foreground "#EAEAEA" :underline (:style wave :color "yellow") :inherit 'font-lock-variable-name-face))))
+ '(scala-font-lock:var-face ((t (:foreground "pink" :underline (:style wave :color "yellow") :inherit 'font-lock-variable-name-face))))
  '(sbt:error ((t (:inherit 'default :foreground "red"))))
  '(maker:error ((t (:inherit 'default :foreground "red"))))
  '(ensime-warnline-highlight ((t (:inherit 'font-lock-warning-face))))
- '(fixed-pitch ((t (:family "CMU Typewriter Text Light"))))
- '(variable-pitch ((t (:family "CMU Serif Roman"))))
+ '(fixed-pitch ((t (:family "CMU Typewriter Text"))))
+ '(variable-pitch ((t (:family "CMU Typewriter Text Variable Width"))))
  ;; http://www.gnu.org/software/emacs/manual/html_node/elisp/Faces-for-Font-Lock.html
  '(font-lock-warning-face ((t (:underline (:style wave :color "red" :inherit 'default)))))
                                         ;for a construct that is peculiar, or that greatly changes the meaning of other text.
@@ -89,7 +89,7 @@
                                         ;for the name of a variable being defined or declared.
  '(font-lock-keyword-face ((t (:foreground "#a5a5a5" :inherit 'default))))
                                         ;for a keyword with special syntactic significance, like ‘for’ and ‘if’ in C.
- '(font-lock-comment-face ((t (:foreground "#a5a5a5" :inherit 'default))))
+ '(font-lock-comment-face ((t (:foreground "#a5a5a5" :inherit 'default :slant italic))))
                                         ;for comments.
  '(font-lock-comment-delimiter-face ((t (:inherit 'font-lock-comment-face))))
                                         ;for comments delimiters, like ‘/*’ and ‘*/’ in C.
