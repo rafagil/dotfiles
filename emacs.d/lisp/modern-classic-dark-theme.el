@@ -101,7 +101,7 @@
                                         ;for the names of built-in functions.
  '(font-lock-preprocessor-face ((t (:inherit 'font-lock-builtin-face))))
                                         ;for preprocessor commands.
- '(font-lock-string-face ((t (:foreground "#eaeaea" :inherit 'default))))
+ '(font-lock-string-face ((t (:foreground "#eaeaea" :inherit 'default :slant italic))))
                                         ;for string constants.
  '(font-lock-doc-face ((t (:foreground "#a5a5a5" :inherit 'font-lock-comment-face))))
                                         ;for documentation strings in the code.
