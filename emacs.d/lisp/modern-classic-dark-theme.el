@@ -85,7 +85,7 @@
                                         ;for a construct that is peculiar, or that greatly changes the meaning of other text.
  '(font-lock-function-name-face ((t (:inherit 'default))))
                                         ;for the name of a function being defined or declared.
- '(font-lock-variable-name-face ((t (:inherit 'default))))
+ '(font-lock-variable-name-face ((t (:foreground "#a5a5a5" :inherit 'default))))
                                         ;for the name of a variable being defined or declared.
  '(font-lock-keyword-face ((t (:foreground "#a5a5a5" :inherit 'default))))
                                         ;for a keyword with special syntactic significance, like ‘for’ and ‘if’ in C.
