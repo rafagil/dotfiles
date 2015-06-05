@@ -1,75 +1,8 @@
 (require 'cl)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(add-to-list 'custom-theme-load-path (expand-file-name "lisp" user-emacs-directory))
 
-(load "package")
-(require 'package)
-(package-initialize)
-
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-(add-to-list 'package-archives
-             '("org" . "http://orgmode.org/elpa/") t)
-
-(setq package-archive-enable-alist '(("melpa" deft magit)))
-
-(defvar channing/packages '(auto-complete
-                            autopair
-                            company
-                            dash
-                            ensime
-                            epl
-                            exec-path-from-shell
-                            expand-region
-                            f
-                            furl
-                            git-commit-mode
-                            git-rebase-mode
-                            guide-key
-                            haskell-mode
-                            helm
-                            helm-ag
-                            helm-projectile
-                            helm-swoop
-                            htmlize
-                            magit
-                            markdown-mode
-                            marmalade
-                            org
-                            org-plus-contrib
-                            paredit
-                            popup
-                            projectile
-                            rainbow-mode
-                            s
-                            color-theme-sanityinc-tomorrow
-                            sbt-mode
-                            scala-mode2
-                            sr-speedbar
-                            smex
-                            web-mode
-                            writegood-mode
-                            yaml-mode
-                            yasnippet)
-  "Default packages")
-
-(defun channing/packages-installed-p ()
-  (loop for pkg in channing/packages
-        when (not (package-installed-p pkg)) do (return nil)
-        finally (return t)))
-
-(unless (channing/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg channing/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-
+(require 'init-packages)
 (require 'init-personal)
 (require 'init-shell)
 (require 'init-paths)
@@ -86,86 +19,12 @@
 (require 'init-scala)
 (require 'init-helm)
 (require 'init-cleanup)
+(require 'init-javascript)
+(require 'init-markdown)
+(require 'init-theme)
 
 ;; needs to be last to have various functions available
 (require 'init-keyboard)
-
-;; Javascript
-(defun js-custom ()
-  "js-mode-hook"
-  (setq js-indent-level 2))
-
-(add-hook 'js-mode-hook 'js-custom)
-
-;; Markdown
-(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.mdown$" . markdown-mode))
-(add-hook 'markdown-mode-hook
-          (lambda ()
-            (visual-line-mode t)
-            (writegood-mode t)
-            (flyspell-mode t)))
-(setq markdown-command "pandoc --smart -f markdown -t html")
-(setq markdown-css-path "http://thomasf.github.io/solarized-css/solarized-light.min.css" )
-
-;; Magit
-(setq magit-auto-revert-mode nil)
-(setq magit-last-seen-setup-instructions "1.4.0")
-
-;; UI Theme
-;;(load-theme 'sanityinc-tomorrow-night t)
-
-(load-theme 'modern-classic-dark t)
-
-(set-face-attribute 'default nil :font  "CMU Typewriter Text Light" )
-(set-face-attribute 'default nil :height 120)
-
-;; OSX Keybindings
-(global-set-key (kbd "<s-right>") 'move-end-of-line)
-(global-set-key (kbd "<s-left>") 'move-beginning-of-line)
-(global-set-key (kbd "s-b") 'helm-buffers-list)
-(global-set-key (kbd "<s-up>") 'beginning-of-buffer)
-(global-set-key (kbd "<s-down>") 'end-of-buffer)
-
-;; Other Keybindings
-(global-set-key (kbd "TAB" ) 'smart-tab)
-(global-set-key (kbd "RET") 'newline-and-indent)
-(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
-(global-set-key (kbd "s-/") 'comment-or-uncomment-region)
-(global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
-(global-set-key (kbd "C-c C-k") 'compile)
-(global-set-key (kbd "C-x g") 'magit-status)
-
-(global-set-key (kbd "M-[") 'previous-buffer)
-(global-set-key (kbd "M-]") 'next-buffer)
-
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
-(global-set-key (kbd "M-p") 'helm-projectile-switch-project)
-
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
-
-(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
-
-(global-set-key (kbd "M-x")      'helm-M-x)
-(global-set-key (kbd "M-s s")   #'helm-ag)
-(global-set-key (kbd "C-x b")   #'helm-mini)
-(global-set-key (kbd "C-x C-b") #'helm-buffers-list)
-(global-set-key (kbd "C-x C-m") #'helm-M-x)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
-(global-set-key (kbd "C-x C-r") #'helm-recentf)
-(global-set-key (kbd "C-x r l") #'helm-filtered-bookmarks)
-(global-set-key (kbd "M-y")     #'helm-show-kill-ring)
-(global-set-key (kbd "M-s o")   #'helm-swoop)
-(global-set-key (kbd "M-s /")   #'helm-multi-swoop)
-
-(global-set-key (kbd "C-x M-t") 'cleanup-region)
-(global-set-key (kbd "C-c f") 'cleanup-buffer)
 
 ;; Start with agenda
 (setq inhibit-splash-screen t)
