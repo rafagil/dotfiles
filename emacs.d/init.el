@@ -25,11 +25,7 @@
 
 ;; needs to be last to have various functions available
 (require 'init-keyboard)
-
-;; Start with agenda
-(setq inhibit-splash-screen t)
-(add-hook 'after-init-hook (lambda () (org-agenda nil "n")))
-(setq org-agenda-window-setup 'current-window)
+(require 'post-init)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
