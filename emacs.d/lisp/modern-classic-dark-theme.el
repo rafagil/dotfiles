@@ -154,7 +154,11 @@
           (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue"))
           (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
  '(next-error ((t (:inherit (region)))))
- '(query-replace ((t (:inherit (isearch))))))
+ '(query-replace ((t (:inherit (isearch)))))
+ '(org-document-title ((t (:foreground "#de935f" :slant italic :weight bold :height 1.44))))
+ '(org-done ((t (:foreground "light green"))))
+ '(org-level-1 ((t (:inherit outline-1 :slant italic :height 1.4))))
+ '(org-level-2 ((t (:inherit outline-2 :slant italic :height 1.2)))))
 
 
 ;;;###autoload
