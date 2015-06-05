@@ -23,7 +23,6 @@
 ;;; Commentary:
 
 ;;; Code:
-
 (deftheme modern-classic-dark
   "An almost monotone theme")
 

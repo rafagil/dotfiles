@@ -24,4 +24,8 @@
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
 
+(setq tool-bar-mode nil)
+
+(setq display-time-mode t)
+
 (provide 'init-display)

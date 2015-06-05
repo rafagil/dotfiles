@@ -13,5 +13,6 @@
 
 ;; hide backup files etc
 (setq dired-omit-mode t)
+(setq dired-listing-switches "-al")
 
 (provide 'init-file-management)
