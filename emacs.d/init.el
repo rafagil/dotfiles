@@ -22,9 +22,9 @@
 (require 'init-javascript)
 (require 'init-markdown)
 (require 'init-theme)
-
 ;; needs to be last to have various functions available
 (require 'init-keyboard)
+
 (require 'post-init)
 
 (custom-set-variables
