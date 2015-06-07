@@ -24,6 +24,8 @@
   (local-set-key (kbd "M-s-µ")  'ensime-refactor-extract-method)
   (local-set-key (kbd "M-s-~")  'ensime-refactor-inline-local)
   (local-set-key (kbd "s-b")    'ensime-edit-definition)
+  (local-set-key (kbd "s-w")    'ensime-expand-selection-command)
+  (local-set-key (kbd "M-<f7>") 'ensime-show-uses-of-symbol-at-point)
   )
 
 (add-hook 'scala-mode-hook 'scala-mode-intellij-keys)
