@@ -7,6 +7,6 @@
             (writegood-mode t)
             (flyspell-mode t)))
 (setq markdown-command "pandoc --smart -f markdown -t html")
-(setq markdown-css-path "http://thomasf.github.io/solarized-css/solarized-light.min.css" )
+(setq markdown-css-paths "http://thomasf.github.io/solarized-css/solarized-light.min.css" )
 
 (provide 'init-markdown)
