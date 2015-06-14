@@ -20,6 +20,9 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
+;; diary
+;;(setq diary-file (expand-file-name "diary" org-directory))
+;;(setq org-agenda-include-diary t)
 
 ;; capture
 (setq org-default-notes-file (concat org-directory "/notes.org"))
