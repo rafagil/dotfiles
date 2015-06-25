@@ -32,6 +32,7 @@
                             helm-projectile
                             helm-swoop
                             htmlize
+                            ibuffer-vc
                             magit
                             markdown-mode
                             marmalade
