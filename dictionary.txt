@@ -1,4 +1,4 @@
-personal_ws-1.1 en 39 
+personal_ws-1.1 en 40 
 Observables
 UI
 RxCometActor
@@ -13,8 +13,8 @@ NodeSeqs
 scalaz
 RxScala
 scala
-RxLift's
 rxlift's
+RxLift's
 NodeSeq
 SHtml
 eChannels
@@ -28,6 +28,7 @@ LiftWeb
 Endo
 JsCmds
 SBT
+Daikon
 Channing
 JSON
 Foggyball

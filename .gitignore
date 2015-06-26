@@ -24,3 +24,5 @@ emacs.d/ensime/classpath_*
 emacs.d/org-clock-save.el
 
 emacs.d/site-start.el
+
+emacs.d/url/cookies
