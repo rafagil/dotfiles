@@ -62,7 +62,7 @@
 (setq org-completion-use-ido t)
 (setq org-todo-keywords
       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
-        (sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(w@/!)" "DELEGATED(l@/!)")
+        (sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(o@/!)" "DELEGATED(l@/!)")
         (sequence "QUESTION(q)" "|" "ANSWERED(a!)")
         (sequence "|" "CANCELED(c!)")))
 
