@@ -15,6 +15,7 @@
 
 (defvar channing/packages '(auto-complete
                             autopair
+                            avy
                             company
                             dash
                             ensime
@@ -23,8 +24,6 @@
                             expand-region
                             f
                             furl
-                            git-commit-mode
-                            git-rebase-mode
                             guide-key
                             haskell-mode
                             helm
