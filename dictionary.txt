@@ -1,4 +1,4 @@
-personal_ws-1.1 en 40 
+personal_ws-1.1 en 41 
 Observables
 UI
 RxCometActor
@@ -11,10 +11,11 @@ Fulfilment
 RxElement
 NodeSeqs
 scalaz
+Laurynas
 RxScala
 scala
-rxlift's
 RxLift's
+rxlift's
 NodeSeq
 SHtml
 eChannels
