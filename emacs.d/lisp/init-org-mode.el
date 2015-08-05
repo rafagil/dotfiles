@@ -24,6 +24,9 @@
 ;;(setq diary-file (expand-file-name "diary" org-directory))
 ;;(setq org-agenda-include-diary t)
 
+;; bullets
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 ;; capture
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
