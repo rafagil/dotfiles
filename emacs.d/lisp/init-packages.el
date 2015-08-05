@@ -43,7 +43,6 @@
                             projectile
                             rainbow-mode
                             s
-                            color-theme-sanityinc-tomorrow
                             sbt-mode
                             scala-mode2
                             sr-speedbar
