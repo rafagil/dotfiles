@@ -36,7 +36,7 @@
                             markdown-mode
                             marmalade
                             org
-                            
+                            org-bullets
                             org-plus-contrib
                             paredit
                             popup
