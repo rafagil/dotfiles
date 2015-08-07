@@ -174,7 +174,7 @@ before layers configuration."
   ;; needs to be last to have various functions available
   ;;(require 'init-keyboard)
 
-  ;;(require 'post-init)
+  (require 'post-init)
 
   )
 
