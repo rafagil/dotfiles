@@ -14,8 +14,8 @@ scalaz
 Laurynas
 RxScala
 scala
-RxLift's
 rxlift's
+RxLift's
 NodeSeq
 SHtml
 eChannels

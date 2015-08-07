@@ -17,16 +17,19 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
-     ;; better-defaults
+     auto-completion
+     better-defaults
+     autopair
      emacs-lisp
-     ;; git
-     ;; markdown
-     ;; org
+     git
+     markdown
+     org
+     scala
+     smex
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; syntax-checking
+     syntax-checking
      version-control
      )
    ;; List of additional packages that will be installed without being
@@ -154,8 +157,25 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
+  (add-to-list 'load-path "~/dotfiles/emacs.d/lisp/")
 
-  (load "~/dotfiles/emacs.d/init.el")
+  (require 'init-personal)
+  (require 'init-shell)
+  (require 'init-paths)
+  (require 'init-file-management)
+  (require 'init-spelling)
+  (require 'init-formatting)
+  (require 'init-git)
+  (require 'init-org-mode)
+  (require 'init-scala)
+  (require 'init-cleanup)
+  (require 'init-javascript)
+  (require 'init-markdown)
+  ;; needs to be last to have various functions available
+  ;;(require 'init-keyboard)
+
+  ;;(require 'post-init)
+
   )
 
 (defun dotspacemacs/config ()

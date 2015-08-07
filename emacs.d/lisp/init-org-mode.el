@@ -4,14 +4,6 @@
 ;; $ brew cask install mactex
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 (require 'org)
-(require 'org-install)
-(require 'org-habit)
-(add-to-list 'org-modules "org-habit")
-(setq org-habit-preceding-days 7
-      org-habit-following-days 1
-      org-habit-graph-column 80
-      org-habit-show-habits-only-for-today t
-      org-habit-show-all-today t)
 
 (setq org-directory "~/Dropbox/org")
 (add-hook 'org-mode-hook (lambda () (writegood-mode)))
@@ -134,8 +126,6 @@ is nil, refile in the current file."
 
 ;; latex
 (require 'ox-latex)
-
-
 
 ;; publishing
 (require 'ox-publish)
