@@ -6,7 +6,6 @@
 (require 'org)
 
 (setq org-directory "~/Dropbox/org")
-(add-hook 'org-mode-hook (lambda () (writegood-mode)))
 
 ;; Clocking
 (setq org-clock-persist 'history)

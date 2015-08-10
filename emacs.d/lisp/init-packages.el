@@ -48,7 +48,6 @@
                             sr-speedbar
                             smex
                             web-mode
-                            writegood-mode
                             yaml-mode
                             yasnippet)
   "Default packages")
