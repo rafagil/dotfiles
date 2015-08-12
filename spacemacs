@@ -171,8 +171,9 @@ before layers configuration."
   (require 'init-cleanup)
   (require 'init-javascript)
   (require 'init-markdown)
+  (require 'init-spelling)
   ;; needs to be last to have various functions available
-  ;;(require 'init-keyboard)
+  (require 'init-keyboard)
 
   (require 'post-init)
 
