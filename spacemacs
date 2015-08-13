@@ -175,6 +175,11 @@ before layers configuration."
   ;; needs to be last to have various functions available
   (require 'init-keyboard)
 
+  (with-eval-after-load 'yasnippet
+    (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
+
+  (setq ns-right-alternate-modifier (quote none))
+
   (require 'post-init)
 
   )
