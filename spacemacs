@@ -36,6 +36,7 @@
      version-control
      ;; mine
      my-org
+     my-scala
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -165,15 +166,6 @@ before layers configuration."
   ;; User initialization goes here
   (add-to-list 'load-path "~/dotfiles/emacs.d/lisp/")
 
-  (require 'init-personal)
-  (require 'init-shell)
-  (require 'init-paths)
-  (require 'init-file-management)
-  (require 'init-spelling)
-  (require 'init-formatting)
-  (require 'init-git)
-  ;;(require 'init-org-mode)
-  (require 'init-scala)
   (require 'init-cleanup)
   (require 'init-javascript)
   (require 'init-markdown)
@@ -195,6 +187,57 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+
+  (setq user-full-name "Channing Walton")
+
+  (setenv "PATH" (shell-command-to-string "/bin/bash -c 'echo -n $PATH'"))
+  ;; zsh
+  (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
+
+  (setq exec-path (append exec-path '("/usr/local/bin/")))
+  (setq exec-path (append exec-path '("/usr/texbin/")))
+  (setq exec-path (append exec-path '("~/bin/")))
+
+  (setq recentf-max-saved-items 100)
+  (global-auto-revert-mode t)
+
+  ;; Backups
+  (setq backup-directory-alist '(("." . "~/Dropbox/emacs-backup"))
+        backup-by-copying t    ; Don't delink hardlinks
+        version-control t      ; Use version numbers on backups
+        delete-old-versions t  ; Automatically delete excess backups
+        kept-new-versions 20   ; how many of the newest versions to keep
+        kept-old-versions 5    ; and how many of the old
+        )
+
+  ;; hide backup files etc
+  (setq dired-omit-mode t)
+  (setq dired-listing-switches "-al")
+
+  ;; spelling
+  (setq ispell-program-name "aspell"
+      ispell-extra-args '("--sug-mode=ultra"))
+  (setq ispell-dictionary "british")
+  (setq ispell-personal-dictionary "~/dotfiles/dictionary.txt")
+
+  ;;formatting
+  (setq-default indicate-empty-lines t)
+  (when (not indicate-empty-lines)
+    (toggle-indicate-empty-lines))
+
+  ;; Indentation
+  (setq tab-width 2
+      indent-tabs-mode nil)
+  (setq-default indent-tabs-mode nil)
+
+  (show-paren-mode t)
+
+  ;; git
+  (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))
+
+  ;; Magit
+  (setq magit-auto-revert-mode nil)
+  (setq magit-last-seen-setup-instructions "1.4.0")
 
 )
 
