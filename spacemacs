@@ -37,6 +37,7 @@
      ;; mine
      my-org
      my-scala
+     my-markdown
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -132,7 +133,7 @@ before layers configuration."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'.
@@ -165,9 +166,6 @@ before layers configuration."
   ;; User initialization goes here
   (add-to-list 'load-path "~/dotfiles/emacs.d/lisp/")
 
-  (require 'init-cleanup)
-  (require 'init-javascript)
-  (require 'init-markdown)
   (require 'init-spelling)
   ;; needs to be last to have various functions available
   (require 'init-keyboard)
@@ -228,8 +226,6 @@ layers configuration."
   (setq tab-width 2
       indent-tabs-mode nil)
   (setq-default indent-tabs-mode nil)
-
-  (show-paren-mode t)
 
   ;; git
   (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))

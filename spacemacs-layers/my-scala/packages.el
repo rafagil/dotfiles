@@ -14,7 +14,6 @@
 ;; which require an initialization must be listed explicitly in the list.
 (setq my-scala-packages
     '(
-      scala
       ))
 
 ;; List of packages to exclude.
