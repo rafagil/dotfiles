@@ -1,4 +1,4 @@
-personal_ws-1.1 en 42 
+personal_ws-1.1 en 43 
 Observables
 UI
 RxCometActor
@@ -14,8 +14,8 @@ scalaz
 Laurynas
 RxScala
 scala
-RxLift's
 rxlift's
+RxLift's
 NodeSeq
 SHtml
 eChannels
@@ -35,6 +35,7 @@ checksums
 JSON
 Foggyball
 RxLift
+assignee
 UUID
 CometActor
 Alacra
