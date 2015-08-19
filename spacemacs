@@ -238,6 +238,14 @@ layers configuration."
   (setq magit-auto-revert-mode nil)
   (setq magit-last-seen-setup-instructions "1.4.0")
 
+  ;; set proxy for work
+  (if (string-equal system-name "LDNPWA000000054")
+    (setq url-proxy-services
+      '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+        ("http" . "primary-proxy.gslb.intranet.barcapint.com:8080")
+        ("https" . "primary-proxy.gslb.intranet.barcapint.comp:8080")))
+  )
+
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
