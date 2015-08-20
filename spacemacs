@@ -220,10 +220,6 @@
   ;; git
   (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))
 
-  ;; Magit
-  (setq magit-auto-revert-mode nil)
-  (setq magit-last-seen-setup-instructions "1.4.0")
-
   ;; set proxy for work
   (if (string-equal system-name "LDNPWA000000054")
       (setq url-proxy-services
@@ -234,9 +230,6 @@
 
   (with-eval-after-load 'yasnippet
     (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
-
-  (setq ns-right-alternate-modifier (quote none))
-  (setq flycheck-scalastyle-jar "~/dotfiles/scalastyle/scalastyle_2.11-0.7.0.jar")
 
   ;; Keybindings
 
