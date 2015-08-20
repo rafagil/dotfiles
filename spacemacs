@@ -232,13 +232,12 @@
     (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
 
   ;; Keybindings
-
   ;; Avy
-  (global-set-key (kbd "C-:") 'avy-goto-char)
-  (global-set-key (kbd "C-'") 'avy-goto-char-2)
-  (global-set-key (kbd "M-g f") 'avy-goto-line)
-  (global-set-key (kbd "M-g w") 'avy-goto-word-1)
-  (global-set-key (kbd "M-g e") 'avy-goto-word-0)
+  (evil-leader/set-key "gc" 'avy-goto-char)
+  (evil-leader/set-key "gC" 'avy-goto-char-2)
+  (evil-leader/set-key "gl" 'avy-goto-line)
+  (evil-leader/set-key "gw" 'avy-goto-word-1)
+  (evil-leader/set-key "gW" 'avy-goto-word-0)
 
   ;; OSX Keybindings
   (global-set-key (kbd "<s-right>") 'move-end-of-line)
@@ -246,33 +245,12 @@
   (global-set-key (kbd "s-b") 'helm-buffers-list)
   (global-set-key (kbd "<s-up>") 'beginning-of-buffer)
   (global-set-key (kbd "<s-down>") 'end-of-buffer)
-
-  ;; Other Keybindings
-  (global-set-key (kbd "TAB" ) 'smart-tab)
-  (global-set-key (kbd "RET") 'newline-and-indent)
-  (global-set-key (kbd "M-/") 'hippie-expand)
   (global-set-key (kbd "C-=") 'text-scale-increase)
   (global-set-key (kbd "C--") 'text-scale-decrease)
 
   (global-set-key (kbd "M-[") 'previous-buffer)
   (global-set-key (kbd "M-]") 'next-buffer)
-
-  (global-set-key (kbd "M-x") 'smex)
-
-  (global-set-key "\C-cl" 'org-store-link)
-  (global-set-key "\C-ca" 'org-agenda)
-
-  (global-set-key (kbd "M-x")      'helm-M-x)
-  (global-set-key (kbd "M-s s")   #'helm-ag)
-  (global-set-key (kbd "C-x b")   #'helm-mini)
-  (global-set-key (kbd "C-x C-m") #'helm-M-x)
-  (global-set-key (kbd "C-x C-f") #'helm-find-files)
-  (global-set-key (kbd "C-x C-r") #'helm-recentf)
-  (global-set-key (kbd "C-x r l") #'helm-filtered-bookmarks)
-  (global-set-key (kbd "M-y")     #'helm-show-kill-ring)
-  (global-set-key (kbd "M-s o")   #'helm-swoop)
-  (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
-  )
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
