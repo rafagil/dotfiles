@@ -33,7 +33,9 @@
 
       ;; capture
       (setq org-default-notes-file (concat org-directory "/notes.org"))
-      
+
+      (setq org-log-into-drawer t)
+
       (setq org-capture-templates
             '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "To do")
                "* TODO [#B] %U %?\n  %i\n  %a")
@@ -68,7 +70,7 @@
       (setq org-ellipsis " \u25bc" )
       (setq org-completion-use-ido t)
       (setq org-todo-keywords
-            '((sequence "TODO(t)" "STARTED(s)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
+            '((sequence "TODO(t)" "STARTED(s!)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
               (sequence "BUG(b)" "FIXME(f)" "|" "FIXED(f!)" "WON'T FIX(o@/!)" "DELEGATED(l@/!)")
               (sequence "QUESTION(q)" "|" "ANSWERED(a!)")
               (sequence "|" "CANCELED(c!)")))
