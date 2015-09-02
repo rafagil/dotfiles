@@ -136,6 +136,11 @@
 
       (setq org-image-actual-width nil)
 
+      ;; pandoc
+      ;; special settings for beamer-pdf and latex-pdf exporters
+      (setq org-pandoc-options-for-beamer-pdf '((latex-engine . "xelatex")))
+      (setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex")))
+
       ;; publishing
       (setq org-publish-project-alist
             '(

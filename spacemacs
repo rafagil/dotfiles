@@ -26,6 +26,7 @@
      markdown
      org
      osx
+     pandoc
      scala
      smex
      ;; (shell :variables
