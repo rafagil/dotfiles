@@ -23,6 +23,15 @@
       (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 
       (setq org-directory "~/Dropbox/org")
+      (setq project-directory (concat org-directory "/projects"))
+
+      ;; agenda
+      (setq org-agenda-start-with-log-mode t)
+      (setq org-agenda-include-inactive-timestamps t)
+      (setq org-agenda-files (list org-directory
+                                   (concat project-directory "/boost")
+                                   (concat project-directory "/foggyball")
+                                   (concat org-directory "/blogs")))
 
       ;; Clocking
       (setq org-clock-persist 'history)
@@ -52,19 +61,17 @@
               ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
                "* %U\n\n%?\n")
 
-              ("b" "Boost Journal" entry (file+datetree (concat org-directory "/projects/boost/journal.org"))
+              ("b" "Boost Journal" entry (file+datetree (concat project-directory "/boost/journal.org"))
                "* %U\n\n%?\n")
 
-              ("f" "Foggyball Journal" entry (file+datetree (concat org-directory "/projects/foggyball/journal.org"))
+              ("f" "Foggyball Journal" entry (file+datetree (concat project-directory "/foggyball/journal.org"))
                "* %U\n\n%?\n")
 
-              ("g" "Glossary" entry (file+headline (concat org-directory "/projects/boost/glossary.org") "Glossary")
+              ("g" "Glossary" entry (file+headline (concat project-directory "/boost/glossary.org") "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n")
               ))
 
-      (setq org-agenda-files (list org-directory
-                                   (concat org-directory "/projects/boost")
-                                   (concat org-directory "/projects/foggyball")))
+      (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
 
       (setq org-startup-indented t)
       (setq org-ellipsis " \u25bc" )
@@ -75,7 +82,6 @@
               (sequence "QUESTION(q)" "|" "ANSWERED(a!)")
               (sequence "|" "CANCELED(c!)")))
 
-      (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
       (setq org-refile-allow-creating-parent-nodes 'confirm)
       (setq org-refile-use-outline-path 'file)
 
