@@ -206,7 +206,7 @@
   (setq ispell-program-name "aspell"
         ispell-extra-args '("--sug-mode=ultra"))
   (setq ispell-dictionary "british")
-  (setq ispell-personal-dictionary "~/dotfiles/dictionary.txt")
+  (setq ispell-personal-dictionary "~/dotfiles/dictionaries/dictionary.txt")
 
   ;;formatting
   (setq-default indicate-empty-lines t)
