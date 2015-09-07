@@ -17,6 +17,20 @@
     :init
     (progn
 
+      ;; Fonts
+      (add-hook 'org-mode-hook 'variable-pitch-mode)
+
+      ;; got to be a better way to do this!
+      (add-hook 'org-mode-hook
+                (lambda () (set-face-attribute 'org-table nil :inherit 'fixed-pitch)))
+      (add-hook 'org-mode-hook
+                (lambda () (set-face-attribute 'org-code nil :inherit 'fixed-pitch)))
+      (add-hook 'org-mode-hook
+                (lambda () (set-face-attribute 'org-block nil :inherit 'fixed-pitch)))
+      (add-hook 'org-mode-hook
+                (lambda () (set-face-attribute 'org-block-background nil :inherit 'fixed-pitch)))
+
+
       ;; For exporting to latex and pdf do
       ;; $ brew install caskroom/cask/brew-cask
       ;; $ brew cask install mactex
