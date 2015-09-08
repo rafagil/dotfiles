@@ -27,8 +27,6 @@
                 (lambda () (set-face-attribute 'org-code nil :inherit 'fixed-pitch)))
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-block nil :inherit 'fixed-pitch)))
-      (add-hook 'org-mode-hook
-                (lambda () (set-face-attribute 'org-block-background nil :inherit 'fixed-pitch)))
 
 
       ;; For exporting to latex and pdf do
