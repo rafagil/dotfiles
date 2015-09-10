@@ -27,10 +27,8 @@
                 (lambda () (set-face-attribute 'org-code nil :inherit 'fixed-pitch)))
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-block nil :inherit 'fixed-pitch)))
-
       (custom-set-faces
        '(org-level-1 ((t (:inherit outline-1 :height 1.5)))))
-
 
       ;; For exporting to latex and pdf do
       ;; $ brew install caskroom/cask/brew-cask
@@ -94,11 +92,24 @@
       (setq org-startup-indented t)
       (setq org-ellipsis " \u25bc" )
       (setq org-completion-use-ido t)
+
       (setq org-todo-keywords
             '((sequence "TODO(t!)" "STARTED(s!)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
               (sequence "BUG(b!)" "FIXME(f!)" "|" "FIXED(f!)" "WON'T FIX(o@/!)" "DELEGATED(l@/!)")
               (sequence "QUESTION(q!)" "|" "ANSWERED(a!)")
               (sequence "|" "CANCELED(c!)")))
+
+      (defun channing/clock-in-when-starting ()
+        (when (equal (org-get-todo-state) "STARTED") (org-clock-in) ))
+
+      (add-hook 'org-after-todo-state-change-hook
+                'channing/clock-in-when-starting)
+
+      (defun channing/clock-out-when-waiting ()
+        (when (equal (org-get-todo-state) "WAITING") (org-clock-out) ))
+
+      (add-hook 'org-after-todo-state-change-hook
+                'channing/clock-out-when-waiting)
 
       (setq org-refile-allow-creating-parent-nodes 'confirm)
       (setq org-refile-use-outline-path 'file)
