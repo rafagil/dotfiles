@@ -65,7 +65,7 @@
               ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "To do")
                "* TODO [#A] %U %?\n  %i\n  %a")
 
-              ("d" "Todo" entry (file+headline (concat org-directory "/todo.org") "Done")
+              ("d" "Done" entry (file+headline (concat org-directory "/todo.org") "To do")
                "* DONE %U %?\n  %i\n")
 
               ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
