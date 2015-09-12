@@ -28,7 +28,10 @@
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-block nil :inherit 'fixed-pitch)))
       (custom-set-faces
-       '(org-level-1 ((t (:inherit outline-1 :height 1.5)))))
+       '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
+       '(org-level-2 ((t (:inherit outline-1 :height 1.3))))
+       '(org-level-3 ((t (:inherit outline-1 :height 1.1))))
+       )
 
       ;; For exporting to latex and pdf do
       ;; $ brew install caskroom/cask/brew-cask
@@ -49,9 +52,6 @@
       ;; Clocking
       (setq org-clock-persist 'history)
       (org-clock-persistence-insinuate)
-
-      ;; bullets
-      (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
       ;; capture
       (setq org-default-notes-file (concat org-directory "/notes.org"))
@@ -88,10 +88,6 @@
               ))
 
       (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
-
-      (setq org-startup-indented t)
-      (setq org-ellipsis " \u25bc" )
-      (setq org-completion-use-ido t)
 
       (setq org-todo-keywords
             '((sequence "TODO(t!)" "STARTED(s!)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
@@ -142,8 +138,6 @@
 
       ;; This from http://orgmode.org/worg/org-faq.html
       (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-
-      (add-hook 'org-mode-hook 'turn-on-flyspell)
 
       ;; Babel for diagrams etc
       (org-babel-do-load-languages
