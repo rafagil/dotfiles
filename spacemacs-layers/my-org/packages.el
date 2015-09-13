@@ -85,6 +85,8 @@
 
               ("g" "Glossary" entry (file+headline (concat project-directory "/boost/glossary.org") "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n")
+
+              ("n" "Add note to the clocked task" item (clock) "+ %T %?")
               ))
 
       (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
