@@ -180,6 +180,7 @@
   (setq user-full-name "Channing Walton")
 
   (setenv "PATH" (shell-command-to-string "/bin/bash -c 'echo -n $PATH'"))
+
   ;; zsh
   (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 
@@ -187,40 +188,16 @@
   (setq exec-path (append exec-path '("/usr/texbin/")))
   (setq exec-path (append exec-path '("~/bin/")))
 
-  (setq recentf-max-saved-items 100)
-  (global-auto-revert-mode t)
-
-  ;; Backups
-  (setq backup-directory-alist '(("." . "~/Dropbox/emacs-backup"))
-        backup-by-copying t    ; Don't delink hardlinks
-        version-control t      ; Use version numbers on backups
-        delete-old-versions t  ; Automatically delete excess backups
-        kept-new-versions 20   ; how many of the newest versions to keep
-        kept-old-versions 5    ; and how many of the old
-        )
-
-  ;; hide backup files etc
-  (setq dired-omit-mode t)
-  (setq dired-listing-switches "-al")
-
   ;; spelling
   (setq ispell-program-name "aspell"
         ispell-extra-args '("--sug-mode=ultra"))
   (setq ispell-dictionary "british")
   (setq ispell-personal-dictionary "~/dotfiles/dictionaries/dictionary.txt")
 
-  ;;formatting
-  (setq-default indicate-empty-lines t)
-  (when (not indicate-empty-lines)
-    (toggle-indicate-empty-lines))
-
   ;; Indentation
   (setq tab-width 2
         indent-tabs-mode nil)
   (setq-default indent-tabs-mode nil)
-
-  ;; git
-  (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))
 
   ;; set proxy for work
   (if (string-equal system-name "LDNPWA000000054")
@@ -266,4 +243,18 @@
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
- '(ring-bell-function (quote ignore) t))
+ '(ring-bell-function (quote ignore) t)
+ '(scala-indent:align-forms t)
+ '(scala-indent:align-parameters t)
+ '(scala-indent:default-run-on-strategy scala-indent:operator-strategy))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#c5c8c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "CMU Typewriter Text"))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+ '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
+ '(org-level-2 ((t (:inherit outline-1 :height 1.3))))
+ '(org-level-3 ((t (:inherit outline-1 :height 1.1)))))
