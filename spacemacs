@@ -232,8 +232,11 @@
   (global-set-key (kbd "M-[") 'previous-buffer)
   (global-set-key (kbd "M-]") 'next-buffer)
 
- ;; (with-eval-after-load 'yasnippet
- ;;   (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
+  ;; colors
+  (set-background-color "black")
+
+;;  (eval-after-load 'yasnippet
+;;    (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
 
 )
 
@@ -244,5 +247,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
 )
-(custom-set-faces)
