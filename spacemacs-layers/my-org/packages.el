@@ -42,8 +42,8 @@
       (setq project-directory (concat org-directory "/projects"))
 
       ;; agenda
-      (setq org-agenda-start-with-log-mode t)
-      (setq org-agenda-include-inactive-timestamps t)
+      ;;(setq org-agenda-start-with-log-mode t)
+      ;;(setq org-agenda-include-inactive-timestamps t)
       (setq org-agenda-files (list org-directory
                                    (concat project-directory "/boost")
                                    (concat project-directory "/foggyball")
