@@ -232,8 +232,8 @@
   (global-set-key (kbd "M-[") 'previous-buffer)
   (global-set-key (kbd "M-]") 'next-buffer)
 
-  (with-eval-after-load 'yasnippet
-    (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
+ ;; (with-eval-after-load 'yasnippet
+ ;;   (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
 
 )
 
@@ -244,23 +244,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ahs-case-fold-search nil)
- '(ahs-default-range (quote ahs-range-whole-buffer))
- '(ahs-idle-interval 0.25)
- '(ahs-idle-timer 0 t)
- '(ahs-inhibit-face-list nil)
- '(ring-bell-function (quote ignore) t)
- '(scala-indent:align-forms t)
- '(scala-indent:align-parameters t)
- '(scala-indent:default-run-on-strategy scala-indent:operator-strategy))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "#c5c8c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "CMU Typewriter Text"))))
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
- '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
- '(org-level-2 ((t (:inherit outline-1 :height 1.3))))
- '(org-level-3 ((t (:inherit outline-1 :height 1.1)))))
+)
+(custom-set-faces)
