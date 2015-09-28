@@ -19,7 +19,6 @@
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
-     autopair
      emacs-lisp
      git
      latex
@@ -121,7 +120,7 @@
    dotspacemacs-enable-paste-micro-state t 
    ;; Guide-key delay in seconds. The Guide-key is the popup buffer listing
    ;; the commands bound to the current keystrokes.
-   dotspacemacs-guide-key-delay 0.4
+   dotspacemacs-which-key-delay 0.4
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil ;; to boost the loading time.
@@ -172,7 +171,7 @@
   (setq org-agenda-window-setup 'current-window)
   )
 
-(defun dotspacemacs/config ()
+(defun dotspacemacs/user-config ()
   "Configuration function.
    This function is called at the very end of Spacemacs initialization after
    layers configuration."
@@ -222,16 +221,19 @@
   ;; git
   (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))
 
-  ;; set proxy for work
+  ;; settings for different environments
   (if (string-equal system-name "LDNPWA000000054")
-      (setq url-proxy-services
-            '(("no_proxy" . "^\\(localhost\\|10.*\\)")
-              ("http" . "primary-proxy.gslb.intranet.barcapint.com:8080")
-              ("https" . "primary-proxy.gslb.intranet.barcapint.comp:8080")))
+      (progn 
+        (setq url-proxy-services
+              '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+                ("http" . "primary-proxy.gslb.intranet.barcapint.com:8080")
+                ("https" . "primary-proxy.gslb.intranet.barcapint.comp:8080")))
+        (when (memq window-system '(mac ns))
+          (exec-path-from-shell-initialize))
+        )
+    (exec-path-from-shell-setenv "SHELL" "/bin/zsh")
     )
 
-  (with-eval-after-load 'yasnippet
-    (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
 
   ;; Keybindings
   ;; Avy
@@ -252,6 +254,10 @@
 
   (global-set-key (kbd "M-[") 'previous-buffer)
   (global-set-key (kbd "M-]") 'next-buffer)
+
+  (with-eval-after-load 'yasnippet
+    (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
+
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -22,7 +22,7 @@
 
 ;; For each package, define a function my-markdown/init-<package-name>
 ;;
- (defun my-markdown/init-my-package ()
+ (defun my-markdown/post-init-my-package ()
    "Initialize my markdown"
    (use-package markdown
      :defer t

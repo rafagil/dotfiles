@@ -10,7 +10,7 @@
 ;; List of packages to exclude.
 (setq my-org-excluded-packages '())
 
-(defun my-org/init-org ()
+(defun my-org/post-init-org ()
   "Initialize org"
   (use-package org
     :defer t

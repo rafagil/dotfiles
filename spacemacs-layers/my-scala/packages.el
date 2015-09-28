@@ -21,7 +21,7 @@
 
 ;; For each package, define a function my-scala/init-<package-name>
 ;;
- (defun my-scala/init-scala ()
+ (defun my-scala/post-init-scala ()
    "Initialize scala"
    (use-package scala
      :defer t
