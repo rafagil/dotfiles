@@ -204,6 +204,9 @@ user code."
   (setq inhibit-splash-screen t)
   (add-hook 'after-init-hook (lambda () (org-agenda nil "n")))
   (setq org-agenda-window-setup 'current-window)
+
+  (setq auto-completion-private-snippets-directory
+        "~/dotfiles/snippets/")
   )
 
 (defun dotspacemacs/user-config ()
@@ -235,7 +238,7 @@ user code."
 
   ;; settings for different environments
   (if (string-equal system-name "LDNPWA000000054")
-      (progn 
+      (progn
         (setq url-proxy-services
               '(("no_proxy" . "^\\(localhost\\|10.*\\)")
                 ("http" . "primary-proxy.gslb.intranet.barcapint.com:8080")
@@ -269,9 +272,6 @@ user code."
 
   ;; colors
   (set-background-color "black")
-
-;;  (eval-after-load 'yasnippet
-;;    (setq yas-snippet-dirs (append yas-snippet-dirs '("~/dotfiles/snippets"))))
 
 )
 
