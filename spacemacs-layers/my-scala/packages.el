@@ -29,7 +29,6 @@
      :init
      (progn
        (add-to-list 'load-path "~/Code/dev/emacs-scalaz-unicode-input-method")
-       (setq flycheck-scalastyle-jar "~/dotfiles/scalastyle/scalastyle_2.11-0.7.0.jar")
        (require 'scalaz-unicode-input-method)
        (add-hook 'scala-mode-hook
                  (lambda () (set-input-method "scalaz-unicode")))
