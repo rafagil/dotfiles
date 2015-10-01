@@ -236,20 +236,6 @@ user code."
         indent-tabs-mode nil)
   (setq-default indent-tabs-mode nil)
 
-  ;; settings for different environments
-  (if (string-equal system-name "LDNPWA000000054")
-      (progn
-        (setq url-proxy-services
-              '(("no_proxy" . "^\\(localhost\\|10.*\\)")
-                ("http" . "primary-proxy.gslb.intranet.barcapint.com:8080")
-                ("https" . "primary-proxy.gslb.intranet.barcapint.comp:8080")))
-        (when (memq window-system '(mac ns))
-          (exec-path-from-shell-initialize))
-        )
-    (exec-path-from-shell-setenv "SHELL" "/bin/zsh")
-    )
-
-
   ;; Keybindings
   ;; Avy
   (evil-leader/set-key "gc" 'avy-goto-char)
