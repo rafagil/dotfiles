@@ -22,21 +22,21 @@
 
 ;; For each package, define a function my-scala/init-<package-name>
 ;;
- (defun my-scala/init-scala ()
-   "Initialize scala"
-   (use-package scala
-     :defer t
-     :init
-     (progn
-       (add-to-list 'load-path "~/Code/dev/emacs-scalaz-unicode-input-method")
-       (require 'scalaz-unicode-input-method)
-       (add-hook 'scala-mode-hook
-                 (lambda () (set-input-method "scalaz-unicode")))
 
-       (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
-       (add-hook 'scala-mode-hook (lambda () (setq indent-tabs-mode nil)))
-       (add-hook 'scala-mode-hook (lambda () (setq show-trailing-whitespace t)))
-       )))
+;;(when (configuration-layer/layer-usedp 'scala)
+  (defun my-scala/pre-init-scala ()
+    "Initialize my scala"
+    (use-package scala
+      :config
+      (progn
+        (load-file "~/Code/dev/emacs-scalaz-unicode-input-method/scalaz-unicode-input-method.el")
+        (add-hook 'scala-mode-hook
+                  (lambda () (set-input-method "scalaz-unicode")))
+
+        (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
+        (add-hook 'scala-mode-hook (lambda () (setq indent-tabs-mode nil)))
+        (add-hook 'scala-mode-hook (lambda () (setq show-trailing-whitespace t)))
+        )))
 
 ;; Often the body of an initialize function uses `use-package'
 ;; For more info on `use-package', see readme:
