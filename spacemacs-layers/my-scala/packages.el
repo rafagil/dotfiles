@@ -14,7 +14,7 @@
 ;; which require an initialization must be listed explicitly in the list.
 (setq my-scala-packages
       '(
-        scala
+        scala-mode2
       ))
 
 ;; List of packages to exclude.
@@ -24,18 +24,32 @@
 ;;
 
 ;;(when (configuration-layer/layer-usedp 'scala)
-  (defun my-scala/pre-init-scala ()
+  (defun my-scala/post-init-scala-mode2 ()
     "Initialize my scala"
     (use-package scala
-      :config
+      :init
       (progn
+        (message "Initialising Scala")
         (load-file "~/Code/dev/emacs-scalaz-unicode-input-method/scalaz-unicode-input-method.el")
         (add-hook 'scala-mode-hook
                   (lambda () (set-input-method "scalaz-unicode")))
 
+        (setq input-method-highlight-flag nil)
+
         (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
         (add-hook 'scala-mode-hook (lambda () (setq indent-tabs-mode nil)))
         (add-hook 'scala-mode-hook (lambda () (setq show-trailing-whitespace t)))
+
+        ;; Only enable unicode mode for insert and emacs states in evil-mode
+        (add-hook 'evil-insert-state-entry-hook
+                  (lambda () (set-input-method "scalaz-unicode")))
+        (add-hook 'evil-insert-state-exit-hook
+                  (lambda () (set-input-method nil)))
+        (add-hook 'evil-emacs-state-entry-hook
+                  (lambda () (set-input-method "scalaz-unicode")))
+        (add-hook 'evil-emacs-state-exit-hook
+                  (lambda () (set-input-method nil)))
+
         )))
 
 ;; Often the body of an initialize function uses `use-package'
