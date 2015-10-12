@@ -256,19 +256,8 @@ user code."
   (global-set-key (kbd "M-[") 'previous-buffer)
   (global-set-key (kbd "M-]") 'next-buffer)
 
-  ;; Disable Alt-[0-9], since my keyboard kinda needs Alt-3 for the hash key.
-  (define-key window-numbering-keymap "\M-0" nil)
-  (define-key window-numbering-keymap "\M-1" nil)
-  (define-key window-numbering-keymap "\M-2" nil)
-  (define-key window-numbering-keymap "\M-3" nil)
-  (define-key window-numbering-keymap "\M-4" nil)
-  (define-key window-numbering-keymap "\M-5" nil)
-  (define-key window-numbering-keymap "\M-6" nil)
-  (define-key window-numbering-keymap "\M-7" nil)
-  (define-key window-numbering-keymap "\M-8" nil)
-  (define-key window-numbering-keymap "\M-9" nil)
-                                        ; Actually allow typing #
-  (global-set-key (kbd "M-3") `(lambda () (interactive) (insert "#")))
+  ;; allow typing # with alt-shift-3
+  (global-set-key (kbd "M-£") `(lambda () (interactive) (insert "#")))
 
   ;; colors
   (set-background-color "black")
