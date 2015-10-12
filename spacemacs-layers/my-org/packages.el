@@ -58,35 +58,39 @@
 
       (setq org-log-into-drawer t)
 
-      (setq org-capture-templates
+         (setq org-capture-templates
             '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* TODO [#B] %U %?\n  %i\n  %a")
+               "* TODO [#B] %U %?\n  %i\n  %a" :kill-buffer t :empty-lines-before 1)
 
               ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* TODO [#A] %U %?\n  %i\n  %a")
+               "* TODO [#A] %U %?\n  %i\n  %a" :kill-buffer t :empty-lines-before 1)
 
               ("d" "Done" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* DONE %U %?\n  %i\n")
+               "* DONE %U %?\n  %i\n" :kill-buffer t :empty-lines-before 1)
 
               ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
-               "* %^{What?} :%^{Tag}:\n %?\n")
+               "* %^{What?} :%^{Tag}:\n %?\n" :kill-buffer t :empty-lines-before 1)
 
               ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* FIXME [#C] %U %?\n  %i\n  %a")
+               "* FIXME [#C] %U %?\n  %i\n  %a" :kill-buffer t :empty-lines-before 1)
 
               ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
-               "* %U\n\n%?\n")
+               "* %U\n\n%?\n" :kill-buffer t :empty-lines-before 1)
 
               ("b" "Boost Journal" entry (file+datetree (concat project-directory "/boost/journal.org"))
-               "* %U\n\n%?\n")
-
-              ("f" "Foggyball Journal" entry (file+datetree (concat project-directory "/foggyball/journal.org"))
-               "* %U\n\n%?\n")
+               "* %U\n\n%?\n" :kill-buffer t :empty-lines-before 1)
 
               ("g" "Glossary" entry (file+headline (concat project-directory "/boost/glossary.org") "Glossary")
-               "* %^{Term} :%^{Tag}:\n %?\n")
+               "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t :empty-lines-before 1)
 
-              ("n" "Add note to the clocked task" item (clock) "+ %T %?\n")
+              ("n" "Add note to the clocked task" item (clock) "+ %T %?\n" :kill-buffer t :empty-lines-before 1)
+
+              ("f" "Fact" entry (file+headline (concat project-directory "/boost/facts.org") "Facts")
+               "* %U %^{Title}%^{EXPERT}p\n\n%?" :prepend t :kill-buffer t :empty-lines-before 1 :empty-lines-after 1)
+
+              ("k" "Fact" entry (file+headline (concat project-directory "/boost/facts.org") "Facts")
+               "* %U %^{Title}\n:PROPERTIES:\n:EXPERT: %^{EXPERT}\n:DATE: %u\n:END:\n\n%?" :prepend t :kill-buffer t :empty-lines-before 1 :empty-lines-after 1)
+
               ))
 
       (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
