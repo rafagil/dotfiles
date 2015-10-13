@@ -86,9 +86,6 @@
               ("n" "Add note to the clocked task" item (clock) "+ %T %?\n" :kill-buffer t :empty-lines-before 1)
 
               ("f" "Fact" entry (file+headline (concat project-directory "/boost/facts.org") "Facts")
-               "* %U %^{Title}%^{EXPERT}p\n\n%?" :prepend t :kill-buffer t :empty-lines-before 1 :empty-lines-after 1)
-
-              ("k" "Fact" entry (file+headline (concat project-directory "/boost/facts.org") "Facts")
                "* %U %^{Title}\n:PROPERTIES:\n:EXPERT: %^{EXPERT}\n:DATE: %u\n:END:\n\n%?" :prepend t :kill-buffer t :empty-lines-before 1 :empty-lines-after 1)
 
               ))
