@@ -42,7 +42,7 @@ values."
      version-control
      ;; mine
      my-org
-     my-scala
+     ;;my-scala
      my-markdown
      )
    ;; List of additional packages that will be installed without being
