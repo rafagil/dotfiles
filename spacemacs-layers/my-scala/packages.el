@@ -31,6 +31,7 @@
         (add-hook 'scala-mode-hook (lambda () (setq truncate-lines t)))
         (add-hook 'scala-mode-hook (lambda () (setq indent-tabs-mode nil)))
         (add-hook 'scala-mode-hook (lambda () (setq show-trailing-whitespace t)))
+        (add-hook 'scala-mode-hook #'global-flycheck-mode)
 
         (setq flycheck-scalastyle-jar (concat (file-name-as-directory user-home-directory) "dotfiles/spacemacs-layers/my-scala/scalastyle_2.11-0.7.0-batch.jar"))
         (setq flycheck-scalastylerc (concat (file-name-as-directory user-home-directory) "dotfiles/spacemacs-layers/my-scala/scalastyle_config.xml"))
