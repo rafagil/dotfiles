@@ -42,7 +42,7 @@ values."
      version-control
      ;; mine
      my-org
-     ;;my-scala
+     my-scala
      my-markdown
      )
    ;; List of additional packages that will be installed without being
@@ -198,8 +198,8 @@ values."
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
-It is called immediately after `dotspacemacs/init'.  You are free to put any
-user code."
+  It is called immediately after `dotspacemacs/init'.  You are free to put any
+  user code."
   ;; Start with agenda
   (setq inhibit-splash-screen t)
   (add-hook 'after-init-hook (lambda () (org-agenda nil "n")))
