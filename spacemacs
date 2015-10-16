@@ -236,6 +236,8 @@ user code."
         indent-tabs-mode nil)
   (setq-default indent-tabs-mode nil)
 
+  (setq js-indent-level 2)
+
   ;; Keybindings
   ;; Avy
   (evil-leader/set-key "gc" 'avy-goto-char)
