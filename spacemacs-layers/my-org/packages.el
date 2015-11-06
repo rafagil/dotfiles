@@ -89,6 +89,9 @@
               ("f" "Fact" entry (file+headline (concat project-directory "/boost/facts.org") "Facts")
                "* %^{Title}\n:PROPERTIES:\n:EXPERT: %^{EXPERT}\n:DATE: %U\n:END:\n\n%?" :prepend t :kill-buffer t :empty-lines-before 1 :empty-lines-after 1)
 
+              ("r" "Retrospective Item" entry (file+headline (concat project-directory "/boost/retro.org") "Next Retrospective")
+               "* %U %?\n" :kill-buffer t)
+
               ))
 
       (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
