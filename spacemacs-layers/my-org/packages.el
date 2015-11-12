@@ -92,6 +92,8 @@
               ("r" "Retrospective Item" entry (file+headline (concat project-directory "/boost/retro.org") "Next Retrospective")
                "* %U %?\n" :kill-buffer t)
 
+              ("l" "Blog Idea" entry (file+headline (concat org-directory "/blogs/ideas.org") "Blog Ideas")
+               "* %U %?\n" :kill-buffer t)
               ))
 
       (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
