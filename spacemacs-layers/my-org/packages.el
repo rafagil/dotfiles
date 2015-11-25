@@ -61,30 +61,33 @@
 
          (setq org-capture-templates
             '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* TODO [#B] %U %?\n  %i\n  %a" :kill-buffer t :empty-lines-before 1)
+               "* TODO [#B] %U %?\n  %i\n  %a" :kill-buffer t)
 
               ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* TODO [#A] %U %?\n  %i\n  %a" :kill-buffer t :empty-lines-before 1)
+               "* TODO [#A] %U %?\n  %i\n  %a" :kill-buffer t)
 
               ("d" "Done" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* DONE %U %?\n  %i\n" :kill-buffer t :empty-lines-before 1)
+               "* DONE %U %?\n  %i\n" :kill-buffer t)
+
+              ("i" "Interrupt" entry (file+headline (concat org-directory "/todo.org") "To do")
+               "* DONE %U %? :interrupted:\n  %i\n" :kill-buffer t :clock-in t :clock-resume t )
 
               ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
-               "* %^{What?} :%^{Tag}:\n %?\n" :kill-buffer t :empty-lines-before 1)
+               "* %^{What?} :%^{Tag}:\n %?\n" :kill-buffer t)
 
               ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* FIXME [#C] %U %?\n  %i\n  %a" :kill-buffer t :empty-lines-before 1)
+               "* FIXME [#C] %U %?\n  %i\n  %a" :kill-buffer t)
 
               ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
-               "* %U\n\n%?\n" :kill-buffer t :empty-lines-before 1)
+               "* %U\n\n%?\n" :kill-buffer t)
 
               ("b" "Boost Journal" entry (file+datetree (concat project-directory "/boost/journal.org"))
-               "* %U\n\n%?\n" :kill-buffer t :empty-lines-before 1)
+               "* %U\n\n%?\n" :kill-buffer t)
 
               ("g" "Glossary" entry (file+headline (concat project-directory "/boost/glossary.org") "Glossary")
-               "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t :empty-lines-before 1)
+               "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
 
-              ("n" "Add note to the clocked task" item (clock) "+ %T %?\n" :kill-buffer t :empty-lines-before 1)
+              ("n" "Add note to the clocked task" item (clock) "+ %T %?\n" :kill-buffer t)
 
               ("f" "Fact" entry (file+headline (concat project-directory "/boost/facts.org") "Facts")
                "* %^{Title}\n:PROPERTIES:\n:EXPERT: %^{EXPERT}\n:DATE: %U\n:END:\n\n%?" :prepend t :kill-buffer t :empty-lines-before 1 :empty-lines-after 1)
