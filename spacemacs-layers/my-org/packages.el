@@ -30,6 +30,12 @@
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-date nil :inherit 'fixed-pitch)))
 
+      (custom-set-faces
+       '(org-level-1 ((t (:inherit outline-1 :height 1.5))))
+       '(org-level-2 ((t (:inherit outline-1 :height 1.3))))
+       '(org-level-3 ((t (:inherit outline-1 :height 1.1))))
+       )
+
       ;; For exporting to latex and pdf do
       ;; $ brew install caskroom/cask/brew-cask
       ;; $ brew cask install mactex

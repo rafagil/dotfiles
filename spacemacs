@@ -104,7 +104,6 @@ values."
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Input Mono"
                                :size 13
-                               :weight light
                                :width normal
                                :powerline-scale 1.1)
    ;; The leader key
