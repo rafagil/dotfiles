@@ -105,7 +105,9 @@ values."
    dotspacemacs-default-font '("Input Mono"
                                :size 12
                                :width normal
+                               :weight normal
                                :powerline-scale 1.1)
+
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -265,6 +267,8 @@ values."
 
   ;; colors
   (set-background-color "black")
+
+  (set-face-attribute 'variable-pitch nil :family "Verdana")
 
   (global-hl-line-mode -1)
 
