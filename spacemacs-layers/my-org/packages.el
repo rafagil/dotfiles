@@ -17,6 +17,9 @@
     :init
     (progn
 
+      ;; diable auto-complete
+      (spacemacs|disable-company org-mode)
+
       ;; Fonts
       (add-hook 'org-mode-hook 'variable-pitch-mode)
 
