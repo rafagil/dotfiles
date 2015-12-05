@@ -65,7 +65,7 @@
 
       (setq org-log-into-drawer t)
 
-         (setq org-capture-templates
+      (setq org-capture-templates
             '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "To do")
                "* TODO [#B] %U %?\n  %i\n  %a" :kill-buffer t)
 
@@ -105,13 +105,28 @@
                "* %U %?\n" :kill-buffer t)
               ))
 
-      (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
-
       (setq org-todo-keywords
             '((sequence "TODO(t!)" "STARTED(s!)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
               (sequence "BUG(b!)" "FIXME(f!)" "|" "FIXED(f!)" "WON'T FIX(o@/!)" "DELEGATED(l@/!)")
               (sequence "QUESTION(q!)" "|" "ANSWERED(a!)")
               (sequence "|" "CANCELED(c!)")))
+
+      (setq org-agenda-custom-commands
+            '(("," "Agenda"
+               ((agenda "" nil)
+                (todo "STARTED"
+                      ((org-agenda-overriding-header "Started")))
+                (todo "WAITING"
+                      ((org-agenda-overriding-header "Waiting")))
+                (todo "TODO"
+                      ((org-agenda-overriding-header "To do")
+                       ;; sort by time, priority, and category
+                       (org-agenda-sorting-strategy
+                        '(time-up priority-down category-keep))))
+               nil))))
+
+
+      (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
 
       (defun channing/clock-in-when-starting ()
         (when (equal (org-get-todo-state) "STARTED") (org-clock-in) ))
