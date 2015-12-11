@@ -108,8 +108,8 @@
               ))
 
       (setq org-todo-keywords
-            '((sequence "TODO(t!)" "STARTED(s!)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
-              (sequence "BUG(b!)" "FIXME(f!)" "|" "FIXED(f!)" "WON'T FIX(o@/!)" "DELEGATED(l@/!)")
+            '((sequence "TODO(t!)" "STARTED(s!)" "PAUSED(p!)" "WAITING(w@/!)" "|" "DONE(d!)" "NO NEED(n@/!)")
+              (sequence "BUG(b!)" "FIXME(x!)" "|" "FIXED(f!)" "WON'T FIX(o@/!)" "DELEGATED(l@/!)")
               (sequence "QUESTION(q!)" "|" "ANSWERED(a!)")
               (sequence "|" "CANCELED(c!)")))
 
@@ -118,6 +118,8 @@
                ((agenda "" nil)
                 (todo "STARTED"
                       ((org-agenda-overriding-header "Started")))
+                (todo "PAUSED"
+                      ((org-agenda-overriding-header "Paused")))
                 (todo "WAITING"
                       ((org-agenda-overriding-header "Waiting")))
                 (todo "TODO"
