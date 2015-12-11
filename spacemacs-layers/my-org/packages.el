@@ -139,7 +139,7 @@
                 'channing/clock-in-when-starting)
 
       (defun channing/clock-out-when-waiting ()
-        (when (equal (org-get-todo-state) "WAITING") (org-clock-out) ))
+        (when (or (equal (org-get-todo-state) "WAITING") (equal (org-get-todo-state) "PAUSED")) (org-clock-out)))
 
       (add-hook 'org-after-todo-state-change-hook
                 'channing/clock-out-when-waiting)
