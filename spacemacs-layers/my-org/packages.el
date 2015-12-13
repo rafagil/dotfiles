@@ -25,6 +25,8 @@
       ;; Fonts
       (add-hook 'org-mode-hook 'variable-pitch-mode)
 
+      (setq org-bullets-bullet-list '("●" "●" "●" "●"))
+
       ;; got to be a better way to do this!
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-table nil :inherit 'fixed-pitch)))
