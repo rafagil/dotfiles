@@ -27,6 +27,8 @@
 
       (setq org-bullets-bullet-list '("●" "●" "●" "●"))
 
+      (setq org-cycle-separator-lines 1)
+
       ;; got to be a better way to do this!
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-table nil :inherit 'fixed-pitch)))
