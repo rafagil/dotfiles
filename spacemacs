@@ -251,8 +251,6 @@ values."
   user code."
   ;; Start with agenda
   (setq inhibit-splash-screen t)
-  (add-hook 'after-init-hook (lambda () (org-agenda nil ",")))
-  (setq org-agenda-window-setup 'current-window)
 
   (setq auto-completion-private-snippets-directory
         "~/dotfiles/snippets/")
