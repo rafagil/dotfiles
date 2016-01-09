@@ -262,6 +262,7 @@ values."
    This function is called at the very end of Spacemacs initialization after
    layers configuration."
 
+  ;; me
   (setq user-full-name "Channing Walton")
   (setq user-mail-address "channing.walton@gmail.com")
 
