@@ -293,18 +293,20 @@ values."
 
   ;; Archive outgoing email in Sent folder on imap.gmail.com:
   (setq gnus-message-archive-method '(nnimap "imap.gmail.com")
-        gnus-message-archive-group "[Gmail]/Sent Mail")
-
-  ;; set return email address based on incoming email address
-;;  (setq gnus-posting-styles
-  ;;      '(((header "to" "address@outlook.com")
-  ;;         (address "address@outlook.com"))
-    ;;      ((header "to" "address@gmail.com")
-      ;;     (address "address@gmail.com"))))
+        gnus-message-archive-group "[Google Mail]/Sent Mail")
 
   ;; store email in ~/gmail directory
   (setq nnml-directory "~/.gmail")
   (setq message-directory "~/.gmail")
+
+  ;; make gnus NOT ignore [Gmail] mailboxes
+  (setq gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
+
+  ;; tells gnus to get new mail and also display all old mail
+  (define-key gnus-summary-mode-map (kbd "C-c C-c")
+    (lambda ()
+      (interactive)
+      (gnus-summary-rescan-group 'all)))
 
   ;; end of gnus setup
 
