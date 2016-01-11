@@ -266,28 +266,6 @@ values."
   (setq user-full-name "Channing Walton")
   (setq user-mail-address "channing.walton@gmail.com")
 
-  ;; gnus
-  ;; Get email, and store in nnml
-  (setq gnus-secondary-select-methods
-        '(
-          (nntp "gmane"
-                (nntp-address "news.gmane.org"))
-          (nntp "news.eternal-september.org")
-          (nntp "nntp.aioe.org")
-          (nntp "news.gwene.org")
-          ))
-
-  ;; Get email, and store in nnml
-  (setq gnus-secondary-select-methods
-        '(
-          (nnimap "gmail"
-                  (nnimap-address
-                   "imap.gmail.com")
-                  (nnimap-server-port 993)
-                  (nnimap-stream ssl))
-          ))
-
-  ;; Send email via Gmail:
   (setq message-send-mail-function 'smtpmail-send-it
         smtpmail-default-smtp-server "smtp.gmail.com")
 
@@ -295,24 +273,8 @@ values."
   (setq gnus-message-archive-method '(nnimap "imap.gmail.com")
         gnus-message-archive-group "[Google Mail]/Sent Mail")
 
-  ;; store email in ~/gmail directory
-  (setq nnml-directory "~/.gmail")
-  (setq message-directory "~/.gmail")
-
-  ;; make gnus NOT ignore [Gmail] mailboxes
-  (setq gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
-
-  ;; tells gnus to get new mail and also display all old mail
-  (define-key gnus-summary-mode-map (kbd "C-c C-c")
-    (lambda ()
-      (interactive)
-      (gnus-summary-rescan-group 'all)))
-
-  ;; end of gnus setup
-
+  ;; shells
   (setenv "PATH" (shell-command-to-string "/bin/bash -c 'echo -n $PATH'"))
-
-  ;; zsh
   (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 
   (setq exec-path (append exec-path '("/usr/local/bin/")))
