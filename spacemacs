@@ -308,7 +308,7 @@ values."
   ;; allow typing # with alt-shift-3
   (global-set-key (kbd "M-£") `(lambda () (interactive) (insert "#")))
 
-  ;; colors
+  ;; UI Tweaks
   (set-background-color "black")
 
   (set-face-attribute 'variable-pitch nil :family "Verdana")
