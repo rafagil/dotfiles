@@ -294,18 +294,9 @@ values."
 
   (setq js-indent-level 2)
 
-  ;; Keybindings
-  ;; Avy
-  (evil-leader/set-key "gc" 'avy-goto-char)
-  (evil-leader/set-key "gC" 'avy-goto-char-2)
-  (evil-leader/set-key "gl" 'avy-goto-line)
-  (evil-leader/set-key "gw" 'avy-goto-word-1)
-  (evil-leader/set-key "gW" 'avy-goto-word-0)
-
   ;; OSX Keybindings
   (global-set-key (kbd "<s-right>") 'move-end-of-line)
   (global-set-key (kbd "<s-left>") 'move-beginning-of-line)
-  (global-set-key (kbd "s-b") 'helm-buffers-list)
   (global-set-key (kbd "<s-up>") 'beginning-of-buffer)
   (global-set-key (kbd "<s-down>") 'end-of-buffer)
   (global-set-key (kbd "C-=") 'text-scale-increase)
