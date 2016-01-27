@@ -29,6 +29,10 @@
 
       (setq org-cycle-separator-lines 1)
 
+      ;; typing
+      (add-hook 'org-mode-hook 'auto-fill-mode)
+      (setq org-support-shift-select t)
+
       ;; got to be a better way to do this!
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-table nil :inherit 'fixed-pitch)))
