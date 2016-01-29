@@ -137,7 +137,6 @@
                nil))))
 
 
-      (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
 
       (defun channing/clock-in-when-starting ()
         (when (equal (org-get-todo-state) "STARTED") (org-clock-in) ))
@@ -151,6 +150,8 @@
       (add-hook 'org-after-todo-state-change-hook
                 'channing/clock-out-when-waiting)
 
+      ;; Refiling
+      (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
       (setq org-refile-allow-creating-parent-nodes 'confirm)
       (setq org-refile-use-outline-path 'file)
 
