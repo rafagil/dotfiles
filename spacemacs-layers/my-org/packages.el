@@ -221,6 +221,9 @@
       (setq org-pandoc-options-for-beamer-pdf '((latex-engine . "xelatex")))
       (setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex")))
 
+      ;; exporting html
+      (setq org-html-htmlize-output-type (quote css))
+
       ;; publishing
       (setq org-publish-project-alist
             '(
