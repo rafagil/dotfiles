@@ -148,7 +148,7 @@
         (when (or (equal (org-get-todo-state) "WAITING") (equal (org-get-todo-state) "PAUSED")) (org-clock-out)))
 
       (defun channing/archive-when-done ()
-        (when (equal (org-get-todo-state) "DONE") (org-archive-subtree-default)))
+        (when (org-entry-is-done-p) (org-archive-subtree-default)))
 
       (add-hook 'org-after-todo-state-change-hook
                 'channing/clock-out-when-waiting)
