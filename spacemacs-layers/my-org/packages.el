@@ -84,7 +84,7 @@
               ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "To do")
                "* TODO [#A] %U %?\n  %i\n  %a" :kill-buffer t)
 
-              ("d" "Done" entry (file+headline (concat org-directory "/todo.org") "To do")
+              ("d" "Done" entry (file+datetree (concat org-directory "/done.org") "To do")
                "* DONE %U %?\nCLOSED: %U  %i\n" :kill-buffer t)
 
               ("i" "Interrupt" entry (file+headline (concat org-directory "/todo.org") "To do")
