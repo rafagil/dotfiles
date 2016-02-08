@@ -66,7 +66,6 @@
                                    (concat project-directory "/boost")
                                    (concat project-directory "/foggyball")
                                    (concat org-directory "/blogs")))
-      (setq org-agenda-start-with-follow-mode t)
 
       ;; Clocking
       (setq org-clock-persist 'history)
