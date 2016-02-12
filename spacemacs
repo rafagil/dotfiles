@@ -309,6 +309,9 @@ values."
   ;; allow typing # with alt-shift-3
   (global-set-key (kbd "M-£") `(lambda () (interactive) (insert "#")))
 
+  ;; Ranger
+  (evil-leader/set-key "oR" 'ranger)
+
   ;; UI Tweaks
   (set-background-color "black")
 

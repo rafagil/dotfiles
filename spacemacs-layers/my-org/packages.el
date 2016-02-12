@@ -161,7 +161,7 @@
       (setq org-refile-use-outline-path 'file)
 
       ;; From http://emacs.stackexchange.com/a/10762/5463
-      (defun org-refile-to-datetree (&optional file)
+      (defun channing/org-refile-to-datetree (&optional file)
         "Refile a subtree to a datetree corresponding to it's timestamp.
          The current time is used if the entry has no timestamp. If FILE
          is nil, refile in the current file."
