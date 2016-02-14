@@ -3,4 +3,4 @@
 (evil-leader/set-key "oa" 'org-agenda)
 (evil-leader/set-key "oj" 'org-clock-jump-to-current-clock)
 (evil-leader/set-key "om" 'org-match-sparse-tree)
-(evil-leader/set-key "or" 'org-refile)
+(evil-leader/set-key "oA" 'channing/org-archive-done-tasks)

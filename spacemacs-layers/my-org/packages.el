@@ -136,24 +136,26 @@
                nil))))
 
 
-
       (defun channing/clock-in-when-starting ()
         (when (equal (org-get-todo-state) "STARTED") (org-clock-in) ))
-
-      (add-hook 'org-after-todo-state-change-hook
-                'channing/clock-in-when-starting)
 
       (defun channing/clock-out-when-waiting ()
         (when (or (equal (org-get-todo-state) "WAITING") (equal (org-get-todo-state) "PAUSED")) (org-clock-out)))
 
-      (defun channing/archive-when-done ()
-        (when (org-entry-is-done-p) (org-archive-subtree-default)))
+      (defun channing/org-archive-done-tasks ()
+        ;; from http://stackoverflow.com/a/27043756/434405
+        (interactive)
+        (org-map-entries
+         (lambda ()
+           (org-archive-subtree)
+           (setq org-map-continue-from (outline-previous-heading)))
+         "/DONE" 'file))
+
+      (add-hook 'org-after-todo-state-change-hook
+                'channing/clock-in-when-starting)
 
       (add-hook 'org-after-todo-state-change-hook
                 'channing/clock-out-when-waiting)
-
-      (add-hook 'org-after-todo-state-change-hook
-                'channing/archive-when-done)
 
       ;; Refiling
       (setq org-refile-targets '((org-agenda-files :maxlevel . 9)))
