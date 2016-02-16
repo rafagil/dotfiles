@@ -27,7 +27,6 @@ values."
      better-defaults
      emacs-lisp
      git
-     gnus
      latex
      markdown
      org
