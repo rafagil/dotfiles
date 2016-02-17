@@ -22,10 +22,17 @@
 
       (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
-      ;; Fonts
+      ;; Appearance
       (add-hook 'org-mode-hook 'variable-pitch-mode)
 
-      (setq org-bullets-bullet-list '("●" "●" "●" "●"))
+      (setq org-bullets-bullet-list '("●" "●" "●" "●" "●" "●" "●"))
+
+      (custom-set-faces
+       '(org-level-1 ((t (:inherit outline-1 :height 1.3))))
+       '(org-level-2 ((t (:inherit outline-1 :height 1.2))))
+       '(org-level-3 ((t (:inherit outline-1 :height 1.1))))
+       )
+
 
       (setq org-cycle-separator-lines 1)
 
@@ -43,11 +50,6 @@
       (add-hook 'org-mode-hook
                 (lambda () (set-face-attribute 'org-date nil :inherit 'fixed-pitch)))
 
-      (custom-set-faces
-       '(org-level-1 ((t (:inherit outline-1 :height 1.3))))
-       '(org-level-2 ((t (:inherit outline-1 :height 1.2))))
-       '(org-level-3 ((t (:inherit outline-1 :height 1.1))))
-       )
 
       ;; For exporting to latex and pdf do
       ;; $ brew install caskroom/cask/brew-cask
@@ -132,7 +134,7 @@
                       ((org-agenda-overriding-header "To do")
                        ;; sort by time, priority, and category
                        (org-agenda-sorting-strategy
-                        '(time-up priority-down category-keep))))
+                        '(priority-down time-up category-keep))))
                nil))))
 
 
