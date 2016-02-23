@@ -34,6 +34,7 @@ values."
      pandoc
      scala
      smex
+     restclient
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -53,6 +54,7 @@ values."
    dotspacemacs-additional-packages '(
                                       atom-dark-theme
                                       org-plus-contrib
+                                      ob-restclient
                                       ranger
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.

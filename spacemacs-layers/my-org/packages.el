@@ -204,6 +204,7 @@
          (scala      . t)
          (sh         . t)
          (sql        . t)
+         (restclient . t)
          (dot        . t)))
 
       ;; don't prompt when evaluating various babel files
