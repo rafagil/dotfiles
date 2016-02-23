@@ -106,7 +106,7 @@
               ("g" "Glossary" entry (file+headline (concat project-directory "/boost/boost.org") "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
 
-              ("n" "Add note to the clocked task" item (clock) "+ %T %?\n" :kill-buffer t)
+              ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t)
 
               ("r" "Retrospective Item" entry (file+headline (concat project-directory "/boost/retro.org") "Next Retrospective")
                "* %U %?\n" :kill-buffer t)
