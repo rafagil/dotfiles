@@ -33,7 +33,6 @@
        '(org-level-3 ((t (:inherit outline-1 :height 1.1))))
        )
 
-
       (setq org-cycle-separator-lines 1)
 
       ;; typing
@@ -201,6 +200,7 @@
          (ditaa      . t)
          (java       . t)
          (js         . t)
+         (python     . t)
          (scala      . t)
          (sh         . t)
          (sql        . t)

@@ -32,6 +32,7 @@ values."
      org
      osx
      pandoc
+     python
      scala
      smex
      restclient
