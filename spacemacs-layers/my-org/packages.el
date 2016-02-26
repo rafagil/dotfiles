@@ -93,13 +93,13 @@
               ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
                "* %^{What?} :%^{Tag}:\n %?\n" :kill-buffer t)
 
-              ("m" "Fixme" entry (file+headline (concat org-directory "/todo.org") "To do")
-               "* FIXME [#C] %U %?\n  %i\n  %a" :kill-buffer t)
-
               ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
                "* %U\n\n%?\n" :kill-buffer t)
 
               ("b" "Boost Journal" entry (file+datetree (concat project-directory "/boost/journal.org"))
+               "* %U\n\n%?\n" :kill-buffer t)
+
+              ("m" "Muti Journal" entry (file+datetree (concat project-directory "/muti/muti.org"))
                "* %U\n\n%?\n" :kill-buffer t)
 
               ("g" "Glossary" entry (file+headline (concat project-directory "/boost/boost.org") "Glossary")
