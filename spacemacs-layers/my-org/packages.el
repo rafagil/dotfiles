@@ -25,11 +25,11 @@
       ;; Appearance
       (add-hook 'org-mode-hook 'variable-pitch-mode)
 
-      (setq org-bullets-bullet-list '("●" "●" "●" "●" "●" "●" "●"))
+      (setq org-bullets-bullet-list '("◉" "●" "●" "●" "●" "●" "●" "●"))
 
       (custom-set-faces
-       '(org-level-1 ((t (:inherit outline-1 :height 1.3))))
-       '(org-level-2 ((t (:inherit outline-1 :height 1.2))))
+       '(org-level-1 ((t (:inherit outline-1 :height 1.6))))
+       '(org-level-2 ((t (:inherit outline-1 :height 1.3))))
        '(org-level-3 ((t (:inherit outline-1 :height 1.1))))
        )
 
