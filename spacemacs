@@ -57,6 +57,7 @@ values."
                                       org-plus-contrib
                                       ob-restclient
                                       ranger
+                                      keyfreq
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -289,6 +290,11 @@ values."
         ispell-extra-args '("--sug-mode=ultra"))
   (setq ispell-dictionary "british")
   (setq ispell-personal-dictionary "~/dotfiles/dictionaries/dictionary.txt")
+
+  ;; keyfreq-autosave-mode
+  (require 'keyfreq)
+  (keyfreq-mode 1)
+  (keyfreq-autosave-mode 1)
 
   ;; Indentation
   (setq tab-width 2
