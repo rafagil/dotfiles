@@ -97,10 +97,10 @@
                "* %U\n\n%?\n" :kill-buffer t)
 
               ("b" "Boost Journal" entry (file+datetree (concat project-directory "/boost/journal.org"))
-               "* %U\n\n%?\n" :kill-buffer t)
+               "* %U %?\n" :kill-buffer t)
 
               ("m" "Muti Journal" entry (file+datetree (concat project-directory "/muti/muti.org"))
-               "* %U\n\n%?\n" :kill-buffer t)
+               "* %U %?\n" :kill-buffer t)
 
               ("g" "Glossary" entry (file+headline (concat project-directory "/boost/boost.org") "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
