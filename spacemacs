@@ -26,6 +26,7 @@ values."
      auto-completion
      better-defaults
      emacs-lisp
+     emoji
      git
      latex
      markdown
@@ -33,12 +34,9 @@ values."
      osx
      pandoc
      python
+     restclient
      scala
      smex
-     restclient
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
      syntax-checking
      themes-megapack
      version-control
