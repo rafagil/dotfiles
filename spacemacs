@@ -28,6 +28,8 @@ values."
      emacs-lisp
      emoji
      git
+     github
+
      latex
      markdown
      org
@@ -39,6 +41,7 @@ values."
      smex
      syntax-checking
      themes-megapack
+     theming
      version-control
      ;; mine
      my-org
@@ -106,18 +109,20 @@ values."
    ;; Number of recent files to show in the startup buffer. Ignored if
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 5
+   ;; Default major mode of the scratch buffer (default `text-mode')
+   dotspacemacs-scratch-mode 'text-mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(atom-dark
                          sanityinc-tomorrow-night
                          solarized-light
-                          solarized-dark
-                          spacemacs-light
-                          spacemacs-dark
-                          leuven
-                          monokai
-                          zenburn)
+                         solarized-dark
+                         spacemacs-light
+                         spacemacs-dark
+                         leuven
+                         monokai
+                         zenburn)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -127,7 +132,6 @@ values."
                                :width normal
                                :weight normal
                                :powerline-scale 1.1)
-
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -180,7 +184,7 @@ values."
    dotspacemacs-helm-no-header nil
    ;; define the position to display `helm', options are `bottom', `top',
    ;; `left', or `right'. (default 'bottom)
-   dotspacemacs-helm-position 'bottom
+   dotspacemacs-helm-position 'right
    ;; If non nil the paste micro-state is enabled. When enabled pressing `p`
    ;; several times cycle between the kill ring content. (default nil)
    dotspacemacs-enable-paste-micro-state nil
@@ -191,7 +195,7 @@ values."
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
    ;; right; if there is insufficient space it displays it at the bottom.
    ;; (default 'bottom)
-   dotspacemacs-which-key-position 'bottom
+   dotspacemacs-which-key-position 'right-then-bottom
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
