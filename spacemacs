@@ -29,7 +29,6 @@ values."
      emoji
      git
      github
-
      latex
      markdown
      org
@@ -37,7 +36,7 @@ values."
      pandoc
      python
      restclient
-     scala
+     (scala :variables scala-enable-eldoc t scala-use-unicode-arrows t scala-auto-start-ensime nil)
      smex
      syntax-checking
      themes-megapack
@@ -128,7 +127,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Input Mono"
-                               :size 12
+                               :size 13
                                :width normal
                                :weight normal
                                :powerline-scale 1.1)
@@ -261,7 +260,8 @@ values."
 
   (setq auto-completion-private-snippets-directory
         "~/dotfiles/snippets/")
-  )
+
+)
 
 (defun dotspacemacs/user-config ()
   "Configuration function.
