@@ -3,7 +3,6 @@
 (setq my-org-packages
       '(
         org
-        org-drill
         ox-latex
         ox-publish
         ))
