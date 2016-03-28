@@ -3,6 +3,7 @@
 (setq my-org-packages
       '(
         org
+        org-drill
         ox-latex
         ox-publish
         ))
@@ -16,6 +17,8 @@
     :defer t
     :init
     (progn
+      (require 'org-drill)
+      (require 'org-velocity)
 
       ;; disable auto-complete
       (spacemacs|disable-company org-mode)

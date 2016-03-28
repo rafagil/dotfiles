@@ -31,7 +31,7 @@ values."
      github
      latex
      markdown
-     org
+     (org :variables org-enable-github-support t)
      osx
      pandoc
      python
@@ -54,7 +54,6 @@ values."
    ;; configuration in `dotspacemacs/config'.
    dotspacemacs-additional-packages '(
                                       atom-dark-theme
-                                      org-plus-contrib
                                       ob-restclient
                                       ranger
                                       keyfreq
