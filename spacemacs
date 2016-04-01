@@ -127,8 +127,8 @@ values."
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Input Mono"
                                :size 13
-                               :width normal
                                :weight normal
+                               :width normal
                                :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
@@ -252,8 +252,11 @@ values."
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
-  It is called immediately after `dotspacemacs/init'.  You are free to put any
-  user code."
+It is called immediately after `dotspacemacs/init', before layer configuration
+executes.
+ This function is mostly useful for variables that need to be set
+before packages are loaded. If you are unsure, you should try in setting them in
+`dotspacemacs/user-config' first."
   ;; Start with agenda
   (setq inhibit-splash-screen t)
 
@@ -263,9 +266,12 @@ values."
 )
 
 (defun dotspacemacs/user-config ()
-  "Configuration function.
-   This function is called at the very end of Spacemacs initialization after
-   layers configuration."
+  "Configuration function for user code.
+This function is called at the very end of Spacemacs initialization after
+layers configuration.
+This is the place where most of your configurations should be done. Unless it is
+explicitly specified that a variable should be set before a package is loaded,
+you should place you code here."
 
   ;; me
   (setq user-full-name "Channing Walton")
