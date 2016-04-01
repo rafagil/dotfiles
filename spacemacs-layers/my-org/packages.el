@@ -171,7 +171,7 @@
          The current time is used if the entry has no timestamp. If FILE
          is nil, refile in the current file."
         (interactive "f")
-        (let* ((datetree-date (or (org-entry-get nil "TIMESTAMP" t)
+        (let* ((datetree-date (or (org-entry-get nil "CLOSED" t)
                                   (org-read-date t nil "now")))
                (date (org-date-to-gregorian datetree-date))
                )
