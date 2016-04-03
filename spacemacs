@@ -125,7 +125,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Input Mono"
+   dotspacemacs-default-font '("Fira Code"
                                :size 13
                                :weight normal
                                :width normal
@@ -262,6 +262,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (setq auto-completion-private-snippets-directory
         "~/dotfiles/snippets/")
+
+  (mac-auto-operator-composition-mode t)
 
 )
 
