@@ -49,6 +49,7 @@
              (headline           `(:inherit default :weight bold :foreground "#c0c0cc" )))
         (custom-theme-set-faces 'user
                                 `(org-agenda-structure ((t (:inherit default ,@ha/variable-font-tuple :height 1.5 :underline nil))))
+                                `(org-agenda-date ((t (:inherit 'org-agenda-structure ,@ha/fixed-font-tuple :height 1.0))))
                                 `(org-verbatim ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple :foreground "#aef"))))
                                 `(org-table ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple))))
                                 `(org-block ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple))))
@@ -66,7 +67,6 @@
                                 `(org-document-title ((t (,@headline ,@ha/variable-font-tuple :height 1.5 :underline nil))))))
 
       ;; End Of Howard's awesomeness
-
       (setq org-cycle-separator-lines 1)
 
       ;; typing
