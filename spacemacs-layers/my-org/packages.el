@@ -73,19 +73,6 @@
       (add-hook 'org-mode-hook 'auto-fill-mode)
       (setq org-support-shift-select t)
 
-      ;; got to be a better way to do this!
-      (add-hook 'org-mode-hook 'variable-pitch-mode)
-
-      (add-hook 'org-mode-hook
-                (lambda () (set-face-attribute 'org-table nil :inherit 'fixed-pitch)))
-      (add-hook 'org-mode-hook
-                (lambda () (set-face-attribute 'org-code nil :inherit 'fixed-pitch)))
-      (add-hook 'org-mode-hook
-                (lambda () (set-face-attribute 'org-block nil :inherit 'fixed-pitch)))
-      (add-hook 'org-mode-hook
-                (lambda () (set-face-attribute 'org-date nil :inherit 'fixed-pitch)))
-
-
       ;; For exporting to latex and pdf do
       ;; $ brew install caskroom/cask/brew-cask
       ;; $ brew cask install mactex
