@@ -49,7 +49,7 @@ alias shapeless="sbt -sbt-create 'set libraryDependencies += \"com.chuusai\" %% 
 
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
-alias bu="brew update; brew upgrade; brew cleanup; brew linkapps"
+alias bu="brew update; brew upgrade; brew cleanup; brew linkapps; cd ~/dotfiles; ./update.sh"
 
 export MY_BIN=/Users/channing/bin
 export EDITOR=vim
