@@ -53,3 +53,4 @@ alias bu="brew update; brew upgrade; brew cleanup; brew linkapps; cd ~/dotfiles;
 
 export MY_BIN=/Users/channing/bin
 export EDITOR=vim
+

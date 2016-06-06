@@ -43,6 +43,7 @@ values."
      theming
      version-control
      ;; mine
+     intero
      my-org
      my-scala
      my-markdown
@@ -53,6 +54,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
+                                      org-plus-contrib
                                       atom-dark-theme
                                       ob-restclient
                                       ranger
@@ -267,6 +269,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (mac-auto-operator-composition-mode t)
 
+  (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+  (add-to-list 'exec-path "~/.local/bin/")
 )
 
 (defun dotspacemacs/user-config ()
@@ -280,6 +284,7 @@ you should place you code here."
 
   ;; adding this here because it works
   (add-to-list 'org-modules 'org-habit)
+  (add-to-list 'org-modules 'org-drill)
 
   ;; me
   (setq user-full-name "Channing Walton")
