@@ -12,7 +12,7 @@
 
 ;; List of all packages to install and/or initialize. Built-in packages
 ;; which require an initialization must be listed explicitly in the list.
-(setq my-scala-packages
+(defconst my-scala-packages
       '(
         scala-mode2
       ))
@@ -23,7 +23,7 @@
 ;; For each package, define a function my-scala/init-<package-name>
 ;;
 
-  (defun my-scala/post-init-scala-mode2 ()
+(defun my-scala/post-init-scala-mode2 ()
     "Initialize my scala"
     (use-package scala
       :init
