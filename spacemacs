@@ -347,6 +347,7 @@ you should place you code here."
 
   (global-hl-line-mode -1)
 
+  (setq bookmark-default-file "/Users/channing/dotfiles/spacemacs.bookmarks")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -356,30 +357,5 @@ you should place you code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (yasnippet restclient magit magit-popup visual-fill-column iedit company helm helm-core gh neotree markdown-toc intero haskell-mode evil-matchit evil-magit badwolf-theme sbt-mode anzu flycheck projectile zonokai-theme zenburn-theme zen-and-art-theme ws-butler writeroom-mode window-numbering which-key volatile-highlights vi-tilde-fringe use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stekene-theme spacemacs-theme spaceline spacegray-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smooth-scrolling smex smeargle seti-theme reverse-theme reveal-in-osx-finder restart-emacs ranger rainbow-delimiters railscasts-theme quelpa pyvenv pytest pyenv-mode py-yapf purple-haze-theme professional-theme popwin planet-theme pkg-info pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pbcopy pastels-on-dark-theme paradox pandoc-mode page-break-lines ox-pandoc osx-trash orgit organic-green-theme org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme ob-restclient noflet noctilux-theme niflheim-theme naquadah-theme mustang-theme move-text monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-mode majapahit-theme magit-gitflow magit-gh-pulls macrostep lush-theme lorem-ipsum linum-relative light-soap-theme leuven-theme launchctl keyfreq jbeans-theme jazz-theme ir-black-theme inkpot-theme info+ indent-guide ido-vertical-mode hy-mode hungry-delete htmlize hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md gandalf-theme flycheck-pos-tip flx-ido flatui-theme flatland-theme firebelly-theme fill-column-indicator farmhouse-theme fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu espresso-theme ensime emoji-cheat-sheet-plus elisp-slime-nav dracula-theme django-theme diff-hl define-word darktooth-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme company-statistics company-quickhelp company-emoji company-auctex company-anaconda colorsarenice-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme clean-aindent-mode cherry-blossom-theme busybee-theme buffer-move bubbleberry-theme bracketed-paste birds-of-paradise-plus-theme auto-yasnippet auto-highlight-symbol auto-compile auctex-latexmk atom-dark-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
- '(org-agenda-date ((t (:inherit (quote org-agenda-structure) :font "Source Code Pro" :height 1.0))))
- '(org-agenda-structure ((t (:inherit default :font "Lucida Grande" :height 1.5 :underline nil))))
- '(org-block ((t (:inherit (quote fixed-pitched) :font "Source Code Pro"))))
- '(org-block-background ((t (:inherit (quote fixed-pitched) :font "Source Code Pro"))))
- '(org-block-begin-line ((t (:inherit (quote fixed-pitched) :font "Source Code Pro"))))
- '(org-block-end-line ((t (:inherit (quote fixed-pitched) :font "Source Code Pro"))))
- '(org-document-title ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande" :height 1.5 :underline nil))))
- '(org-level-1 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande" :height 1.75))))
- '(org-level-2 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande" :height 1.5))))
- '(org-level-3 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande" :height 1.25))))
- '(org-level-4 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande" :height 1.1))))
- '(org-level-5 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande"))))
- '(org-level-6 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande"))))
- '(org-level-7 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande"))))
- '(org-level-8 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Lucida Grande"))))
- '(org-table ((t (:inherit (quote fixed-pitched) :font "Source Code Pro"))))
- '(org-verbatim ((t (:inherit (quote fixed-pitched) :font "Source Code Pro" :foreground "#aef")))))
+
+)
