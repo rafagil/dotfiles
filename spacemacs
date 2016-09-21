@@ -357,4 +357,30 @@ you should place you code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-)
+ '(package-selected-packages
+   (quote
+    (projectile markdown-mode git-commit zenburn-theme ws-butler tao-theme spacemacs-theme spaceline org-plus-contrib open-junk-file omtose-phellack-theme neotree moe-theme material-theme leuven-theme intero indent-guide helm-descbinds helm-ag haskell-mode gruvbox-theme grandshell-theme google-translate git-link evil-surround evil-search-highlight-persist evil-matchit evil-iedit-state ensime sbt-mode color-theme-sanityinc-tomorrow badwolf-theme ample-theme ace-link smartparens flycheck helm helm-core magit ht hydra f which-key zonokai-theme zen-and-art-theme writeroom-mode window-numbering volatile-highlights vi-tilde-fringe use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stekene-theme spacegray-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smooth-scrolling smex smeargle seti-theme scala-mode reverse-theme reveal-in-osx-finder restart-emacs ranger rainbow-delimiters railscasts-theme quelpa pyvenv pytest pyenv-mode py-yapf purple-haze-theme professional-theme powerline popwin planet-theme pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pbcopy pastels-on-dark-theme paradox pandoc-mode page-break-lines ox-pandoc osx-trash orgit organic-green-theme org-repo-todo org-present org-pomodoro org-bullets oldlace-theme occidental-theme obsidian-theme ob-restclient noflet noctilux-theme niflheim-theme naquadah-theme mustang-theme move-text monokai-theme monochrome-theme molokai-theme mmm-mode minimal-theme markdown-toc majapahit-theme magit-gitflow magit-gh-pulls macrostep lush-theme lorem-ipsum linum-relative light-soap-theme launchctl keyfreq jbeans-theme jazz-theme ir-black-theme inkpot-theme info+ iedit ido-vertical-mode hy-mode hungry-delete htmlize hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-company helm-c-yasnippet hc-zenburn-theme gruber-darker-theme gotham-theme golden-ratio gnuplot github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe git-gutter-fringe+ gist gh-md gandalf-theme flycheck-pos-tip flx-ido flatui-theme flatland-theme firebelly-theme fill-column-indicator farmhouse-theme fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-numbers evil-nerd-commenter evil-mc evil-magit evil-lisp-state evil-indent-plus evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu espresso-theme emoji-cheat-sheet-plus elisp-slime-nav dracula-theme django-theme diff-hl define-word darktooth-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme company-statistics company-quickhelp company-emoji company-auctex company-anaconda colorsarenice-theme color-theme-sanityinc-solarized clues-theme clean-aindent-mode cherry-blossom-theme busybee-theme buffer-move bubbleberry-theme bracketed-paste birds-of-paradise-plus-theme auto-yasnippet auto-highlight-symbol auto-compile auctex-latexmk atom-dark-theme apropospriate-theme anti-zenburn-theme ample-zen-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-jump-helm-line ac-ispell))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+ '(org-agenda-date ((t (:inherit (quote org-agenda-structure) :font "Fira Mono" :height 1.0))))
+ '(org-agenda-structure ((t (:inherit default :font "Source Sans Pro" :height 1.5 :underline nil))))
+ '(org-block ((t (:inherit (quote fixed-pitched) :font "Fira Mono"))))
+ '(org-block-background ((t (:inherit (quote fixed-pitched) :font "Fira Mono"))))
+ '(org-block-begin-line ((t (:inherit (quote fixed-pitched) :font "Fira Mono"))))
+ '(org-block-end-line ((t (:inherit (quote fixed-pitched) :font "Fira Mono"))))
+ '(org-document-title ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro" :height 1.5 :underline nil))))
+ '(org-level-1 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro" :height 1.75))))
+ '(org-level-2 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro" :height 1.5))))
+ '(org-level-3 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro" :height 1.25))))
+ '(org-level-4 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro" :height 1.1))))
+ '(org-level-5 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro"))))
+ '(org-level-6 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro"))))
+ '(org-level-7 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro"))))
+ '(org-level-8 ((t (:inherit default :weight bold :foreground "#c0c0cc" :font "Source Sans Pro"))))
+ '(org-table ((t (:inherit (quote fixed-pitched) :font "Fira Mono"))))
+ '(org-verbatim ((t (:inherit (quote fixed-pitched) :font "Fira Mono" :foreground "#aef")))))
