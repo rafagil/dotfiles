@@ -345,13 +345,6 @@ you should place you code here."
   (setq user-full-name "Channing Walton")
   (setq user-mail-address "channing.walton@gmail.com")
 
-  (setq message-send-mail-function 'smtpmail-send-it
-        smtpmail-default-smtp-server "smtp.gmail.com")
-
-  ;; Archive outgoing email in Sent folder on imap.gmail.com:
-  (setq gnus-message-archive-method '(nnimap "imap.gmail.com")
-        gnus-message-archive-group "[Google Mail]/Sent Mail")
-
   ;; shells
   (setenv "PATH" (shell-command-to-string "/bin/bash -c 'echo -n $PATH'"))
   (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
