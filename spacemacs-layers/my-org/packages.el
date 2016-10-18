@@ -3,8 +3,6 @@
 (setq my-org-packages
       '(
         org
-        ox-latex
-        ox-publish
         ))
 
 ;; List of packages to exclude.

@@ -51,6 +51,8 @@ alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 alias bu="brew update; brew upgrade; brew cleanup; brew linkapps; cd ~/dotfiles; ./update.sh"
 
+alias scalactags="ctags -R . --exclude=target --exclude=vendor"
+
 export MY_BIN=/Users/channing/bin
 export EDITOR=vim
 

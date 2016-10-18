@@ -14,7 +14,6 @@
 ;; which require an initialization must be listed explicitly in the list.
 (setq my-markdown-packages
     '(
-      markdown
       ))
 
 ;; List of packages to exclude.

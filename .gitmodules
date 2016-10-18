@@ -43,3 +43,6 @@
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/bundle/vim-speeddating
 	url = git://github.com/tpope/vim-speeddating.git
+[submodule "vim/bundle/sbt-quickfix"]
+	path = vim/bundle/sbt-quickfix
+	url = https://github.com/dscleaver/sbt-quickfix.git
