@@ -19,7 +19,7 @@
     userId: "71618bad-e691-6c21-b4bb-31b75eac8ae6"
   "file-templates": {}
   linter:
-    errorPanelHeight: 66
+    errorPanelHeight: 105
   "markdown-writer": {}
   metrics:
     userId: "f6e8ef8acf1c266e78bff163cfd375c2f14baad9"
@@ -31,5 +31,7 @@
     viewedVersion: "0.95.0"
   "terminal-plus":
     core: {}
+    style:
+      fontSize: "11"
   welcome:
     showOnStartup: false
