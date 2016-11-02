@@ -1,0 +1,15 @@
+Config { font = "xft:Luxi Sans Regular:size=9:antialias=true"
+       , bgColor = "#002b36"
+       , fgColor = "#657b83"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run DynNetwork [] 10
+                    , Run Cpu ["-H","50","--high","#dc322f"] 10
+                    , Run BatteryP ["BAT0"] ["-t", "<acstatus> <left>%", "--", "-f", "AC/online"] 10
+                    , Run Date "<fc=#93a1a1>%a %b %_d %Y %l:%M%P</fc>" "date" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %cpu% | %dynnetwork% | %battery% | %date%"
+       }
