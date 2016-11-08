@@ -16,6 +16,7 @@ import XMonad.Util.EZConfig
 import XMonad.Util.NamedActions
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run(spawnPipe)
+import XMonad.Hooks.SetWMName
 
 import qualified XMonad.StackSet as W
 
@@ -27,8 +28,8 @@ sBase1  = "#93a1a1"
 myNavigation2DConfig = defaultNavigation2DConfig
 
 myConfig h = ewmh defaultConfig
-  { modMask             = mod4Mask
-  , manageHook          = myManageHook
+  {
+  manageHook          = myManageHook
   , layoutHook          = myLayoutHook
   , handleEventHook     = myHandleEventHook
   , logHook             = myLogHook h
@@ -37,6 +38,7 @@ myConfig h = ewmh defaultConfig
   , focusFollowsMouse   = False
   , normalBorderColor   = sBase02
   , focusedBorderColor  = sBase1
+  , startupHook		= setWMName "LG3D"
   } `additionalKeysP` (myKeys ++ myKeys2 ++ myKeys3)
 
 myLogHook h = dynamicLogWithPP $ xmobarPP
