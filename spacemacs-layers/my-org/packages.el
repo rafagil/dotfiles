@@ -39,12 +39,19 @@
               (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro.")))
         "My variable width font available to org-mode files and whatnot.")
 
+      (defvar ha/heading-font
+        (cond ((x-list-fonts "NewYorkerType") '(:font "NewYorkerType"))
+              ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro")))
+        "Heading fonts"
+        )
+
       (let* ((ha/fixed-font-tuple (list :font ha/fixed-font-family))
              (base-font-color     (face-foreground 'default nil 'default))
              (background-color    (face-background 'default nil 'default))
              (primary-color       (face-foreground 'mode-line nil))
              (secondary-color     (face-background 'secondary-selection nil 'region))
              (headline           `(:inherit default :weight bold :foreground "#c0c0cc" )))
+
         (custom-theme-set-faces 'user
                                 `(org-agenda-structure ((t (:inherit default ,@ha/variable-font-tuple :height 1.5 :underline nil))))
                                 `(org-agenda-date ((t (:inherit 'org-agenda-structure ,@ha/fixed-font-tuple :height 1.0))))
@@ -60,8 +67,8 @@
                                 `(org-level-5 ((t (,@headline ,@ha/variable-font-tuple))))
                                 `(org-level-4 ((t (,@headline ,@ha/variable-font-tuple :height 1.1))))
                                 `(org-level-3 ((t (,@headline ,@ha/variable-font-tuple :height 1.25))))
-                                `(org-level-2 ((t (,@headline ,@ha/variable-font-tuple :height 1.5))))
-                                `(org-level-1 ((t (,@headline ,@ha/variable-font-tuple :height 1.75))))
+                                `(org-level-2 ((t (,@headline ,@ha/heading-font :height 1.5))))
+                                `(org-level-1 ((t (,@headline ,@ha/heading-font :height 1.75))))
                                 `(org-document-title ((t (,@headline ,@ha/variable-font-tuple :height 1.5 :underline nil))))))
 
       ;; End Of Howard's awesomeness
