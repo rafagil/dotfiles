@@ -12,6 +12,7 @@
     ]
   editor:
     fontFamily: "Fira Code"
+    fontSize: 13
     invisibles: {}
     lineHeight: 1.3
     preferredLineLength: 160
