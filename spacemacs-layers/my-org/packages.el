@@ -24,14 +24,14 @@
       (setq org-bullets-bullet-list '("◉" "●" "●" "●" "●" "●" "●" "●"))
 
       ;; the following from https://github.com/howardabrams/dot-files/blob/master/emacs-client.org
-      (defvar ha/fixed-font-family
+      (defvar cjw/fixed-font-family
         (cond ((x-list-fonts "Fira Mono")       "Fira Mono")
               ((x-list-fonts "Source Code Pro") "Source Code Pro")
               ((x-list-fonts "Anonymous Pro")   "Anonymous Pro")
               ((x-list-fonts "M+ 1mn")          "M+ 1mn"))
         "My fixed width font based on what is installed, `nil' if not defined.")
 
-      (defvar ha/variable-font-tuple
+      (defvar cjw/variable-font-tuple
         (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
               ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
               ((x-list-fonts "Verdana")         '(:font "Verdana"))
@@ -39,13 +39,13 @@
               (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro.")))
         "My variable width font available to org-mode files and whatnot.")
 
-      (defvar ha/heading-font
+      (defvar cjw/heading-font
         (cond ((x-list-fonts "NewYorkerType") '(:font "NewYorkerType"))
               ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro")))
         "Heading fonts"
         )
 
-      (let* ((ha/fixed-font-tuple (list :font ha/fixed-font-family))
+      (let* ((cjw/fixed-font-tuple (list :font cjw/fixed-font-family))
              (base-font-color     (face-foreground 'default nil 'default))
              (background-color    (face-background 'default nil 'default))
              (primary-color       (face-foreground 'mode-line nil))
@@ -53,23 +53,23 @@
              (headline           `(:inherit default :weight bold :foreground "#c0c0cc" )))
 
         (custom-theme-set-faces 'user
-                                `(org-agenda-structure ((t (:inherit default ,@ha/variable-font-tuple :height 1.5 :underline nil))))
-                                `(org-agenda-date ((t (:inherit 'org-agenda-structure ,@ha/fixed-font-tuple :height 1.0))))
-                                `(org-verbatim ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple :foreground "#aef"))))
-                                `(org-table ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple))))
-                                `(org-block ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple))))
-                                `(org-block-background ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple))))
-                                `(org-block-begin-line ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple))))
-                                `(org-block-end-line ((t (:inherit 'fixed-pitched ,@ha/fixed-font-tuple))))
-                                `(org-level-8 ((t (,@headline ,@ha/variable-font-tuple))))
-                                `(org-level-7 ((t (,@headline ,@ha/variable-font-tuple))))
-                                `(org-level-6 ((t (,@headline ,@ha/variable-font-tuple))))
-                                `(org-level-5 ((t (,@headline ,@ha/variable-font-tuple))))
-                                `(org-level-4 ((t (,@headline ,@ha/variable-font-tuple :height 1.1))))
-                                `(org-level-3 ((t (,@headline ,@ha/variable-font-tuple :height 1.25))))
-                                `(org-level-2 ((t (,@headline ,@ha/heading-font :height 1.5))))
-                                `(org-level-1 ((t (,@headline ,@ha/heading-font :height 1.75))))
-                                `(org-document-title ((t (,@headline ,@ha/variable-font-tuple :height 1.5 :underline nil))))))
+                                `(org-agenda-structure ((t (:inherit default ,@cjw/variable-font-tuple :height 1.5 :underline nil))))
+                                `(org-agenda-date ((t (:inherit 'org-agenda-structure ,@cjw/fixed-font-tuple :height 1.0))))
+                                `(org-verbatim ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple :foreground "#aef"))))
+                                `(org-table ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
+                                `(org-block ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
+                                `(org-block-background ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
+                                `(org-block-begin-line ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
+                                `(org-block-end-line ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
+                                `(org-level-8 ((t (,@headline ,@cjw/variable-font-tuple))))
+                                `(org-level-7 ((t (,@headline ,@cjw/variable-font-tuple))))
+                                `(org-level-6 ((t (,@headline ,@cjw/variable-font-tuple))))
+                                `(org-level-5 ((t (,@headline ,@cjw/variable-font-tuple))))
+                                `(org-level-4 ((t (,@headline ,@cjw/variable-font-tuple :height 1.1))))
+                                `(org-level-3 ((t (,@headline ,@cjw/variable-font-tuple :height 1.25))))
+                                `(org-level-2 ((t (,@headline ,@cjw/heading-font :height 1.5))))
+                                `(org-level-1 ((t (,@headline ,@cjw/heading-font :height 1.75))))
+                                `(org-document-title ((t (,@headline ,@cjw/variable-font-tuple :height 1.5 :underline nil))))))
 
       ;; End Of Howard's awesomeness
       (setq org-cycle-separator-lines 1)
