@@ -345,10 +345,6 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
 
-  ;; adding this here because it works
-  (add-to-list 'org-modules 'org-habit)
-  (add-to-list 'org-modules 'org-drill)
-
   ;; me
   (setq user-full-name "Channing Walton")
   (setq user-mail-address "channing.walton@gmail.com")
