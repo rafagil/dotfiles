@@ -1,8 +1,8 @@
-personal_ws-1.1 en 115 
+personal_ws-1.1 en 122 
 Foggyball
 implicits
-SBT
 sbt
+SBT
 eChannels
 app
 arg
@@ -13,12 +13,13 @@ NodeSeq
 notional
 sbteclipse
 gauss
-ListBuffer
 typeclass
+ListBuffer
 monad
 JsCmds
 Observables
 UUID
+IDEs
 SHtml
 jittery
 david
@@ -27,12 +28,11 @@ typeclasses
 intellij
 checksums
 channing
-Channing
 monoid
 CometActor
 RxJava
-RxLift
 subtype
+RxLift
 composeable
 jackman
 covariant
@@ -43,6 +43,7 @@ serialisers
 monads
 walton
 serialisable
+Barclays
 penultimate
 peyton
 retroactive
@@ -50,19 +51,20 @@ repo
 scala
 versioned
 metadata
-haskell
 SSL
+haskell
 nauseous
 Alacra
 RxComponent
 polymorphism
 deserialise
+onboarding
 polymorphic
 pimp
 philip
 VeriSign
-RxCometActor
 thunk
+RxCometActor
 UI
 affero
 andrew
@@ -73,16 +75,19 @@ Daikon
 enrichment
 morgan
 plugin
-VM
 uppercase
+VM
 LiftWeb
 liftweb
 Fulfilment
 snippets
 RxScala
 wildcard
+JBoss
+XP
 paul
 typesafe
+Teamcity
 RxElement
 nigel
 stephen
@@ -90,6 +95,7 @@ allton
 xsbt
 idioms
 angelica
+onboard
 plantuml
 Endo
 idiom
@@ -111,6 +117,7 @@ eScreening
 NodeSeqs
 flatmap
 serialiser
+http
 simon
 pimping
 JSON
