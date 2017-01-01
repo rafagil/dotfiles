@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Spacemacs Documentation"
+(("org-refile-last-stored"
+ (filename . "~/Dropbox/org/todo.org")
+ (front-context-string . "* TODO [#A] [201")
+ (rear-context-string . "6-12-20 Tuesday\n")
+ (position . 3476))
+("org-capture-last-stored"
+ (filename . "~/Dropbox/org/todo.org")
+ (front-context-string . "** TODO [#A] [20")
+ (rear-context-string . "naming in there\n")
+ (position . 3234))
+("Spacemacs Documentation"
  (filename . "~/.emacs.d/doc/DOCUMENTATION.org")
  (front-context-string . "#+TITLE: Spacema")
  (rear-context-string)
