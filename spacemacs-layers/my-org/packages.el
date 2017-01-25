@@ -93,6 +93,7 @@
 
       (setq org-agenda-files (list org-directory
                                    (concat project-directory "/boost")
+                                   (concat project-directory "/underscore")
                                    (concat project-directory "/foggyball")
                                    (concat org-directory "/blogs")))
 
@@ -125,6 +126,9 @@
                "* %U\n\n%?\n" :kill-buffer t)
 
               ("b" "Boost Journal" entry (file+datetree (concat project-directory "/boost/journal.org"))
+               "* %U %?\n" :kill-buffer t)
+
+              ("u" "Underscore Journal" entry (file+datetree (concat project-directory "/underscore/journal.org"))
                "* %U %?\n" :kill-buffer t)
 
               ("m" "Muti Journal" entry (file+datetree (concat project-directory "/muti/muti.org"))
