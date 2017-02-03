@@ -154,7 +154,7 @@
 
       (setq org-agenda-custom-commands
             '(("," "Agenda"
-               ((agenda "" ((org-agenda-span 1)))
+               ((agenda "" ((org-agenda-ndays 1)))
                 (todo "STARTED"
                       ((org-agenda-overriding-header "Started")))
                 (todo "PAUSED"
