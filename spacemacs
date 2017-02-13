@@ -335,6 +335,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
   (add-to-list 'exec-path "~/.local/bin/")
+
+  (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+  (setq exec-path (append exec-path '("/usr/local/bin")))
 )
 
 (defun dotspacemacs/user-config ()
