@@ -5,13 +5,13 @@
 (("org-refile-last-stored"
  (filename . "~/Dropbox/org/todo.org")
  (front-context-string . "* TODO [#A] [201")
- (rear-context-string . "6-12-20 Tuesday\n")
- (position . 3476))
+ (rear-context-string . "an application?\n")
+ (position . 2542))
 ("org-capture-last-stored"
- (filename . "~/Dropbox/org/projects/underscore/journal.org")
- (front-context-string . "**** [2017-01-21")
- (rear-context-string . "-01-21 Saturday\n")
- (position . 158))
+ (filename . "~/Dropbox/org/projects/boost/journal.org")
+ (front-context-string . "**** [2017-03-26")
+ (rear-context-string . "17-03-26 Sunday\n")
+ (position . 123380))
 ("Spacemacs Documentation"
  (filename . "~/.emacs.d/doc/DOCUMENTATION.org")
  (front-context-string . "#+TITLE: Spacema")
