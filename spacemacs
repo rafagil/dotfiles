@@ -27,7 +27,7 @@ values."
    ;; If non-nil layers with lazy install support are lazy installed.
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-  dotspacemacs-configuration-layer-path '("~/dotfiles/spacemacs-layers/")
+  dotspacemacs-configuration-layer-path '("/Users/channing/dotfiles/spacemacs-layers/")
    ;; List of configuration layers to load.?h
    dotspacemacs-configuration-layers
    '(
@@ -41,6 +41,33 @@ values."
      better-defaults
      csv
      emacs-lisp
+     emoji
+     git
+     github
+     html
+     idris
+     javascript
+     latex
+     markdown
+     (org :variables org-enable-github-support t)
+     osx
+     pandoc
+     python
+     restclient
+     (scala :variables scala-enable-eldoc t scala-use-unicode-arrows t scala-auto-start-ensime nil)
+     smex
+     syntax-checking
+     themes-megapack
+     theming
+     version-control
+     yaml
+     ;; mine
+     intero
+     my-org
+     my-scala
+     my-markdown
+     my-writeroom
+
      ;; git
      ;; markdown
      ;; org
@@ -341,66 +368,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-
-  ;; adding this here because it works
-  (add-to-list 'org-modules 'org-drill)
-
-  ;; me
-  (setq user-full-name "Channing Walton")
-  (setq user-mail-address "channing.walton@gmail.com")
-
-  ;; shells
-  (setenv "PATH" (shell-command-to-string "/bin/bash -c 'echo -n $PATH'"))
-  (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
-
-  (setq exec-path (append exec-path '("/usr/local/bin/")))
-  (setq exec-path (append exec-path '("/usr/texbin/")))
-  (setq exec-path (append exec-path '("~/bin/")))
-
-  ;; spelling
-  (setq ispell-program-name "aspell"
-        ispell-extra-args '("--sug-mode=ultra"))
-  (setq ispell-dictionary "british")
-  (setq ispell-personal-dictionary "~/dotfiles/dictionaries/dictionary.txt")
-
-  ;; keyfreq-autosave-mode
-  (require 'keyfreq)
-  (keyfreq-mode 1)
-  (keyfreq-autosave-mode 1)
-
-  ;; Indentation
-  (setq tab-width 2
-        indent-tabs-mode nil)
-  (setq-default indent-tabs-mode nil)
-
-  (setq js-indent-level 2)
-
-  ;; OSX Keybindings
-  (global-set-key (kbd "<s-right>") 'move-end-of-line)
-  (global-set-key (kbd "<s-left>") 'move-beginning-of-line)
-  (global-set-key (kbd "<s-up>") 'beginning-of-buffer)
-  (global-set-key (kbd "<s-down>") 'end-of-buffer)
-  (global-set-key (kbd "C-=") 'text-scale-increase)
-  (global-set-key (kbd "C--") 'text-scale-decrease)
-
-  (global-set-key (kbd "M-[") 'previous-buffer)
-  (global-set-key (kbd "M-]") 'next-buffer)
-
-  ;; allow typing # with alt-shift-3
-  (global-set-key (kbd "M-£") `(lambda () (interactive) (insert "#")))
-
-  ;; Ranger
-  (evil-leader/set-key "oR" 'ranger)
-
-  ;; UI Tweaks
-  (set-background-color "black")
-
-  (set-face-attribute 'variable-pitch nil :family "Verdana")
-
-  (global-hl-line-mode -1)
-
-  (setq bookmark-default-file "/Users/channing/dotfiles/spacemacs.bookmarks")
-)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -411,13 +379,12 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (define-word winum unfill solarized-theme restclient-helm madhat2r-theme fuzzy company-restclient know-your-http-well idris-mode prop-menu autothemer visual-fill-column powerline spinner org alert log4e gntp restclient markdown-mode skewer-mode simple-httpd json-snatcher json-reformat multiple-cursors js2-mode hydra parent-mode projectile request haskell-mode haml-mode gitignore-mode fringe-helper git-gutter+ git-gutter gh marshal logito pcache ht pos-tip flycheck pkg-info epl flx magit-popup git-commit with-editor smartparens iedit anzu evil goto-chg undo-tree sbt-mode scala-mode diminish web-completion-data dash-functional tern company bind-map bind-key yasnippet packed auctex anaconda-mode pythonic f dash s avy helm-core async auto-complete popup package-build which-key moe-theme info+ hungry-delete evil-magit highlight helm magit zonokai-theme zenburn-theme zen-and-art-theme yapfify yaml-mode ws-butler writeroom-mode window-numbering web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stekene-theme spacemacs-theme spaceline spacegray-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smex smeargle slim-mode seti-theme scss-mode sass-mode reverse-theme reveal-in-osx-finder restart-emacs ranger rainbow-delimiters railscasts-theme quelpa pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode professional-theme popwin planet-theme pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pbcopy pastels-on-dark-theme paradox pandoc-mode ox-pandoc ox-gfm osx-trash osx-dictionary orgit organic-green-theme org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme ob-restclient ob-http noflet noctilux-theme niflheim-theme neotree naquadah-theme mwim mustang-theme move-text monokai-theme monochrome-theme molokai-theme mmm-mode minimal-theme material-theme markdown-toc majapahit-theme magit-gitflow magit-gh-pulls macrostep lush-theme lorem-ipsum livid-mode live-py-mode linum-relative link-hint light-soap-theme less-css-mode launchctl keyfreq json-mode js2-refactor js-doc jbeans-theme jazz-theme ir-black-theme intero inkpot-theme indent-guide ido-vertical-mode hy-mode htmlize hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation hide-comnt heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md gandalf-theme flycheck-pos-tip flx-ido flatui-theme flatland-theme firebelly-theme fill-column-indicator farmhouse-theme fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu espresso-theme ensime emoji-cheat-sheet-plus emmet-mode elisp-slime-nav dumb-jump dracula-theme django-theme diff-hl darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme csv-mode company-web company-tern company-statistics company-emoji company-auctex company-anaconda column-enforce-mode colorsarenice-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode clues-theme clean-aindent-mode cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme auto-yasnippet auto-highlight-symbol auto-compile auctex-latexmk atom-dark-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (zonokai-theme zenburn-theme zen-and-art-theme yapfify yaml-mode writeroom-mode visual-fill-column web-mode web-beautify underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smex smeargle slim-mode seti-theme scss-mode sass-mode reverse-theme reveal-in-osx-finder restclient-helm railscasts-theme pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode professional-theme planet-theme pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pbcopy pastels-on-dark-theme pandoc-mode ox-pandoc ox-gfm osx-trash osx-dictionary orgit organic-green-theme org-projectile org-present org-pomodoro alert log4e gntp org-download omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme ob-http noflet noctilux-theme niflheim-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-toc markdown-mode majapahit-theme magit-gitflow magit-gh-pulls madhat2r-theme lush-theme livid-mode skewer-mode simple-httpd live-py-mode light-soap-theme less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jbeans-theme jazz-theme ir-black-theme intero inkpot-theme idris-mode prop-menu hy-mode htmlize hindent heroku-theme hemisu-theme helm-pydoc helm-gitignore helm-css-scss hc-zenburn-theme haskell-mode haml-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gnuplot gitignore-mode github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gist gh marshal logito pcache ht gh-md gandalf-theme flycheck-pos-tip pos-tip flycheck flatui-theme flatland-theme firebelly-theme farmhouse-theme evil-magit magit magit-popup git-commit with-editor espresso-theme ensime sbt-mode scala-mode emoji-cheat-sheet-plus emmet-mode dracula-theme django-theme diff-hl darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme company-web web-completion-data company-tern dash-functional tern company-restclient know-your-http-well company-emoji company-auctex company-anaconda color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme auctex-latexmk auctex apropospriate-theme anti-zenburn-theme anaconda-mode pythonic ample-zen-theme ample-theme alect-themes afternoon-theme ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline restart-emacs request ranger rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file ob-restclient neotree mwim move-text macrostep lorem-ipsum linum-relative link-hint keyfreq info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio fuzzy flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word csv-mode company-statistics column-enforce-mode clean-aindent-mode auto-yasnippet auto-highlight-symbol auto-compile atom-dark-theme aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "#c5c8c6" :background "#1d1f21" :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :stipple nil :inherit nil))))
  '(org-agenda-date ((t (:inherit (quote org-agenda-structure) :font "Source Code Pro" :height 1.0))) t)
  '(org-agenda-structure ((t (:inherit default :font "Source Sans Pro" :height 1.5 :underline nil))))
  '(org-block ((t (:inherit (quote fixed-pitched) :font "Source Code Pro"))))
