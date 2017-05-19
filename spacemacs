@@ -354,6 +354,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (mac-auto-operator-composition-mode t)
 
+  ;; so you can use right-option + 3 to get a #
+  (setq-default mac-right-option-modifier nil)
+
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
   (add-to-list 'exec-path "~/.local/bin/")
 
