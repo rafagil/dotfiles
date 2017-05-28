@@ -35,7 +35,7 @@
         (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
               ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
               ((x-list-fonts "Verdana")         '(:font "Verdana"))
-              ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+              ((x-family-fonts "Sans Serif")    '(:family "Sans Sedotspacemacs-additional-packagesrif"))
               (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro.")))
         "My variable width font available to org-mode files and whatnot.")
 
