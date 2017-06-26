@@ -40,8 +40,8 @@
         "My variable width font available to org-mode files and whatnot.")
 
       (defvar cjw/heading-font
-        (cond ((x-list-fonts "NewYorkerType") '(:font "NewYorkerType"))
-              ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro")))
+        (cond
+              ((x-list-fonts "Source Code Pro") '(:font "Source Code Pro")))
         "Heading fonts"
         )
 
@@ -61,12 +61,12 @@
                                 `(org-block-background ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
                                 `(org-block-begin-line ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
                                 `(org-block-end-line ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
-                                `(org-level-8 ((t (,@headline ,@cjw/variable-font-tuple))))
-                                `(org-level-7 ((t (,@headline ,@cjw/variable-font-tuple))))
-                                `(org-level-6 ((t (,@headline ,@cjw/variable-font-tuple))))
-                                `(org-level-5 ((t (,@headline ,@cjw/variable-font-tuple))))
-                                `(org-level-4 ((t (,@headline ,@cjw/variable-font-tuple :height 1.1))))
-                                `(org-level-3 ((t (,@headline ,@cjw/variable-font-tuple :height 1.25))))
+                                `(org-level-8 ((t (,@headline ,@cjw/heading-font))))
+                                `(org-level-7 ((t (,@headline ,@cjw/heading-font))))
+                                `(org-level-6 ((t (,@headline ,@cjw/heading-font))))
+                                `(org-level-5 ((t (,@headline ,@cjw/heading-font))))
+                                `(org-level-4 ((t (,@headline ,@cjw/heading-font :height 1.1))))
+                                `(org-level-3 ((t (,@headline ,@cjw/heading-font :height 1.25))))
                                 `(org-level-2 ((t (,@headline ,@cjw/heading-font :height 1.5))))
                                 `(org-level-1 ((t (,@headline ,@cjw/heading-font :height 1.75))))
                                 `(org-document-title ((t (,@headline ,@cjw/variable-font-tuple :height 1.5 :underline nil))))))
