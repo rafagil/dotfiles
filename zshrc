@@ -55,3 +55,5 @@ alias scalactags="ctags -R . --exclude=target --exclude=vendor"
 
 export MY_BIN=/Users/channing/bin
 export EDITOR=vim
+
+eval $(thefuck --alias)
