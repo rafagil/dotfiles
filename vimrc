@@ -22,6 +22,7 @@ let g:NERDTreeToggle="<F2>"
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
 
+autocmd filetype crontab setlocal nobackup nowritebackup
 
 "############
 "# QuickSBT #
