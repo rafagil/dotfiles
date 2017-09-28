@@ -83,7 +83,7 @@
       ;; $ brew cask install mactex
       (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
 
-      (setq org-directory "~/Dropbox/org")
+      (setq org-directory "/Users/channing/Dropbox/org")
       (setq project-directory (concat org-directory "/projects"))
 
       ;; agenda
@@ -93,6 +93,7 @@
 
       (setq org-agenda-files (list org-directory
                                    (concat project-directory "/boost")
+                                   (concat project-directory "/santander")
                                    (concat project-directory "/underscore")
                                    (concat project-directory "/foggyball")
                                    (concat org-directory "/blogs")))
@@ -102,41 +103,41 @@
       (org-clock-persistence-insinuate)
 
       ;; capture
-      (setq org-default-notes-file (concat org-directory "/notes.org"))
+      (setq org-default-notes-file (expand-file-name org-directory "/notes.org"))
 
       (setq org-log-into-drawer t)
 
       (setq org-capture-templates
-            '(("t" "Todo" entry (file+headline (concat org-directory "/todo.org") "To do")
+            '(("t" "Todo" entry (file+headline "/Users/channing/Dropbox/org/todo.org" "To do")
                "* TODO [#B] %U %?\n  %i\n  %a" :kill-buffer t)
 
-              ("T" "Todo (Important)" entry (file+headline (concat org-directory "/todo.org") "To do")
+              ("T" "Todo (Important)" entry (file+headline "/Users/channing/Dropbox/org/todo.org" "To do")
                "* TODO [#A] %U %?\n  %i\n  %a" :kill-buffer t)
 
-              ("d" "Done" entry (file+datetree (concat org-directory "/done.org") "To do")
+              ("d" "Done" entry (file+datetree "/Users/channing/Dropbox/org/done.org" "To do")
                "* DONE %U %?\nCLOSED: %U  %i\n" :kill-buffer t)
 
-              ("i" "Interrupt" entry (file+headline (concat org-directory "/todo.org") "To do")
+              ("i" "Interrupt" entry (file+headline "/Users/channing/Dropbox/org/todo.org" "To do")
                "* DONE %U %? :interrupted:\n  %i\n" :kill-buffer t :clock-in t :clock-resume t )
 
-              ("h" "HowTo" entry (file+headline (concat org-directory "/howto.org") "How To")
+              ("h" "HowTo" entry (file+headline "/Users/channing/Dropbox/org/howto.org" "How To")
                "* %^{What?} :%^{Tag}:\n %?\n" :kill-buffer t)
 
-              ("j" "Personal Journal" entry (file+datetree (concat org-directory "/journal.org"))
+              ("j" "Personal Journal" entry (file+datetree "/Users/channing/Dropbox/org/journal.org")
                "* %U\n\n%?\n" :kill-buffer t)
 
-              ("u" "Underscore Journal" entry (file+datetree (concat project-directory "/underscore/journal.org"))
+              ("u" "Underscore Journal" entry (file+datetree "/Users/channing/Dropbox/org/projects/underscore/journal.org")
                "* %U %?\n" :kill-buffer t)
 
-              ("g" "Glossary" entry (file+headline (concat project-directory "/boost/boost.org") "Glossary")
+              ("g" "Glossary" entry (file+headline "/Users/channing/Dropbox/org/projects/santander/santander.org" "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
 
               ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t :empty-lines 1)
 
-              ("r" "Retrospective Item" entry (file+headline (concat project-directory "/boost/retro.org") "Next Retrospective")
+              ("r" "Retrospective Item" entry (file+headline "/Users/channing/Dropbox/org/projects/santander/retro.org" "Next Retrospective")
                "* %U %?\n" :kill-buffer t)
 
-              ("l" "Blog Idea" entry (file+headline (concat org-directory "/blogs/ideas.org") "Blog Ideas")
+              ("l" "Blog Idea" entry (file+headline "/Users/channing/Dropbox/org/projects/blogs/ideas.org" "Blog Ideas")
                "* %U %?\n" :kill-buffer t)
               ))
 

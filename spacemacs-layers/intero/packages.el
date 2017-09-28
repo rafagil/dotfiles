@@ -10,7 +10,6 @@
 
 (defconst intero-packages
   '(company
-    flycheck
     haskell-mode
     hindent
     (intero :location (recipe
@@ -26,9 +25,6 @@
 
 (defun intero/post-init-company ()
   (add-hook 'intero-mode-hook 'company-mode))
-
-(defun intero/post-init-flycheck ()
-  (spacemacs/add-flycheck-hook 'intero-mode-hook))
 
 (defun intero/init-haskell-mode ()
   (use-package haskell-mode))
