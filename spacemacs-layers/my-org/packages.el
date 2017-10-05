@@ -132,6 +132,9 @@
               ("g" "Glossary" entry (file+headline "/Users/channing/Dropbox/org/projects/santander/santander.org" "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
 
+              ("s" "Santander Journal" entry (file+datetree "/Users/channing/Dropbox/org/projects/santander/santander.org" "Journal")
+               "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
+
               ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t :empty-lines 1)
 
               ("r" "Retrospective Item" entry (file+headline "/Users/channing/Dropbox/org/projects/santander/retro.org" "Next Retrospective")

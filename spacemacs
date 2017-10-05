@@ -85,10 +85,6 @@ values."
    dotspacemacs-additional-packages '(
                                       org-plus-contrib
                                       atom-dark-theme
-                                      ob-restclient
-                                      ranger
-                                      keyfreq
-                                      kanban
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
