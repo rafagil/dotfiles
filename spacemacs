@@ -27,7 +27,7 @@ This function should only modify configuration layer settings."
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
   dotspacemacs-configuration-layer-path '("~/dotfiles/spacemacs-layers/")
-   ;; List of configuration layers to load.?h
+   ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
      ;; ----------------------------------------------------------------
@@ -48,6 +48,7 @@ This function should only modify configuration layer settings."
      javascript
      latex
      markdown
+     neotree
      (org :variables org-enable-github-support t)
      osx
      pandoc
@@ -360,12 +361,11 @@ It should only modify the values of Spacemacs settings."
    ))
 
 (defun dotspacemacs/user-init ()
-  "Initialization function for user code.
-It is called immediately after `dotspacemacs/init', before layer configuration
-executes.
- This function is mostly useful for variables that need to be set
-before packages are loaded. If you are unsure, you should try in setting them in
-`dotspacemacs/user-config' first."
+  "Initialization for user code:
+This function is called immediately after `dotspacemacs/init', before layer
+configuration.
+It is mostly for variables that should be set before packages are loaded.
+If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; Ensime recommends doing this
   (push '("melpa-stable" . "stable.melpa.org/packages/") configuration-layer--elpa-archives)
