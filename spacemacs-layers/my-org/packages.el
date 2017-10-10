@@ -1,4 +1,4 @@
-;;; packages.el --- my-org Layer packages File for Spacemacs
+;; packages.el --- my-org Layer packages File for Spacemacs
 
 (setq my-org-packages
       '(
@@ -23,53 +23,8 @@
 
       (setq org-bullets-bullet-list '("◉" "●" "●" "●" "●" "●" "●" "●"))
 
-      ;; the following from https://github.com/howardabrams/dot-files/blob/master/emacs-client.org
-      (defvar cjw/fixed-font-family
-        (cond ((x-list-fonts "Fira Mono")       "Fira Mono")
-              ((x-list-fonts "Source Code Pro") "Source Code Pro")
-              ((x-list-fonts "Anonymous Pro")   "Anonymous Pro")
-              ((x-list-fonts "M+ 1mn")          "M+ 1mn"))
-        "My fixed width font based on what is installed, `nil' if not defined.")
-
-      (defvar cjw/variable-font-tuple
-        (cond ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
-              ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
-              ((x-list-fonts "Verdana")         '(:font "Verdana"))
-              ((x-family-fonts "Sans Serif")    '(:family "Sans Sedotspacemacs-additional-packagesrif"))
-              (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro.")))
-        "My variable width font available to org-mode files and whatnot.")
-
-      (defvar cjw/heading-font
-        (cond
-              ((x-list-fonts "Source Code Pro") '(:font "Source Code Pro")))
-        "Heading fonts"
-        )
-
-      (let* ((cjw/fixed-font-tuple (list :font cjw/fixed-font-family))
-             (base-font-color     (face-foreground 'default nil 'default))
-             (background-color    (face-background 'default nil 'default))
-             (primary-color       (face-foreground 'mode-line nil))
-             (secondary-color     (face-background 'secondary-selection nil 'region))
-             (headline           `(:inherit default :weight bold :foreground "#c0c0cc" )))
-
-        (custom-theme-set-faces 'user
-                                `(org-agenda-structure ((t (:inherit default ,@cjw/variable-font-tuple :height 1.5 :underline nil))))
-                                `(org-agenda-date ((t (:inherit 'org-agenda-structure ,@cjw/fixed-font-tuple :height 1.0))))
-                                `(org-verbatim ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple :foreground "#aef"))))
-                                `(org-table ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
-                                `(org-block ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
-                                `(org-block-background ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
-                                `(org-block-begin-line ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
-                                `(org-block-end-line ((t (:inherit 'fixed-pitched ,@cjw/fixed-font-tuple))))
-                                `(org-level-8 ((t (,@headline ,@cjw/heading-font))))
-                                `(org-level-7 ((t (,@headline ,@cjw/heading-font))))
-                                `(org-level-6 ((t (,@headline ,@cjw/heading-font))))
-                                `(org-level-5 ((t (,@headline ,@cjw/heading-font))))
-                                `(org-level-4 ((t (,@headline ,@cjw/heading-font :height 1.1))))
-                                `(org-level-3 ((t (,@headline ,@cjw/heading-font :height 1.25))))
-                                `(org-level-2 ((t (,@headline ,@cjw/heading-font :height 1.5))))
-                                `(org-level-1 ((t (,@headline ,@cjw/heading-font :height 1.75))))
-                                `(org-document-title ((t (,@headline ,@cjw/variable-font-tuple :height 1.5 :underline nil))))))
+      ;; Change fonts etc used to be here - see git history before 5 October 2017
+      ;; https://github.com/howardabrams/dot-files/blob/master/emacs-client.org
 
       ;; End Of Howard's awesomeness
       (setq org-cycle-separator-lines 1)
@@ -133,7 +88,7 @@
                "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
 
               ("s" "Santander Journal" entry (file+datetree "/Users/channing/Dropbox/org/projects/santander/santander.org" "Journal")
-               "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
+               "* %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t :empty-lines 1)
 
