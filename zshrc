@@ -57,3 +57,8 @@ export MY_BIN=/Users/channing/bin
 export EDITOR=vim
 
 eval $(thefuck --alias)
+
+export PATH=$PATH:~/.bloop
+alias bloop="bloop-ng.py bloop.Cli"
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/
