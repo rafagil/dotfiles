@@ -89,11 +89,11 @@
 
               ("s" "Santander")
 
-              ("sj" "Santander Journal" entry (file+datetree "~/Dropbox/org/projects/santander/santander.org" "Journal")
-               "* %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
-
               ("sf" "Santander Fact" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "Facts")
                "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+
+              ("sj" "Santander Journal" entry (file+datetree "~/Dropbox/org/projects/santander/santander.org" "Journal")
+               "* %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("sp" "Santander People" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "People")
                "* %^{Person} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
