@@ -87,13 +87,18 @@
               ("g" "Glossary" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
 
-              ("s" "Santander Journal" entry (file+datetree "~/Dropbox/org/projects/santander/santander.org" "Journal")
+              ("s" "Santander")
+
+              ("sj" "Santander Journal" entry (file+datetree "~/Dropbox/org/projects/santander/santander.org" "Journal")
                "* %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
-              ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t :empty-lines 1)
+              ("sf" "Santander Fact" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "Facts")
+               "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
-              ("r" "Retrospective Item" entry (file+headline "~/Dropbox/org/projects/santander/retro.org" "Next Retrospective")
+              ("sr" "Retrospective Item" entry (file+headline "~/Dropbox/org/projects/santander/retro.org" "Next Retrospective")
                "* %U %?\n" :kill-buffer t)
+
+              ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t :empty-lines 1)
 
               ("l" "Blog Idea" entry (file+headline "~/Dropbox/org/projects/blogs/ideas.org" "Blog Ideas")
                "* %U %?\n" :kill-buffer t)
