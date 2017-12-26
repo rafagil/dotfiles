@@ -79,10 +79,10 @@
                "* %^{What?} :%^{Tag}:\n %?\n" :kill-buffer t)
 
               ("j" "Personal Journal" entry (file+datetree "~/Dropbox/org/journal.org")
-               "* %U\n\n%?\n" :kill-buffer t)
+               "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("u" "Underscore Journal" entry (file+datetree "~/Dropbox/org/projects/underscore/journal.org")
-               "* %U %?\n" :kill-buffer t)
+               "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("g" "Glossary" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "Glossary")
                "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
@@ -93,7 +93,7 @@
                "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("sj" "Santander Journal" entry (file+datetree "~/Dropbox/org/projects/santander/santander.org" "Journal")
-               "* %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+               "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("sp" "Santander People" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "People")
                "* %^{Person} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
