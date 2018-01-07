@@ -381,9 +381,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   (mac-auto-operator-composition-mode t)
 
-  ;; so you can use right-option + 3 to get a #
-  (global-set-key (kbd "M-3")(lambda () (interactive) (insert "#")))
-
   (add-to-list 'exec-path "~/.local/bin/")
 
   (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
