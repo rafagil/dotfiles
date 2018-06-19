@@ -57,3 +57,6 @@ export MY_BIN=/Users/channing/bin
 export EDITOR=vim
 
 eval $(thefuck --alias)
+
+export JAVA_HOME=~/Applications/graalvm/Contents/Home
+export PATH=$JAVA_HOMe/bin:$PATH
