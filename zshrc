@@ -49,14 +49,12 @@ alias shapeless="sbt -sbt-create 'set libraryDependencies += \"com.chuusai\" %% 
 
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
-alias bu="brew update; brew upgrade; brew cleanup; brew linkapps; cd ~/dotfiles; ./update.sh"
+alias bu="brew update; brew upgrade; brew cleanup; cd ~/dotfiles; ./update.sh"
 
 alias scalactags="ctags -R . --exclude=target --exclude=vendor"
 
 export MY_BIN=/Users/channing/bin
 export EDITOR=vim
 
-eval $(thefuck --alias)
-
-export JAVA_HOME=~/Applications/graalvm/Contents/Home
-export PATH=$JAVA_HOMe/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/
+export PATH=$JAVA_HOME/bin:$PATH
