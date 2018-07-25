@@ -1,0 +1,78 @@
+.activator
+.android
+.atom
+.cabal
+.cache
+.coursier
+.cups
+.dropbox
+.DS_Store
+.emacs.d
+.fontconfig
+.gitbucket
+.gem
+.ghc
+.idea-build
+.ivy2
+.local
+.m2
+.npm
+.oh-my-zsh
+.oracle_jre_usage
+.pia_manager
+.rvm
+.sbt
+.stack
+.spacemacs.d
+.Spotlight-*/
+.sqldeveloper
+.squirrel-sql
+.Trash
+.Trashes
+.vim
+.viminfo
+.zsh_history
+/afs
+/automount
+/cores
+/Network
+/Previous Systems.localized
+/private/tmp
+/private/var/run
+/private/var/spool/postfix
+/private/var/vm
+/tmp
+/Vault
+/VirtualMachines
+/Volumes
+BitSync
+dev
+Desktop
+Downloads
+dotfiles/emacs.d/elpa
+Dropbox/.dropbox.cache
+Dropbox/Apps
+Dropbox/Boost
+Dropbox/Family
+Dropbox/Indiana
+Dropbox/emacs-backup
+Library/Application Support/BitTorrent
+Library/Application Support/com.github.atom.ShipIt
+Library/Application Support/Franz
+Library/Application Support/Google
+Library/Application Support/IdeaIC13
+Library/Application Support/MobileSync
+Library/Application Support/Popcorn-Time/Cache
+Library/Caches
+Library/Cookies
+Library/iTunes/iPad Software Updates
+Library/iTunes/iPhone Software Updates
+Library/Logs
+Library/Saved Application State
+Library/Application Support/Vivaldi
+Library/Preferences
+Library/Safari
+Library/com.*
+public_html
+tmp
+VirtualBox VMs

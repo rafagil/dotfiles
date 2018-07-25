@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gitinspector --file='**' -T -m --format html > stats.html

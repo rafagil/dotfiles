@@ -31,7 +31,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew git git-flow github osx)
+plugins=(brew git github osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,9 +44,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-alias scalaz="sbt -sbt-create 'set libraryDependencies += \"org.scalaz\" %% \"scalaz-core\" % \"7.1.7\"' 'set initialCommands := \"import scalaz._; import Scalaz._\"' 'console'"
-alias shapeless="sbt -sbt-create 'set libraryDependencies += \"com.chuusai\" %% \"shapeless\" % \"2.0.0\"' 'set initialCommands := \"import shapeless._\"' 'console'"
-
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 alias bu="brew update; brew upgrade; brew cleanup; cd ~/dotfiles; ./update.sh"
@@ -56,5 +53,7 @@ alias scalactags="ctags -R . --exclude=target --exclude=vendor"
 export MY_BIN=/Users/channing/bin
 export EDITOR=vim
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/
-export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
