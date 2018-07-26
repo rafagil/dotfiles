@@ -19,7 +19,7 @@ EXCLUDES="/Users/channing/bin/mirror.excludes"
  
 echo "Start rsync $(date)"
  
-$RSYNC -vaxEz  -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --exclude-from=$EXCLUDES "$SRC" "$DST"
+$RSYNC -vaxEzq  -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --exclude-from=$EXCLUDES "$SRC" "$DST"
  
 echo "End rsync $(date)"
   

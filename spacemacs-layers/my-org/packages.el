@@ -198,9 +198,8 @@
          (js         . t)
          (python     . t)
          (scala      . t)
-         (sh         . t)
+         (shell      . t)
          (sql        . t)
-         (restclient . t)
          (dot        . t)))
 
       ;; don't prompt when evaluating various babel files
