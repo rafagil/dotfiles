@@ -73,6 +73,7 @@ Library/Application Support/Vivaldi
 Library/Preferences
 Library/Safari
 Library/com.*
+Library/VoiceTrigger
 public_html
 tmp
 VirtualBox VMs
