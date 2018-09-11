@@ -24,6 +24,7 @@ david
 delegatable
 deriver
 deserialise
+doobie
 eChannels
 editability
 Endo
@@ -96,6 +97,7 @@ sbt
 sbteclipse
 scala
 scalastyle
+scalastyle
 scalaz
 semigroup
 serialisable
@@ -109,8 +111,10 @@ stephen
 subtype
 Teamcity
 thunk
+tpolecat
 typeclass
 typeclasses
+typelevel
 typesafe
 UI
 unicode

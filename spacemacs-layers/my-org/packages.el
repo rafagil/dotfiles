@@ -104,6 +104,14 @@
               ("sr" "Retrospective Item" entry (file+headline "~/Dropbox/org/projects/santander/retro.org" "Next Retrospective")
                "* %U %?\n" :kill-buffer t)
 
+              ("q" "Questions")
+
+              ("qf" "Questions Fact" entry (file+headline "~/Dropbox/org/projects/questions/questions.org" "Facts")
+               "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+
+              ("qj" "Questions Journal" entry (file+datetree "~/Dropbox/org/projects/questions/questions.org" "Journal")
+               "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+
               ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t :empty-lines 1)
 
               ("l" "Blog Idea" entry (file+headline "~/Dropbox/org/projects/blogs/ideas.org" "Blog Ideas")
