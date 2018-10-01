@@ -43,6 +43,7 @@ alias vi=vim
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+alias up='cd ..'
 
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
@@ -52,8 +53,6 @@ alias scalactags="ctags -R . --exclude=target --exclude=vendor"
 
 export MY_BIN=/Users/channing/bin
 export EDITOR=vim
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
