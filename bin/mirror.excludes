@@ -57,24 +57,21 @@ Dropbox/Family
 Dropbox/Indiana
 Dropbox/emacs-backup
 Library/Application Support/BitTorrent
+Library/Application Support/CloudDocs
 Library/Application Support/com.github.atom.ShipIt
 Library/Application Support/Franz
 Library/Application Support/Google
-Library/Application Support/IdeaIC13
 Library/Application Support/MobileSync
-Library/Application Support/Popcorn-Time/Cache
 Library/Caches
-Library/Containers
 Library/Cookies
+Library/Containers
 Library/iTunes/iPad Software Updates
 Library/iTunes/iPhone Software Updates
 Library/Logs
 Library/Saved Application State
-Library/Application Support/Vivaldi
-Library/Preferences
+Library/Preference*
 Library/Safari
 Library/com.*
 Library/VoiceTrigger
 public_html
 tmp
-VirtualBox VMs

@@ -56,3 +56,7 @@ export EDITOR=vim
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+export JAVA_HOME=~/dev/jdk-11.jdk/Contents/Home
+
+export PATH=$JAVA_HOME/bin:$PATH
+
