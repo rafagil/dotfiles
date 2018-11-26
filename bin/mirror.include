@@ -1,0 +1,16 @@
++ */
++ .gnupg
++ .gnupg/*
++ .ssh
++ .ssh/*
++ Desktop
++ Desktop/***
++ Documents/
++ Documents/***
++ Dropbox
++ Dropbox/***
++ Library/Mail
++ Library/Mail/***
++ Pictures
++ Pictures/***
+- *

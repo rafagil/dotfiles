@@ -3,10 +3,10 @@ echo "Running mirror..."
  
 RSYNC="/usr/local/bin/rsync"
  
-SRC="/Users/channing"
-DST="10.0.1.3::Mirror"
+SRC="/Users/channing/"
+DST="10.0.1.3::Mirror/channing"
  
-EXCLUDES="/Users/channing/bin/mirror.excludes"
+FILTER="/Users/channing/bin/mirror.filter"
   
 # rsync options
 # -v increase verbosity
@@ -14,12 +14,12 @@ EXCLUDES="/Users/channing/bin/mirror.excludes"
 # -x don't cross device boundaries (ignore mounted volumes)
 # -E preserve executability
 # -S handle spare files efficiently
-# --delete delete deletes any files that have been deleted locally
+# --delete deletes any files that have been deleted locally
 # --exclude-from reference a list of files to exclude
  
 echo "Start rsync $(date)"
  
-$RSYNC -vaxEzq  -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --exclude-from=$EXCLUDES "$SRC" "$DST"
+$RSYNC -vaxEz -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --verbose --prune-empty-dirs --include-from='/Users/channing/bin/mirror.include'  "$SRC" "$DST"
  
 echo "End rsync $(date)"
   
