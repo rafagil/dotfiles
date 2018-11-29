@@ -17,7 +17,7 @@ DST="10.0.1.3::Mirror/channing"
  
 echo "Start rsync $(date)"
  
-$RSYNC -qaxEz -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --verbose --prune-empty-dirs --include-from='/Users/channing/bin/mirror.include'  "$SRC" "$DST"
+$RSYNC -qaxEz -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --verbose --include-from='/Users/channing/bin/mirror.include'  "$SRC" "$DST"
  
 echo "End rsync $(date)"
   
