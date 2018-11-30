@@ -16,7 +16,7 @@ declare -a repos=("dbcsi" "dotfiles" "eclipse-accelerate" "eclipse-saveme" "ecli
 for repo in "${repos[@]}"
 do
     echo Updating ${repo}
-    git -C $ARCHIVE/${repo}.git remote update
+    git -C $ARCHIVE/${repo}.git remote update > /dev/null
 done
 
 # finished
