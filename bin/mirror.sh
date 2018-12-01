@@ -5,7 +5,12 @@ RSYNC="/usr/local/bin/rsync"
  
 SRC="/Users/channing/"
 DST="10.0.1.3::Mirror/channing"
- 
+
+echo "Checking for unfriendly files ..."
+find ${SRC}Documents -name '*[<>:"/\\|?*]*'
+find ${SRC}Pictures -name '*[<>:"/\\|?*]*'
+find ${SRC}Dropbox -name '*[<>:"/\\|?*]*' ! -path '${SRC}Dropbox/underscore-share*'
+
 # rsync options
 # -v increase verbosity
 # -a turns on archive mode (recursive copy + retain attributes)
