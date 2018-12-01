@@ -60,6 +60,7 @@ Migrator
 monad
 monads
 monoid
+monoid
 morgan
 nauseous
 nigel
@@ -96,6 +97,7 @@ SBT
 sbt
 sbteclipse
 scala
+scalastyle
 scalastyle
 scalastyle
 scalaz

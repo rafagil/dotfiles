@@ -22,7 +22,7 @@ find ${SRC}Dropbox -name '*[<>:"/\\|?*]*' ! -path ${SRC}'Dropbox/underscore-shar
  
 echo "Start rsync $(date)"
  
-$RSYNC -qaxEzv -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --verbose --include-from='/Users/channing/bin/mirror.include'  "$SRC" "$DST"
+$RSYNC -qaxEzv -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --prune-empty-dirs --verbose --include-from='/Users/channing/bin/mirror.include' "$SRC" "$DST"
  
 echo "End rsync $(date)"
   
