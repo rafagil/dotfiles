@@ -9,7 +9,7 @@ DST="10.0.1.3::Mirror/channing"
 echo "Checking for unfriendly files ..."
 find ${SRC}Documents -name '*[<>:"/\\|?*]*'
 find ${SRC}Pictures -name '*[<>:"/\\|?*]*'
-find ${SRC}Dropbox -name '*[<>:"/\\|?*]*' ! -path '${SRC}Dropbox/underscore-share*'
+find ${SRC}Dropbox -name '*[<>:"/\\|?*]*' ! -path ${SRC}'Dropbox/underscore-share*'
 
 # rsync options
 # -v increase verbosity
