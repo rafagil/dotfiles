@@ -22,6 +22,7 @@ daniel
 datatype
 david
 delegatable
+Deriver
 deriver
 deserialise
 doobie
@@ -97,6 +98,7 @@ SBT
 sbt
 sbteclipse
 scala
+scalastyle
 scalastyle
 scalastyle
 scalastyle
