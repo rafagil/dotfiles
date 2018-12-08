@@ -36,7 +36,7 @@
       ;; For exporting to latex and pdf do
       ;; $ brew install caskroom/cask/brew-cask
       ;; $ brew cask install mactex
-      (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin"))
+      (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin"))
 
       (setq org-directory "~/Dropbox/org")
       (setq project-directory (concat org-directory "/projects"))
