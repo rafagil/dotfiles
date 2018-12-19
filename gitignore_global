@@ -1,6 +1,10 @@
 *~
 .DS_Store
 
+# Metals
+.metals/
+.bloop/
+
 # SBT
 lib_managed/
 src_managed/
