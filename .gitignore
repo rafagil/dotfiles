@@ -17,6 +17,8 @@ config/ranger/history
 
 config/ranger/tagged
 
+config/yarn
+
 emacs.d/bookmarks
 
 emacs.d/ensime/classpath_*

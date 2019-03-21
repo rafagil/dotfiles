@@ -47,10 +47,17 @@
       (setq org-agenda-window-setup 'current-window)
 
       (setq org-agenda-files (list org-directory
+                                   (concat project-directory "/books")
                                    (concat project-directory "/boost")
-                                   (concat project-directory "/santander")
-                                   (concat project-directory "/underscore")
                                    (concat project-directory "/foggyball")
+                                   (concat project-directory "/muti")
+                                   (concat project-directory "/questions")
+                                   (concat project-directory "/reward4work")
+                                   (concat project-directory "/santander")
+                                   (concat project-directory "/santander-cobam")
+                                   (concat project-directory "/scala")
+                                   (concat project-directory "/sporting-index")
+                                   (concat project-directory "/underscore")
                                    (concat org-directory "/blogs")))
 
       ;; Clocking
@@ -81,28 +88,13 @@
               ("j" "Personal Journal" entry (file+datetree "~/Dropbox/org/journal.org")
                "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
-              ("u" "Underscore Journal" entry (file+datetree "~/Dropbox/org/projects/underscore/journal.org")
-               "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+              ("u" "Underscore")
 
-              ("g" "Glossary" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "Glossary")
-               "* %^{Term} :%^{Tag}:\n %?\n" :kill-buffer t)
-
-              ("s" "Santander")
-
-              ("sf" "Santander Fact" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "Facts")
+              ("uf" "Underscore Fact" entry (file+headline "~/Dropbox/org/projects/underscore/underscore.org" "Facts")
                "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
-              ("sj" "Santander Journal" entry (file+datetree "~/Dropbox/org/projects/santander/santander.org" "Journal")
+              ("uj" "Underscore Journal" entry (file+datetree "~/Dropbox/org/projects/underscore/underscore.org" "Journal")
                "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
-
-              ("sp" "Santander People" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "People")
-               "* %^{Person} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
-
-              ("ss" "Santander System" entry (file+headline "~/Dropbox/org/projects/santander/santander.org" "Systems")
-               "* %^{System} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
-
-              ("sr" "Retrospective Item" entry (file+headline "~/Dropbox/org/projects/santander/retro.org" "Next Retrospective")
-               "* %U %?\n" :kill-buffer t)
 
               ("q" "Questions")
 
