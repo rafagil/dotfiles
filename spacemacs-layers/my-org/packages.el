@@ -88,6 +88,14 @@
               ("j" "Personal Journal" entry (file+datetree "~/Dropbox/org/journal.org")
                "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
+              ("a" "Artmyl")
+
+              ("af" "Artmyl Fact" entry (file+headline "~/Dropbox/org/projects/artmyl/artmyl.org" "Facts")
+               "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+
+              ("aj" "Artmyl Journal" entry (file+datetree "~/Dropbox/org/projects/artmyl/artmyl.org" "Journal")
+               "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+
               ("u" "Underscore")
 
               ("uf" "Underscore Fact" entry (file+headline "~/Dropbox/org/projects/underscore/underscore.org" "Facts")
