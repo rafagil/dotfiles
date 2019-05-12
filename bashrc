@@ -1,3 +1,5 @@
+ulimit -n 200000
+ulimit -u 2048
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
