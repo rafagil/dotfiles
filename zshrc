@@ -7,7 +7,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # themes: lambda kolo cloud kphoen wezm sunaku pygmalion
 #ZSH_THEME="lambda"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="awesomepanda"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
