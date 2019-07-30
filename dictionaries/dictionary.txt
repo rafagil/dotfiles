@@ -38,6 +38,7 @@ Fulfilment
 gauss
 haskell
 heirarchical
+Hikari
 http
 IDEs
 idiom
@@ -71,6 +72,7 @@ NodeSeqs
 notifiable
 notional
 Observables
+Omnear
 onboard
 onboarding
 paul
@@ -128,6 +130,7 @@ versioned
 VM
 wadler
 walton
+websocket
 wikipedia
 wildcard
 wizardry

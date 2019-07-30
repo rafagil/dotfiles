@@ -51,7 +51,7 @@
                                    (concat project-directory "/boost")
                                    (concat project-directory "/foggyball")
                                    (concat project-directory "/muti")
-                                   (concat project-directory "/questions")
+                                   (concat project-directory "/omnear")
                                    (concat project-directory "/reward4work")
                                    (concat project-directory "/santander")
                                    (concat project-directory "/santander-cobam")
@@ -104,12 +104,12 @@
               ("uj" "Underscore Journal" entry (file+datetree "~/Dropbox/org/projects/underscore/underscore.org" "Journal")
                "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
-              ("q" "Questions")
+              ("o" "Omnear")
 
-              ("qf" "Questions Fact" entry (file+headline "~/Dropbox/org/projects/questions/questions.org" "Facts")
+              ("of" "Omnear Fact" entry (file+headline "~/Dropbox/org/projects/omnear/omnear.org" "Facts")
                "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
-              ("qj" "Questions Journal" entry (file+datetree "~/Dropbox/org/projects/questions/questions.org" "Journal")
+              ("oj" "Questions Journal" entry (file+datetree "~/Dropbox/org/projects/omnear/omnear.org" "Journal")
                "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("n" "Add note to the clocked task" plain (clock) "%U %?\n" :kill-buffer t :empty-lines 1)
