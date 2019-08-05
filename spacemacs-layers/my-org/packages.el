@@ -47,6 +47,7 @@
       (setq org-agenda-window-setup 'current-window)
 
       (setq org-agenda-files (list org-directory
+				   (concat project-directory "/artyml")
                                    (concat project-directory "/books")
                                    (concat project-directory "/boost")
                                    (concat project-directory "/foggyball")
@@ -205,7 +206,7 @@
          (java       . t)
          (js         . t)
          (python     . t)
-         (scala      . t)
+     ;;    (scala      . t) requires ensime and I'm using scala-lsp
          (shell      . t)
          (sql        . t)
          (dot        . t)))
