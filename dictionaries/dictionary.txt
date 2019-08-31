@@ -7,7 +7,7 @@ app
 applicatives
 arg
 arity
-artyml
+artaml
 assignee
 backend
 Barclays
@@ -103,6 +103,7 @@ Scaladoc
 scalastyle
 scalatest
 scalaz
+selfie
 semigroup
 serialisable
 serialiser
@@ -115,6 +116,7 @@ stephen
 subtype
 Teamcity
 thunk
+tldr
 tpolecat
 treelog
 typeclass
