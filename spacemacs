@@ -46,7 +46,6 @@ This function should only modify configuration layer settings."
      helm
      markdown
      multiple-cursors
-     treemacs
      (org :variables org-enable-github-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -70,7 +69,6 @@ This function should only modify configuration layer settings."
      theming
      version-control
      yaml
-
      elm
      my-org
      my-markdown
