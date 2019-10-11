@@ -46,3 +46,6 @@
 [submodule "vim/bundle/sbt-quickfix"]
 	path = vim/bundle/sbt-quickfix
 	url = https://github.com/dscleaver/sbt-quickfix.git
+[submodule "spacemacs-layers/scala-lsp"]
+	path = spacemacs-layers/scala-lsp
+	url = https://github.com/zheli/scala-lsp.git
