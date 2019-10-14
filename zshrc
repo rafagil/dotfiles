@@ -58,8 +58,8 @@ export EDITOR=vim
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Limits - see https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
-ulimit -n 200000
-ulimit -u 2048
+#ulimit -n 200000
+#ulimit -u 2048
 
 autoload -U compinit && compinit
 zmodload -i zsh/complist

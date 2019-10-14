@@ -44,6 +44,7 @@ This function should only modify configuration layer settings."
      git
      graphviz
      helm
+     lsp
      markdown
      multiple-cursors
      (org :variables org-enable-github-support t)
@@ -72,7 +73,7 @@ This function should only modify configuration layer settings."
      elm
      my-org
      my-markdown
-     scala-lsp
+     (scala :variables scala-backend 'scala-metals)
      )
 
    ;; List of additional packages that will be installed without being
@@ -537,5 +538,5 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Fira Code" :foundry "nil" :slant normal :weight normal :height 130 :width normal)))))
+ '(default ((t (:background nil)))))
 )

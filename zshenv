@@ -5,4 +5,3 @@ export PATH=${JAVA_HOME}/bin:~/bin:/usr/local/bin:/usr/local/sbin:/Library/TeX/D
 # python
 export PATH=/usr/local/share/python:$PATH
 
-export PATH=~/bin:~/.local/bin:$PATH

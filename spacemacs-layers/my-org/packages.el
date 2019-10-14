@@ -47,7 +47,7 @@
       (setq org-agenda-window-setup 'current-window)
 
       (setq org-agenda-files (list org-directory
-				   (concat project-directory "/artyml")
+				   (concat project-directory "/artaml")
            (concat project-directory "/books")
            (concat project-directory "/boost")
            (concat project-directory "/foggyball")
