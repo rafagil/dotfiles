@@ -51,8 +51,8 @@ This function should only modify configuration layer settings."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
+     spell-checking
+     syntax-checking
      treemacs
      ;; version-control
      csv
@@ -139,7 +139,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    ;; (default 5)
-   dotspacemacs-elpa-timeout 20
+   dotspacemacs-elpa-timeout 5
 
    ;; Set `gc-cons-threshold' and `gc-cons-percentage' when startup finishes.
    ;; This is an advanced option and should not be changed unless you suspect
@@ -488,11 +488,13 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
         "~/dotfiles/snippets/")
 
   (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+
   (setq exec-path (append exec-path '("/usr/local/bin")))
 
   (setq-default
    dotspacemacs-configuration-layers
    '((treemacs :variables treemacs-use-follow-mode t treemacs-use-filewatch-mode t)))
+
   )
 
 (defun dotspacemacs/user-load ()
@@ -510,6 +512,8 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
   (ido-mode -1)
+
+  (spacemacs/toggle-highlight-current-line-globally-off)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -524,6 +528,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(column-number-mode t)
  '(custom-safe-themes
    (quote
     ("e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "341b2570a9bbfc1817074e3fad96a7eff06a75d8e2362c76a2c348d0e0877f31" "89536596ee5bdc5ef9ea3d3d5b515ea616285fa9274c836263024f1993f6b3dd" "c82d24bfba431e8104219bfd8e90d47f1ad6b80a504a7900cbee002a8f04392f" default)))
@@ -532,11 +538,12 @@ This function is called at the very end of Spacemacs initialization."
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 5) ((control)))))
  '(org-agenda-files
    (quote
-    ("/Users/channing/Dropbox/org/board.org" "/Users/channing/Dropbox/org/done.org" "/Users/channing/Dropbox/org/howto.org" "/Users/channing/Dropbox/org/journal.org" "/Users/channing/Dropbox/org/music.org" "/Users/channing/Dropbox/org/refile.org" "/Users/channing/Dropbox/org/report.org" "/Users/channing/Dropbox/org/todo.org" "/Users/channing/Dropbox/org/projects/books/Belphagor.org" "/Users/channing/Dropbox/org/projects/books/Uplift.org" "/Users/channing/Dropbox/org/projects/books/ideas.org" "/Users/channing/Dropbox/org/projects/boost/boost.org" "/Users/channing/Dropbox/org/projects/boost/journal.org" "/Users/channing/Dropbox/org/projects/boost/retro.org" "/Users/channing/Dropbox/org/projects/boost/systems.org" "/Users/channing/Dropbox/org/projects/foggyball/foggyball.org" "/Users/channing/Dropbox/org/projects/foggyball/journal.org" "/Users/channing/Dropbox/org/projects/muti/muti.org" "/Users/channing/Dropbox/org/projects/omnear/omnear.org" "/Users/channing/Dropbox/org/projects/reward4work/website.org" "/Users/channing/Dropbox/org/projects/santander/santander.org" "/Users/channing/Dropbox/org/projects/santander-cobam/santander.org" "/Users/channing/Dropbox/org/projects/scala/scala.org" "/Users/channing/Dropbox/org/projects/sporting-index/nulls.org" "/Users/channing/Dropbox/org/projects/sporting-index/review.org" "/Users/channing/Dropbox/org/projects/underscore/journal.org" "/Users/channing/Dropbox/org/projects/underscore/underscore.org" "/Users/channing/Dropbox/org/blogs/ideas.org"))))
+    ("/Users/channing/Dropbox/org/board.org" "/Users/channing/Dropbox/org/done.org" "/Users/channing/Dropbox/org/howto.org" "/Users/channing/Dropbox/org/journal.org" "/Users/channing/Dropbox/org/music.org" "/Users/channing/Dropbox/org/refile.org" "/Users/channing/Dropbox/org/report.org" "/Users/channing/Dropbox/org/todo.org" "/Users/channing/Dropbox/org/projects/books/Belphagor.org" "/Users/channing/Dropbox/org/projects/books/Uplift.org" "/Users/channing/Dropbox/org/projects/books/ideas.org" "/Users/channing/Dropbox/org/projects/boost/boost.org" "/Users/channing/Dropbox/org/projects/boost/journal.org" "/Users/channing/Dropbox/org/projects/boost/retro.org" "/Users/channing/Dropbox/org/projects/boost/systems.org" "/Users/channing/Dropbox/org/projects/foggyball/foggyball.org" "/Users/channing/Dropbox/org/projects/foggyball/journal.org" "/Users/channing/Dropbox/org/projects/muti/muti.org" "/Users/channing/Dropbox/org/projects/omnear/omnear.org" "/Users/channing/Dropbox/org/projects/reward4work/website.org" "/Users/channing/Dropbox/org/projects/santander/santander.org" "/Users/channing/Dropbox/org/projects/santander-cobam/santander.org" "/Users/channing/Dropbox/org/projects/scala/scala.org" "/Users/channing/Dropbox/org/projects/sporting-index/nulls.org" "/Users/channing/Dropbox/org/projects/sporting-index/review.org" "/Users/channing/Dropbox/org/projects/underscore/journal.org" "/Users/channing/Dropbox/org/projects/underscore/underscore.org" "/Users/channing/Dropbox/org/blogs/ideas.org")))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:background nil)))))
+ '(default ((t (:inherit nil :stipple nil :background "Black" :foreground "#c5c8c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "nil" :family "Fira Code")))))
 )

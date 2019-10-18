@@ -17,8 +17,6 @@
       ;; disable auto-complete
       (spacemacs|disable-company org-mode)
 
-      (add-hook 'org-mode-hook 'turn-on-auto-fill)
-
       (setq org-hide-emphasis-markers t)
 
       (setq org-bullets-bullet-list '("◉" "●" "●" "●" "●" "●" "●" "●"))

@@ -36,6 +36,7 @@ eScreening
 flatmap
 Foggyball
 Fulfilment
+Gagosian
 gauss
 haskell
 heirarchical
@@ -127,6 +128,7 @@ typelevel
 typesafe
 UI
 unicode
+unsecure
 uppercase
 UUID
 VeriSign
