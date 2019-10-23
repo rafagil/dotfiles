@@ -494,7 +494,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq-default
    dotspacemacs-configuration-layers
    '((treemacs :variables treemacs-use-follow-mode t treemacs-use-filewatch-mode t)))
-
   )
 
 (defun dotspacemacs/user-load ()
@@ -514,6 +513,9 @@ before packages are loaded."
   (ido-mode -1)
 
   (spacemacs/toggle-highlight-current-line-globally-off)
+
+  ;; enables the right option key to be used to get the hash symbol
+  (setq ns-right-alternate-modifier (quote none))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -532,7 +534,7 @@ This function is called at the very end of Spacemacs initialization."
  '(column-number-mode t)
  '(custom-safe-themes
    (quote
-    ("e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "341b2570a9bbfc1817074e3fad96a7eff06a75d8e2362c76a2c348d0e0877f31" "89536596ee5bdc5ef9ea3d3d5b515ea616285fa9274c836263024f1993f6b3dd" "c82d24bfba431e8104219bfd8e90d47f1ad6b80a504a7900cbee002a8f04392f" default)))
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "e0d42a58c84161a0744ceab595370cbe290949968ab62273aed6212df0ea94b4" "341b2570a9bbfc1817074e3fad96a7eff06a75d8e2362c76a2c348d0e0877f31" "89536596ee5bdc5ef9ea3d3d5b515ea616285fa9274c836263024f1993f6b3dd" "c82d24bfba431e8104219bfd8e90d47f1ad6b80a504a7900cbee002a8f04392f" default)))
  '(evil-want-Y-yank-to-eol nil)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 5) ((control)))))
@@ -545,5 +547,5 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "Black" :foreground "#c5c8c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "nil" :family "Fira Code")))))
+ )
 )

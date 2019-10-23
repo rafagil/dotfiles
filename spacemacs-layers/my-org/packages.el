@@ -49,6 +49,7 @@
            (concat project-directory "/books")
            (concat project-directory "/boost")
            (concat project-directory "/foggyball")
+           (concat project-directory "/itv")
            (concat project-directory "/muti")
            (concat project-directory "/omnear")
            (concat project-directory "/reward4work")
@@ -78,9 +79,6 @@
               ("d" "Done" entry (file+datetree "~/Dropbox/org/done.org" "To do")
                "* DONE %U %?\nCLOSED: %U  %i\n" :kill-buffer t)
 
-              ("i" "Interrupt" entry (file+headline "~/Dropbox/org/todo.org" "To do")
-               "* DONE %U %? :interrupted:\n  %i\n" :kill-buffer t :clock-in t :clock-resume t )
-
               ("h" "HowTo" entry (file+headline "~/Dropbox/org/howto.org" "How To")
                "* %^{What?} :%^{Tag}:\n %?\n" :kill-buffer t)
 
@@ -93,6 +91,14 @@
                "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("aj" "Artmyl Journal" entry (file+datetree "~/Dropbox/org/projects/artmyl/artmyl.org" "Journal")
+               "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+
+              ("i" "ITV")
+
+              ("if" "ITV Fact" entry (file+headline "~/Dropbox/org/projects/itv/itv.org" "Facts")
+               "* %^{Fact} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
+
+              ("ij" "ITV Journal" entry (file+datetree "~/Dropbox/org/projects/itv/itv.org" "Journal")
                "* %<%H:%M> %^{Term} :%^{Tag}:\n\n %?\n\n" :kill-buffer t)
 
               ("u" "Underscore")
