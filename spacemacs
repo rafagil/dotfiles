@@ -538,9 +538,6 @@ This function is called at the very end of Spacemacs initialization."
  '(evil-want-Y-yank-to-eol nil)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 5) ((control)))))
- '(org-agenda-files
-   (quote
-    ("/Users/channing/Dropbox/org/board.org" "/Users/channing/Dropbox/org/done.org" "/Users/channing/Dropbox/org/howto.org" "/Users/channing/Dropbox/org/journal.org" "/Users/channing/Dropbox/org/music.org" "/Users/channing/Dropbox/org/refile.org" "/Users/channing/Dropbox/org/report.org" "/Users/channing/Dropbox/org/todo.org" "/Users/channing/Dropbox/org/projects/books/Belphagor.org" "/Users/channing/Dropbox/org/projects/books/Uplift.org" "/Users/channing/Dropbox/org/projects/books/ideas.org" "/Users/channing/Dropbox/org/projects/boost/boost.org" "/Users/channing/Dropbox/org/projects/boost/journal.org" "/Users/channing/Dropbox/org/projects/boost/retro.org" "/Users/channing/Dropbox/org/projects/boost/systems.org" "/Users/channing/Dropbox/org/projects/foggyball/foggyball.org" "/Users/channing/Dropbox/org/projects/foggyball/journal.org" "/Users/channing/Dropbox/org/projects/muti/muti.org" "/Users/channing/Dropbox/org/projects/omnear/omnear.org" "/Users/channing/Dropbox/org/projects/reward4work/website.org" "/Users/channing/Dropbox/org/projects/santander/santander.org" "/Users/channing/Dropbox/org/projects/santander-cobam/santander.org" "/Users/channing/Dropbox/org/projects/scala/scala.org" "/Users/channing/Dropbox/org/projects/sporting-index/nulls.org" "/Users/channing/Dropbox/org/projects/sporting-index/review.org" "/Users/channing/Dropbox/org/projects/underscore/journal.org" "/Users/channing/Dropbox/org/projects/underscore/underscore.org" "/Users/channing/Dropbox/org/blogs/ideas.org")))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

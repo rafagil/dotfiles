@@ -51,6 +51,7 @@ int
 intellij
 jackman
 JBoss
+jdbc
 jittery
 JsCmd
 JsCmds
@@ -67,6 +68,7 @@ monad
 monads
 monoid
 morgan
+msisdn
 nauseous
 nigel
 NodeSeq

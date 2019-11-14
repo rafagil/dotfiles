@@ -16,8 +16,8 @@ src_managed/
 .scala_dependencies
 .worksheet
 
-# Ensime
-.ensime*
+# VSCode
+.vscode
 
 # Latex stuff
 *.aux
