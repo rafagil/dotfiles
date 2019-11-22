@@ -51,7 +51,7 @@ This function should only modify configuration layer settings."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     spell-checking
+     ;; spell-checking
      syntax-checking
      treemacs
      ;; version-control
@@ -135,7 +135,7 @@ It should only modify the values of Spacemacs settings."
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-   dotspacemacs-elpa-https nil
+   dotspacemacs-elpa-https t
 
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    ;; (default 5)
@@ -516,6 +516,9 @@ before packages are loaded."
 
   ;; enables the right option key to be used to get the hash symbol
   (setq ns-right-alternate-modifier (quote none))
+
+  (add-to-list 'org-modules 'org-habit)
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
