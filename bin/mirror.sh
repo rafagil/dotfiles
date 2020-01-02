@@ -4,12 +4,12 @@ echo "Running mirror..."
 RSYNC="/usr/local/bin/rsync"
  
 SRC="/Users/channing/"
-DST="10.0.1.3::Mirror/channing"
+DST="192.168.1.2::Mirror/channing"
 
 echo "Checking for unfriendly files ..."
 find ${SRC}Documents -name '*[<>:"/\\|?*]*'
+find ${SRC}Dropbox -name '*[<>:"/\\|?*]*'
 find ${SRC}Pictures -name '*[<>:"/\\|?*]*'
-find ${SRC}Dropbox -name '*[<>:"/\\|?*]*' ! -path ${SRC}'Dropbox/underscore-share*'
 
 # rsync options
 # -v increase verbosity
@@ -22,7 +22,7 @@ find ${SRC}Dropbox -name '*[<>:"/\\|?*]*' ! -path ${SRC}'Dropbox/underscore-shar
  
 echo "Start rsync $(date)"
  
-$RSYNC -qaxEzv -S --timeout=3600 --progress --human-readable --force --delete-excluded --delete --prune-empty-dirs --verbose --include-from='/Users/channing/bin/mirror.include' "$SRC" "$DST"
+$RSYNC -axEzq -S --timeout=3600 --human-readable --force --delete-excluded --delete --prune-empty-dirs --include-from='/Users/channing/bin/mirror.include' --exclude="*" "$SRC" "$DST"
  
 echo "End rsync $(date)"
   

@@ -1,14 +1,9 @@
-+ */
-+ .gnupg
-+ .gnupg/*
-+ .ssh
-+ .ssh/*
-+ Desktop
-+ Desktop/***
-+ Documents/
-+ Documents/***
-+ Dropbox
-+ Dropbox/***
-+ Pictures
-+ Pictures/***
-- *
+.zshrc
+.zshenv
+.gnupg/***
+.ssh/***
+Desktop/***
+Documents/***
+Dropbox/***
+Pictures/***
+Library/Mail/***
